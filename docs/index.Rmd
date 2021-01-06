@@ -16,3 +16,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
+## Pardon our dust  
+
+We are in the process of migrating to a new hosting site.  We hope to have an improved website here soon.
+
