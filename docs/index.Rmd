@@ -1,7 +1,7 @@
 ---
 title: "Project MOSAIC"
 description: |
-  Welcome to the website. I hope you enjoy it!
+  An NSF-funded project supporting Mathematics, Statistics, and Computation
 site: distill::distill_website
 ---
 
