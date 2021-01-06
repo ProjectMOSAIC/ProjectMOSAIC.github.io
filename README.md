@@ -1,2 +1,3 @@
 # mosaic-web
-Project MOSAIC website
+
+Welcome to the Project MOSAIC website
