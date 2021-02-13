@@ -1,0 +1,9 @@
+---
+title: "MOSAIC Datasets"
+description: |
+    Finding datasets from Project MOSAIC
+---
+
+The actively currated datasets are in the `{mosaicData}` R package.
+
+There are some legacy datasets (from before the R-package era), many but not all of which were incorporated in `{mosaicData}` 

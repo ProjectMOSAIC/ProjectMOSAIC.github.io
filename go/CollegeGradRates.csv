@@ -1,0 +1,503 @@
+"grad4","grad6","cohort","name","control","endow","medSAT","fulltime","fulltimefac","pell"
+44.8,67.2,58,"University of Alabama at Birmingham","Public",21260,1113,74.4,96,33
+30.3,57.6,33,"University of Alabama at Tuscaloosa","Public",23206,1159,91.9,69,12
+36.4,67.3,55,"Auburn University","Public",17388,1217,92.6,93,3
+21.9,43.8,32,"University of South Alabama","Public",9232,1010,74.5,49,44
+11.3,27.5,80,"University of Alaska at Anchorage","Public",2922,NA,45.3,22,4
+34.4,61.1,352,"Arizona State University at Tempe","Public",7206,1077,83.1,95,43
+34.1,63.2,364,"University of Arizona","Public",13361,1095,88.1,81,28
+19.2,57.7,26,"Embry-Riddle Aeronautical University at Prescott","Private not-for-profit",8402,1132,93.6,77,38
+31.3,50,64,"Northern Arizona University","Public",3765,1056,83.3,35,50
+41,68.9,61,"University of Arkansas at Fayetteville","Public",37331,1162,87,95,15
+22.5,42.5,40,"University of Central Arkansas","Public",498,1090,83.7,71,55
+2.4,38.1,42,"Academy of Art University","Private for-profit",NA,NA,57,36,7
+20.6,70.6,34,"Art Center College of Design","Private not-for-profit",20973,NA,84.4,10,50
+48.9,62.2,45,"Azusa Pacific University","Private not-for-profit",4173,1089,85.4,92,29
+43.1,60,65,"Biola University","Private not-for-profit",11403,1114,93.9,42,40
+8.7,30.4,23,"California College of the Arts","Private not-for-profit",16297,NA,92.6,5,39
+87.9,95.5,66,"California Institute of Technology","Private not-for-profit",753036,1528,100,97,3
+36.4,45.5,22,"California Lutheran University","Private not-for-profit",14832,1117,91.6,37,25
+23.4,70.5,363,"California Polytechnic State University at San Luis Obispo","Public",8225,1205,96.6,60,5
+18.5,46.3,54,"California State University at Bakersfield","Public",2019,897,86.1,57,91
+20,42.4,85,"California State University-Stanislaus","Public",1267,940,79.8,43,85
+13.6,40,140,"California State University at San Bernardino","Public",1109,898,86.7,33,88
+21.9,63.3,640,"California State Polytechnic University at Pomona","Public",1829,1058,85.1,30,65
+11.5,58.8,148,"California State University at Chico","Public",2175,1014,92.6,40,46
+0,25,40,"California State University-Dominguez Hills","Public",750,830,65.2,18,84
+14.9,44.1,397,"California State University at Fresno","Public",5985,941,86.7,37,74
+16.1,56.4,778,"California State University at Fullerton","Public",854,993,75.9,26,40
+14.5,50.5,289,"California State University-East Bay","Public",387,914,84.8,29,53
+9.7,53.4,773,"California State University at Long Beach","Public",1285,1016,82,30,60
+10.7,45.7,234,"California State University at Los Angeles","Public",886,862,82.3,30,89
+12.8,50.1,407,"California State University at Northridge","Public",1879,929,76.7,19,73
+7.4,38.9,525,"California State University at Sacramento","Public",1022,958,80.8,45,72
+76.4,94.4,1631,"University of California at Berkeley","Public",24839,1333,97.6,68,48
+51.1,83.2,1834,"University of California at Davis","Public",5786,1193,97.2,84,63
+63,86.1,1771,"University of California at Irvine","Public",6654,1177,98,76,40
+71.4,93,1496,"University of California at Los Angeles","Public",28132,1264,97.2,75,54
+49.1,72.2,1401,"University of California at Riverside","Public",3930,1051,97.6,80,85
+55.3,88,1672,"University of California at San Diego","Public",11190,1252,96.9,86,74
+60.2,79.6,683,"University of California at Santa Barbara","Public",4626,1197,98,77,44
+48.6,75.9,609,"University of California at Santa Cruz","Public",2698,1150,97,60,46
+41.7,58.3,24,"California Maritime Academy","Public",2200,1059,97.2,76,41
+50,67.6,74,"Chapman University","Private not-for-profit",NA,1204,95.3,50,18
+94.7,97.4,38,"Claremont McKenna College","Private not-for-profit",369317,1388,99.6,93,7
+42.1,47.4,95,"DeVry University at Pomona","Private for-profit",NA,NA,47.5,37,43
+44.7,70.2,47,"Dominican University of California","Private not-for-profit",10791,1030,82.1,12,45
+88.6,97.1,35,"Harvey Mudd College","Private not-for-profit",271779,1493,99.7,92,7
+18.2,18.2,22,"Holy Names University","Private not-for-profit",9061,910,79.2,15,76
+4.4,37.8,45,"Humboldt State University","Public",2560,1041,91.4,28,77
+54.5,59.1,22,"Art Institute of California-San Diego","Private for-profit",NA,NA,76.6,83,21
+17.9,23.8,84,"La Sierra University","Private not-for-profit",9006,941,86.4,95,60
+50,58.8,34,"Art Institute of California at San Francisco","Private for-profit",NA,NA,56.7,50,28
+75.8,85,207,"Loyola Marymount University","Private not-for-profit",38299,1210,95.4,50,15
+33.3,36.7,30,"Menlo College","Private not-for-profit",10798,994,89.9,19,27
+67.9,75,56,"Mount St. Mary's College","Private not-for-profit",35644,983,79,13,83
+42.9,42.9,21,"Notre Dame de Namur University","Private not-for-profit",8314,933,63.7,18,50
+82.4,84.3,51,"Occidental College","Private not-for-profit",150771,1293,99.5,80,23
+38.2,55.9,34,"Otis College of Art and Design","Private not-for-profit",9810,1049,98.9,6,75
+27.1,35.6,59,"Pacific Union College","Private not-for-profit",21126,1025,86.7,92,53
+47.1,72.5,189,"University of the Pacific","Private not-for-profit",26512,1160,97.4,55,54
+74.5,84.7,98,"Pepperdine University","Private not-for-profit",75331,1230,87.6,52,11
+68,76,25,"Pitzer College","Private not-for-profit",95115,1270,95.6,80,12
+45.8,50,24,"Point Loma Nazarene University","Private not-for-profit",9294,1148,96.8,31,25
+92.2,94.1,51,"Pomona College","Private not-for-profit",951712,1459,99.3,88,13
+63.9,66.7,36,"University of Redlands","Private not-for-profit",21340,1110,99.2,43,23
+23.2,68.5,521,"San Diego State University","Public",3821,1037,88.1,39,45
+57.8,75.6,90,"University of San Diego","Private not-for-profit",33829,1214,95.9,42,7
+12.7,50.8,904,"San Francisco State University","Public",1305,1010,83.3,32,53
+58.2,77.5,249,"University of San Francisco","Private not-for-profit",20937,1117,95.7,34,32
+7.8,50.9,864,"San Jose State University","Public",2475,1006,78.9,16,37
+85.6,91.5,201,"Santa Clara University","Private not-for-profit",70835,1240,98.2,51,5
+78.6,78.6,28,"Scripps College","Private not-for-profit",229553,1353,98.4,80,3
+45.8,54.2,59,"Saint Mary's College of California","Private not-for-profit",33478,1107,91.5,34,44
+22.4,48.3,58,"Sonoma State University","Public",3316,1036,89.2,23,16
+77.7,92.5,534,"University of Southern California","Private not-for-profit",85637,1373,96,58,15
+66.7,75,24,"Westmont College","Private not-for-profit",43229,1187,99.5,66,15
+55.9,58.8,34,"Whittier College","Private not-for-profit",38118,1055,98.2,90,44
+17.2,51.6,93,"University of Colorado at Denver","Public",NA,1057,56.9,56,14
+23.9,39.1,46,"University of Colorado at Colorado Springs","Public",NA,1088,79.4,86,49
+41.1,70.6,333,"University of Colorado at Boulder","Public",NA,1174,90.7,66,3
+76.9,84.6,26,"Colorado College","Private not-for-profit",188202,1327,98.8,86,2
+35.9,66.7,39,"Colorado School of Mines","Public",33884,1277,94.2,64,6
+38.1,68.3,139,"Colorado State University","Public",7582,1131,86.4,73,13
+53.8,75.4,65,"University of Denver","Private not-for-profit",30010,1226,90.8,49,11
+6,22.9,83,"Metropolitan State College of Denver","Public",205,973,61.8,11,41
+27.9,55,111,"University of Northern Colorado","Public",5979,1049,87.9,60,19
+8.3,25,24,"Colorado State University at Pueblo","Public",1664,972,72.2,21,68
+78.4,78.4,74,"United States Air Force Academy","Public",NA,1332,100,98,NA
+10.5,39.5,38,"Central Connecticut State University","Public",0,1020,78.6,19,22
+63.5,80.6,211,"University of Connecticut","Public",11190,1220,95.9,97,5
+50,65.6,32,"University of Hartford","Private not-for-profit",14083,1090,85.4,29,32
+55.2,69,29,"Quinnipiac University","Private not-for-profit",28624,1095,95.8,28,4
+13.6,31.8,22,"Southern Connecticut State University","Public",1195,956,85.4,11,25
+78.8,87.9,33,"Trinity College (Conn.)","Private not-for-profit",153289,1263,94.8,73,5
+92.6,92.6,81,"Wesleyan University","Private not-for-profit",163180,1391,99.7,94,10
+19.2,46.2,26,"Western Connecticut State University","Public",NA,990,82.3,13,13
+91.1,95.6,180,"Yale University","Private not-for-profit",1420691,1472,99.5,85,6
+51.6,72.6,124,"University of Delaware","Public",47019,1189,90.8,97,0
+66,66,50,"American University","Private not-for-profit",32503,1280,96.4,55,6
+42.9,60.7,28,"Catholic University of America","Private not-for-profit",33481,1106,93.7,49,4
+74.9,82.1,235,"George Washington University","Private not-for-profit",64223,1287,92.7,42,4
+92.6,96.6,149,"Georgetown University","Private not-for-profit",61421,1397,95.7,52,3
+36,64.4,292,"University of Central Florida","Public",2169,1185,75.5,50,25
+30,50,40,"Embry-Riddle Aeronautical University","Private not-for-profit",7139,1098,94.7,87,27
+21.6,48.5,97,"Florida Atlantic University","Public",7203,1070,60.4,46,34
+45.5,59.1,22,"Florida Institute of Technology","Private not-for-profit",6222,1166,72.2,26,56
+15.6,46.7,122,"Florida International University","Public",4353,1079,63.4,36,81
+53.2,77.8,171,"Florida State University","Public",12953,1195,89.8,68,23
+62.8,86.4,514,"University of Florida","Public",21494,1264,93.3,89,31
+84.4,90.6,32,"Full Sail University","Private for-profit",NA,NA,100,99,6
+73.5,86,136,"University of Miami","Private not-for-profit",39587,1313,93,79,18
+15.1,39.8,93,"University of North Florida","Public",4937,1118,73.1,52,25
+52.1,60.4,48,"Nova Southeastern University","Private not-for-profit",1939,1051,69,25,60
+26.1,57.4,272,"University of South Florida","Public",8082,1130,75.7,95,52
+15.9,47.7,44,"University of West Florida","Public",4780,1072,72,36,62
+14.3,38.1,21,"Armstrong Atlantic State University","Public",343,996,71.5,42,67
+0,6.9,29,"Augusta State University","Public",40,965,74.5,33,75
+8.1,32.4,37,"Clayton State University","Public",397,943,59.5,38,89
+83.6,91,189,"Emory University","Private not-for-profit",361575,1390,98.8,78,17
+36.8,81.5,389,"Georgia Institute of Technology","Public",16336,1320,91.5,90,3
+9.8,26.8,41,"Georgia Southern University","Public",1874,1086,90,93,48
+19.2,49.5,313,"Georgia State University","Public",4136,1084,74.7,74,73
+50.4,75.8,252,"University of Georgia","Public",1751,1226,94,89,7
+9.1,45.5,66,"Kennesaw State University","Public",1180,1060,76.5,36,35
+25.8,54.8,31,"Mercer University","Private not-for-profit",19497,1159,84,73,51
+41.7,66.7,24,"Savannah College of Art and Design","Private not-for-profit",1106,1073,86.8,82,23
+3.7,25.9,27,"Southern Polytechnic State University","Public",596,1115,71.5,60,42
+18.5,48.1,27,"University of West Georgia","Public",1361,966,83.7,77,72
+26,48.1,154,"Chaminade University of Honolulu","Private not-for-profit",4302,958,70.7,15,52
+10.5,33.8,219,"University of Hawaii at Hilo","Public",62,961,82.3,63,72
+16.6,58.1,1178,"University of Hawaii-Manoa","Public",1725,1090,81.4,85,22
+24.5,46.6,204,"Hawaii Pacific University","Private not-for-profit",11560,1030,56.9,25,17
+10,32,50,"Boise State University","Public",3948,1046,73.1,42,61
+18.2,54.5,44,"University of Idaho","Public",14794,1079,89.4,78,56
+31.6,76.3,38,"School of the Art Institute of Chicago","Private not-for-profit",47184,1115,91.2,11,31
+65.6,81.3,32,"Bradley University","Private not-for-profit",36536,1148,94.9,65,26
+87.6,93.8,161,"University of Chicago","Private not-for-profit",378421,1456,99,88,12
+27.1,47.9,48,"Columbia College Chicago","Private not-for-profit",8727,NA,89.7,4,45
+50.3,75.7,189,"DePaul University","Private not-for-profit",13044,1134,82.5,48,54
+37.5,41.7,24,"DeVry University (Chicago, Ill.)","Private for-profit",NA,NA,30.9,5,45
+33.3,59,676,"University of Illinois at Chicago","Public",5649,1091,92.3,54,78
+53.8,58.5,65,"Benedictine University","Private not-for-profit",1825,1049,73.9,7,34
+66.6,87.2,958,"University of Illinois at Urbana-Champaign","Public",17321,1288,97.1,65,6
+49.2,72.3,65,"Illinois Institute of Technology","Private not-for-profit",27041,1263,93.7,60,38
+30.9,72.7,55,"Illinois State University","Public",3094,1110,94.3,71,12
+81,90.5,21,"Knox College","Private not-for-profit",48203,NA,98.7,92,25
+47.8,68.3,230,"Loyola University Chicago","Private not-for-profit",21992,1212,92.8,44,40
+21,54.3,138,"Northern Illinois University","Public",144,1010,88.7,80,52
+86.9,95.8,313,"Northwestern University","Private not-for-profit",254533,1434,89.5,91,3
+4.2,17.6,142,"Northeastern Illinois University","Public",415,890,59.2,40,75
+18.9,39.6,53,"Southern Illinois University at Carbondale","Public",5034,990,87.6,89,72
+20.9,39.5,43,"Southern Illinois University at Edwardsville","Public",1082,1050,85.1,66,32
+28.6,53.6,28,"Western Illinois University","Public",2049,970,90.7,94,42
+72.5,84.3,51,"Wheaton College (Ill.)","Private not-for-profit",92413,1309,97,62,15
+34.8,65.2,23,"Ball State University","Public",6712,1056,93.1,87,28
+3.4,24.1,29,"Indiana University-Purdue University at Fort Wayne","Public",3191,983,66.1,20,77
+15.1,43.4,53,"Indiana University-Purdue University at Indianapolis","Public",19260,1006,72,32,36
+51.4,78,177,"Indiana University at Bloomington","Public",17834,1184,95.6,92,4
+86,91.7,121,"University of Notre Dame","Private not-for-profit",466966,1428,99.7,93,3
+0,0,21,"Vincennes University","Public",3191,NA,41.8,2,27
+80,80,25,"Grinnell College","Private not-for-profit",779319,1343,97.2,93,13
+38,69.8,129,"Iowa State University","Public",18280,1153,95.1,90,16
+36.4,65.6,151,"University of Iowa","Public",35946,1171,90.1,93,4
+34.4,61.3,163,"University of Kansas","Public",41012,1130,90,76,8
+19.5,58.5,41,"Kansas State University","Public",13694,NA,88.7,92,17
+21.2,50.6,85,"Wichita State University","Public",16426,1091,70.5,52,39
+26.5,50,68,"University of Kentucky","Public",32268,1143,91.8,81,12
+26.3,50.9,57,"University of Louisville","Public",35527,1131,77.8,52,26
+23.1,55.9,143,"Louisiana State University at Baton Rouge","Public",13824,1169,93.5,95,6
+26.3,44.7,38,"Loyola University New Orleans","Private not-for-profit",56842,1209,90.6,77,36
+7.3,26.6,109,"University of New Orleans","Public",1825,1032,75.9,84,43
+18.4,44.7,38,"University of Louisiana at Lafayette","Public",4049,1030,84.3,85,32
+59,71.1,83,"Tulane University","Private not-for-profit",74132,1337,77.3,63,13
+88.9,92.1,63,"Bowdoin College","Private not-for-profit",430832,1403,99.6,91,8
+92.6,92.6,27,"Colby College","Private not-for-profit",251289,1329,100,85,1
+34.6,53.8,26,"University of Maine","Public",5712,1061,84.4,67,37
+9.5,52.4,21,"Frostburg State University","Public",2764,968,93.4,56,46
+86.1,93.6,251,"Johns Hopkins University","Private not-for-profit",110647,1390,98.3,88,5
+22.3,48.2,301,"University of Maryland-Baltimore County","Public",4473,1205,86.5,71,17
+62.8,86.6,559,"University of Maryland at College Park","Public",11032,1290,92.3,75,5
+75,78.6,28,"Maryland Institute College of Art","Private not-for-profit",28638,1160,92,40,16
+32,56,25,"Salisbury University","Public",4332,1127,92.2,54,9
+20.2,54.5,99,"Towson University","Public",1935,1074,88.8,30,9
+71,71,69,"United States Naval Academy","Public",1350,1254,100,87,NA
+26.1,47.8,23,"Stevenson University","Private not-for-profit",14480,966,82.5,17,27
+88.1,97,67,"Amherst College","Private not-for-profit",789599,1433,100,92,23
+100,100,25,"Babson College","Private not-for-profit",57875,1284,100,66,12
+88.3,96.7,60,"Bentley University","Private not-for-profit",36586,1209,96.5,66,8
+50,68.2,22,"Berklee College of Music","Private not-for-profit",46182,NA,91.4,39,14
+85.3,90.4,197,"Boston College","Private not-for-profit",132982,1344,96.9,67,4
+79.9,84.1,572,"Boston University","Private not-for-profit",32567,1260,92.3,70,5
+78.9,82.5,57,"Brandeis University","Private not-for-profit",98774,1344,99.3,72,12
+13.6,45.5,22,"Bridgewater State College","Public",1258,1020,83.5,20,7
+54.8,64.5,31,"Clark University","Private not-for-profit",73925,1194,95.7,75,18
+70.3,75.7,37,"Emerson College","Private not-for-profit",25066,1240,91.8,34,9
+88.7,99.6,248,"Harvard University","Private not-for-profit",1103930,1477,70.7,84,2
+80,90,40,"College of the Holy Cross","Private not-for-profit",167842,NA,98.7,87,8
+26.2,46.2,65,"University of Massachusetts at Lowell","Public",3569,1085,72.1,17,21
+45.9,66.3,320,"University of Massachusetts at Amherst","Public",7032,1161,92.7,82,20
+11.2,53.3,107,"University of Massachusetts at Boston","Public",3648,1010,68.9,26,51
+92.9,97.5,281,"Massachusetts Institute of Technology","Private not-for-profit",809393,1485,98.9,92,17
+72.1,83.6,61,"Mount Holyoke College","Private not-for-profit",212414,NA,98,83,21
+0,79.5,195,"Northeastern University","Private not-for-profit",20299,1313,86.1,42,6
+11.4,45.7,35,"Salem State University","Public",1369,992,76.6,16,31
+51.3,66.7,39,"Simmons College","Private not-for-profit",30,1098,89.1,33,21
+76.8,82.9,82,"Smith College","Private not-for-profit",396038,NA,99.3,86,30
+30.2,48.8,43,"University of Massachusetts at Dartmouth","Public",4130,1059,88.2,40,30
+40.5,67.1,79,"Suffolk University","Private not-for-profit",2523,1021,92.5,40,26
+88.3,92.8,111,"Tufts University","Private not-for-profit",128721,1418,98.6,67,6
+90.8,94.3,174,"Wellesley College","Private not-for-profit",536173,1363,95.4,78,11
+40.4,61.7,47,"Wentworth Institute of Technology","Private not-for-profit",16107,1087,88.3,50,25
+14.3,19,21,"Western New England University","Private not-for-profit",10686,1078,91.6,63,19
+77.3,86.4,22,"Wheaton College (Mass.)","Private not-for-profit",82549,NA,99.7,83,17
+90.2,98,51,"Williams College","Private not-for-profit",680488,1420,98.4,90,14
+63,73.9,46,"Worcester Polytechnic Institute","Private not-for-profit",91251,NA,95.1,83,9
+16,40,25,"Worcester State College","Public",1943,1010,75.1,17,15
+30.3,54.5,33,"Andrews University","Private not-for-profit",10858,1026,88.3,82,48
+48,68,25,"Calvin College","Private not-for-profit",22575,1189,96.7,88,24
+25,50,56,"Central Michigan University","Public",2837,1030,88.9,48,40
+15.8,55.3,38,"Eastern Michigan University","Public",2466,1008,70.9,35,66
+8.3,58.3,24,"Kettering University","Private not-for-profit",23160,1212,98.5,93,13
+29.9,59.8,117,"Grand Valley State University","Public",2743,1110,87.6,54,36
+69.6,87,23,"Hope College","Private not-for-profit",39698,1201,96.9,76,19
+74.9,91.2,680,"University of Michigan at Ann Arbor","Public",139163,1311,96.9,84,2
+50.9,79.7,375,"Michigan State University","Public",30459,1165,91.6,92,18
+18.6,48.6,70,"University of Michigan at Dearborn","Public",3815,1090,69,39,64
+19.7,49.2,61,"Oakland University","Public",2984,1050,74.3,26,19
+20.1,54.3,164,"Wayne State University","Public",9405,970,65.1,24,80
+18.2,54.5,66,"Western Michigan University","Public",7789,1050,86.7,46,45
+93.9,98,49,"Carleton College","Private not-for-profit",288943,1391,98.8,91,5
+65.5,75.9,29,"Gustavus Adolphus College","Private not-for-profit",39331,1220,98.9,90,16
+50,64.7,34,"Hamline University","Private not-for-profit",13325,1085,94.5,36,42
+76.6,83,47,"Macalester College","Private not-for-profit",270114,1348,97.7,78,7
+19.6,51,51,"Minnesota State University at Mankato","Public",2404,1030,87.8,55,27
+37.4,61.6,596,"University of Minnesota-Twin Cities","Public",43988,1244,86.8,72,13
+18.3,49.3,71,"University of Minnesota at Duluth","Public",5478,1110,89,76,12
+18,44.3,61,"St. Cloud State University","Public",1059,1010,73.5,62,21
+78.9,86.8,38,"St. Olaf College","Private not-for-profit",90575,1291,98.4,76,9
+56.9,69,58,"University of Saint Thomas (Minn.)","Private not-for-profit",29519,1171,94.9,47,15
+31.6,57.9,38,"St. Catherine University","Private not-for-profit",11025,1050,67.2,95,60
+4,32,25,"Winona State University","Public",1665,1070,92.3,62,15
+41.4,62.1,29,"University of Mississippi","Public",25736,1084,92.7,88,25
+33.3,54.5,33,"Mississippi State University","Public",16969,1074,90.6,94,45
+19,33.3,21,"University of Southern Mississippi","Public",4272,972,85.9,81,82
+46.2,74.8,119,"University of Missouri at Columbia","Public",18114,1171,94.3,56,8
+17.1,67.1,82,"University of Missouri at Kansas City","Public",14350,1110,68.5,44,34
+23.8,66.7,21,"Missouri University of Science and Technology","Public",19605,1261,90.8,77,24
+48.1,74.1,27,"Truman State University","Public",3541,1242,96.3,94,7
+65.3,74.7,95,"Saint Louis University","Private not-for-profit",55326,1219,56.6,57,6
+23.3,53.5,43,"Missouri State University","Public",2916,1111,78.3,59,30
+91,96.6,177,"Washington University in St. Louis","Private not-for-profit",426930,1462,88,73,1
+19.2,42.3,26,"Montana State University at Bozeman","Public",7868,1117,83.1,64,32
+68.3,79.3,82,"Creighton University","Private not-for-profit",26164,1198,93.4,73,15
+17.9,43.6,39,"University of Nebraska at Omaha","Public",313,1070,79.1,33,23
+13.3,57.3,75,"University of Nebraska at Lincoln","Public",6650,1152,93.5,84,9
+15.4,43,505,"University of Nevada at Las Vegas","Public",5189,1013,73.3,43,24
+18.9,53.8,143,"University of Nevada at Reno","Public",14265,1055,80.6,32,7
+92.5,97.3,147,"Dartmouth College","Private not-for-profit",509901,1442,98.6,87,10
+30,61.7,60,"University of New Hampshire","Public",13222,1105,96,49,6
+57.7,61.5,26,"Drew University","Private not-for-profit",69471,1118,95.9,63,26
+25,50,24,"Fairleigh Dickinson University","Private not-for-profit",2604,990,41.5,18,23
+39.6,66,53,"Rowan University","Public",11199,1085,86.1,12,27
+11.4,47.7,44,"New Jersey City University","Public",650,836,74.8,7,87
+20,54.7,95,"Kean University","Public",859,920,78,3,56
+28.1,60.3,121,"Montclair State University","Public",2125,1010,85.3,10,37
+20,62.3,130,"New Jersey Institute of Technology","Public",8745,1125,81.6,57,50
+90.1,98,152,"Princeton University","Private not-for-profit",1891913,1482,100,89,3
+55.6,61.1,36,"Ramapo College of New Jersey","Public",1122,1110,90.9,19,14
+43.3,46.7,30,"Rider University","Private not-for-profit",8748,1054,84.9,37,26
+20.4,66.7,54,"Rutgers University at Camden","Public",6197,1070,80.7,27,64
+52.3,81.5,1203,"Rutgers University at New Brunswick","Public",12369,1190,95.2,65,29
+33.8,67.6,219,"Rutgers University at Newark","Public",6481,1065,78.6,56,71
+37.2,60.5,43,"Saint Peter's College","Private not-for-profit",8948,963,88.9,35,80
+47.9,56.3,71,"Seton Hall University","Private not-for-profit",23153,1086,90.8,45,34
+50,85.3,34,"Stevens Institute of Technology","Private not-for-profit",26056,1256,99.7,60,24
+36.4,66.7,33,"Richard Stockton College of New Jersey","Public",1570,1049,89,31,35
+79.1,87.2,86,"College of New Jersey","Public",2682,1250,97.4,21,3
+26,57.3,96,"William Paterson University","Public",518,988,84.5,8,47
+15,48,100,"University of New Mexico","Public",12557,1041,75.4,26,54
+14.3,42.9,21,"New Mexico State University at Las Cruces","Public",5602,982,85.5,63,71
+42.5,60,40,"Adelphi University","Private not-for-profit",14112,1078,87.8,21,31
+84.8,93.5,92,"Barnard College","Private not-for-profit",79937,1344,97.7,58,16
+31.8,36.4,22,"Berkeley College New York City Campus","Private for-profit",NA,NA,87.2,75,25
+61.9,76.2,21,"Canisius College","Private not-for-profit",19255,1096,89.4,36,41
+77.1,85.4,48,"Colgate University","Private not-for-profit",221862,1363,99.4,96,2
+87.7,93.4,227,"Columbia University","Private not-for-profit",279619,1455,87.3,62,15
+63.6,93.9,33,"Cooper Union for the Advancement of Science and Art","Private not-for-profit",526981,1366,99.6,9,14
+88.6,94.8,518,"Cornell University","Private not-for-profit",159687,1394,99.9,94,10
+38.3,66.9,608,"City University of New York Bernard M. Baruch College","Public",6386,1180,76.4,22,70
+17.1,45.7,199,"City University of New York Brooklyn College","Public",4029,1090,70.7,12,82
+29,45.2,31,"City University of New York College of Staten Island","Public",430,1000,74.1,8,66
+11.9,45.2,252,"City College of City University of New York","Public",11095,1030,75.9,12,85
+15,46.4,453,"Hunter College of the City University of New York","Public",3105,1125,70.3,11,55
+27.4,52.4,84,"City University of New York John Jay College of Criminal Justice","Public",255,935,75.6,13,88
+16.7,41.7,48,"Herbert H. Lehman College of City University of New York","Public",693,975,59.4,16,90
+2.1,29.2,48,"New York City College of Technology/City University of New York","Public",961,900,60.5,8,90
+15.8,43.5,285,"City University of New York Queens College","Public",1666,1075,73.3,15,53
+8.1,20.9,86,"City University of New York York College","Public",86,895,62.8,15,86
+81.2,86.3,117,"Fordham University","Private not-for-profit",26160,1253,92.5,45,22
+86.7,90,30,"Hamilton College (N.Y.)","Private not-for-profit",327841,1359,99.1,89,4
+41.3,58.7,75,"Hofstra University","Private not-for-profit",20556,1186,92.1,43,19
+68.8,81.3,48,"Ithaca College","Private not-for-profit",24642,1166,98.3,75,19
+13.7,28.8,73,"Long Island University at Brooklyn","Private not-for-profit",0,895,83.6,39,86
+22.7,27.3,22,"Long Island University-C.W. Post Campus","Private not-for-profit",0,990,50.9,28,7
+58.3,66.7,24,"Manhattan College","Private not-for-profit",14012,1098,97,50,22
+70.8,75,24,"Marist College","Private not-for-profit",21994,1157,87.3,31,8
+61.8,88.2,34,"College of Mount Saint Vincent","Private not-for-profit",3878,920,84.3,27,75
+57.9,77.2,114,"New School","Private not-for-profit",21731,1104,85,7,35
+87.1,91.8,669,"New York University","Private not-for-profit",54017,1340,94.2,36,19
+36.9,49.5,111,"New York Institute of Technology at Old Westbury","Private not-for-profit",4184,1036,81.6,9,52
+44.3,60.3,131,"Pace University New York Campus","Private not-for-profit",9880,1090,83.9,28,43
+43,65,100,"Polytechnic Institute of New York University","Private not-for-profit",27812,1276,95.9,44,77
+36.6,67.6,71,"Pratt Institute","Private not-for-profit",16296,1166,94.5,3,35
+65.2,80.4,112,"Rensselaer Polytechnic Institute","Private not-for-profit",87402,1333,99.6,90,10
+26.5,66.2,136,"Rochester Institute of Technology","Private not-for-profit",41629,1210,91.8,71,43
+77.2,88,92,"University of Rochester","Private not-for-profit",142442,1336,95.2,96,18
+75.9,89.7,29,"Siena College","Private not-for-profit",35819,1130,94.6,61,19
+66.7,75,36,"Skidmore College","Private not-for-profit",106722,1246,98.4,83,10
+26.4,62,516,"St. John's University (N.Y.)","Private not-for-profit",17354,1090,75.1,39,55
+52.9,69.3,140,"State University of New York at Albany","Public",1834,1122,93.7,41,49
+61.1,80.4,409,"Binghamton University","Public",4364,1288,96.6,60,26
+39.4,70.3,259,"University at Buffalo","Public",14986,1159,92.9,47,32
+52.6,71.3,574,"State University of New York at Stony Brook","Public",4348,1212,92.1,45,49
+20.6,38.2,34,"Buffalo State College","Public",1618,974,89.2,28,93
+39.5,66.7,81,"State University of New York College at Geneseo","Public",2099,1296,97.8,62,9
+52.9,64.7,34,"State University of New York College at New Paltz","Public",1441,1134,92.4,24,23
+18.5,48.1,27,"State University of New York College at Oneonta","Public",4471,1094,98,29,38
+30,46.7,30,"State University of New York College at Oswego","Public",988,1115,94.7,40,57
+23.1,38.5,26,"State University of New York College at Purchase","Public",9758,1098,90.9,14,34
+24.1,31,29,"State University of New York College at Old Westbury","Public",40,991,83.7,20,78
+39.1,60.9,23,"State University of New York College at Plattsburgh","Public",1833,1037,94.4,36,44
+13.6,27.3,22,"State University of New York Maritime College","Public",933,1078,91.6,43,21
+64.9,76.8,168,"Syracuse University","Private not-for-profit",35080,1166,95.1,70,31
+74.4,87.2,39,"Union College (N.Y.)","Private not-for-profit",147444,NA,98.8,88,10
+0,20.8,24,"United Talmudical Seminary","Private not-for-profit",NA,NA,100,18,97
+78.2,80.8,78,"United States Military Academy","Public",NA,1243,100,98,NA
+92.9,94.3,70,"Vassar College","Private not-for-profit",285225,1383,98.2,90,11
+67.6,72.1,68,"School of Visual Arts","Private for-profit",NA,1034,93,35,3
+20.5,64.1,39,"Appalachian State University","Public",3395,1151,94.5,61,16
+92.1,95.8,216,"Duke University","Private not-for-profit",318956,1430,99.8,97,4
+33,55.7,88,"East Carolina University","Public",3915,1032,86.5,85,30
+52.4,66.7,21,"High Point University","Private not-for-profit",9940,1080,95.8,57,22
+75.2,89.1,258,"University of North Carolina at Chapel Hill","Public",68455,1302,94.3,89,6
+29.9,60.4,144,"University of North Carolina at Charlotte","Public",5720,1047,85.3,62,50
+27.4,54.8,73,"University of North Carolina at Greensboro","Public",10061,1020,88.1,78,45
+46.1,77,165,"North Carolina State University","Public",16660,1178,87.7,90,9
+31,55.2,29,"University of North Carolina at Wilmington","Public",4264,1157,90.6,64,17
+81.8,89.1,55,"Wake Forest University","Private not-for-profit",134228,NA,98.6,85,3
+28.1,50,32,"University of North Dakota","Public",902,1050,82.9,95,14
+20,48,25,"North Dakota State University","Public",28,1090,90.3,98,11
+33.3,58.7,63,"University of Akron","Public",2021,NA,79.2,17,63
+33.3,50,24,"Baldwin-Wallace College","Private not-for-profit",26612,1088,86.3,38,48
+17.6,55.9,34,"Bowling Green State University","Public",8661,1029,92.4,67,46
+70.8,83.2,113,"Case Western Reserve University","Private not-for-profit",176403,1345,96.6,87,23
+25.8,53.6,97,"University of Cincinnati","Public",31724,1132,83.3,20,26
+8.3,20.8,24,"Cleveland State University","Public",400,970,70.5,25,76
+90.9,90.9,22,"Denison University","Private not-for-profit",253574,1282,99.2,85,8
+26.4,51.4,72,"Kent State University","Public",NA,1044,87.5,35,52
+56.5,73.4,124,"Miami University (Ohio)","Public",19901,1195,98.2,77,1
+73.5,86.8,68,"Oberlin College","Private not-for-profit",236501,1356,97.6,90,6
+51.2,82.4,346,"Ohio State University","Public",31727,1253,91.5,59,13
+39.4,54.5,33,"Ohio University","Public",11275,1093,81.5,75,11
+22.4,44.9,49,"University of Toledo","Public",1875,NA,82.1,55,64
+12.5,57.1,56,"Wright State University","Public",5911,NA,83.2,50,59
+64.3,75,28,"Xavier University (Ohio)","Private not-for-profit",15613,1135,88,49,14
+25,43.8,48,"University of Central Oklahoma","Public",1343,1010,68.8,24,36
+30.4,64.3,56,"Oklahoma State University at Stillwater","Public",10987,1143,86.2,93,34
+37.1,68.6,175,"University of Oklahoma at Norman","Public",30374,1185,86.8,87,20
+53.8,69.2,26,"George Fox University","Private not-for-profit",5453,1117,87.6,41,50
+79.3,89.7,29,"Lewis & Clark College","Private not-for-profit",48858,NA,98.9,67,11
+67.6,73.5,34,"Linfield College","Private not-for-profit",39565,1090,98,61,27
+28.6,62.7,241,"Oregon State University","Public",18080,1081,83.8,85,35
+44.8,72.4,232,"University of Oregon","Public",18484,1110,91.3,61,16
+73.7,84.2,76,"Pacific University","Private not-for-profit",15139,1093,95.8,61,44
+17.2,42.6,122,"Portland State University","Public",2282,1050,65.5,25,61
+68.1,83.3,72,"University of Portland","Private not-for-profit",20798,1190,96.8,59,17
+59.5,78.4,37,"Reed College","Private not-for-profit",282046,1390,97.3,95,13
+20,40,35,"Southern Oregon University","Public",3674,1015,65.3,58,67
+72,84,25,"Willamette University","Private not-for-profit",77226,1259,94.3,66,24
+10.7,25,28,"Western Oregon University","Public",1856,970,85.3,27,62
+68.2,77.3,22,"Allegheny College","Private not-for-profit",65193,1217,98.2,86,28
+88.4,97.7,43,"Bryn Mawr College","Private not-for-profit",339611,1285,99.5,74,17
+87.9,92.4,66,"Bucknell University","Private not-for-profit",121118,1300,99.4,98,3
+67.3,86.7,324,"Carnegie Mellon University","Private not-for-profit",78809,1395,96.7,95,7
+75,89.3,28,"Dickinson College","Private not-for-profit",110446,1283,98.3,82,3
+34.9,74.6,252,"Drexel University","Private not-for-profit",21130,1200,81.5,51,17
+79.2,83.3,24,"Franklin & Marshall College","Private not-for-profit",112427,NA,98,89,2
+88.2,91.2,34,"Haverford College","Private not-for-profit",282592,1396,100,90,8
+25,50,28,"Indiana University of Pennsylvania","Public",2448,985,93,94,60
+34.6,46.2,26,"Kutztown University of Pennsylvania","Public",1408,972,91,94,24
+50,61.8,34,"La Salle University","Private not-for-profit",10527,1007,73.8,33,45
+71.9,85.9,64,"Lehigh University","Private not-for-profit",147704,1304,98.8,91,5
+29.2,45.8,24,"Millersville University of Pennsylvania","Public",2067,1055,90.8,61,23
+42.3,69.2,26,"Pennsylvania State University-Altoona","Public",NA,1006,94.2,37,44
+13.5,51.4,37,"Pennsylvania State University-Berks","Public",NA,1003,88.8,31,29
+33.3,50,36,"Pennsylvania State University-Brandywine","Public",NA,968,85.3,23,38
+41.4,62.1,29,"Pennsylvania State University-Hazleton","Public",NA,932,94.6,47,69
+54.1,81.9,342,"Pennsylvania State University at University Park","Public",28825,1198,96.8,91,5
+24.8,49.6,113,"Pennsylvania State University-Abington","Public",NA,953,81.6,18,66
+87.3,96.3,455,"University of Pennsylvania","Private not-for-profit",223090,1434,87.1,76,4
+44.8,51.7,29,"Philadelphia University","Private not-for-profit",5641,1061,93.4,11,26
+12.5,67.6,176,"University of the Sciences in Philadelphia","Private not-for-profit",38556,1180,98.6,63,31
+58.8,81.7,131,"University of Pittsburgh main campus","Public",69953,1255,93,67,5
+64,68,25,"University of Scranton","Private not-for-profit",18625,1126,94.6,54,15
+53.8,61.5,26,"Shippensburg University of Pennsylvania","Public",2452,992,95.7,79,22
+94.9,98.3,59,"Swarthmore College","Private not-for-profit",812787,1419,99.1,87,7
+36.9,65.5,252,"Temple University","Public",7201,1103,89.2,27,47
+81.8,86.4,110,"Villanova University","Private not-for-profit",33422,1306,92.6,62,3
+37.1,57.1,35,"West Chester University of Pennsylvania","Public",1054,1080,91.1,61,11
+86.5,95.9,193,"Brown University","Private not-for-profit",265453,1415,96.4,89,7
+63,66.7,27,"Bryant University","Private not-for-profit",34515,1142,95.8,71,9
+46.2,56.9,65,"Johnson & Wales University (R.I.)","Private not-for-profit",11682,NA,91.6,56,44
+36.4,69.1,55,"University of Rhode Island","Public",6571,1049,88.3,36,20
+70.9,90.9,55,"Rhode Island School of Design","Private not-for-profit",110761,1238,100,16,9
+37,59.3,27,"College of Charleston","Public",4408,1183,92.8,44,6
+28.8,62.1,66,"Clemson University","Public",7441,1224,93.8,87,3
+48,73.5,98,"University of South Carolina at Columbia","Public",12903,1196,92.7,63,14
+20,40,30,"Austin Peay State University","Public",1741,990,74.4,34,81
+18.2,48.5,66,"University of Memphis","Public",10437,990,73.5,49,80
+11.6,43.5,69,"Middle Tennessee State University","Public",2408,1032,84.3,58,56
+8.3,45.8,24,"Southern Adventist University","Private not-for-profit",8325,1025,85,97,49
+20.6,41.2,34,"University of Tennessee at Chattanooga","Public",8300,1069,89.2,48,54
+28.6,53.8,119,"University of Tennessee at Knoxville","Public",19869,1198,94.4,87,23
+79.2,85.8,106,"Vanderbilt University","Private not-for-profit",261577,1430,99.3,82,7
+88.6,88.6,35,"Austin College","Private not-for-profit",86593,1203,99.5,78,31
+51.4,68.5,216,"Baylor University","Private not-for-profit",58861,1210,98.2,85,24
+20,48,25,"Texas A&M University at Corpus Christi","Public",898,948,79.5,41,69
+26.8,46.4,56,"Houston Baptist University","Private not-for-profit",31974,1078,89.2,48,67
+4.7,12.9,85,"University of Houston-Downtown","Public",2095,NA,47.4,37,78
+18.8,54.3,764,"University of Houston main campus","Public",15526,1079,72.8,93,54
+10.5,34.2,38,"Lamar University","Public",1849,941,72.9,73,63
+16,32,25,"Midwestern State University","Public",2759,1066,75.1,66,52
+17,45.5,88,"University of North Texas","Public",3185,1093,78,68,31
+41.2,67.6,34,"University of Texas-Pan American","Public",NA,920,73.8,98,95
+91.8,98.2,110,"Rice University","Private not-for-profit",617569,1433,98.5,85,9
+29.7,45.9,37,"University of St. Thomas (Tex.)","Private not-for-profit",21530,1137,76.4,48,43
+28.6,57.1,21,"Sam Houston State University","Public",3177,993,83.6,76,44
+73.7,82.9,76,"Southern Methodist University","Private not-for-profit",107966,1243,95.9,68,9
+17.9,46.4,28,"Stephen F. Austin State University","Public",1167,970,84.6,72,74
+17.5,47.5,40,"Texas State University at San Marcos","Public",3590,1063,81.4,69,42
+49.2,79.4,262,"Texas A&M University at College Station","Public",7371,1217,91.7,99,8
+15.9,44.2,276,"University of Texas at Arlington","Public",2801,1064,60.5,65,76
+55.1,84.5,1210,"University of Texas at Austin","Public",56204,1241,92.6,89,19
+48.5,73.8,237,"University of Texas at Dallas","Public",17068,1246,75.3,70,28
+13,39.1,23,"University of Texas at El Paso","Public",9019,902,65.9,60,92
+63.4,75.6,41,"Texas Christian University","Private not-for-profit",123312,1177,96,73,8
+8,23.8,311,"University of Texas at San Antonio","Public",2508,1025,79.9,75,72
+30.7,57,114,"Texas Tech University","Public",15493,1109,90.2,91,20
+28.3,47.8,46,"Texas Woman's University","Public",2503,936,68.5,34,71
+59.1,68.2,44,"Trinity University","Private not-for-profit",324595,1281,98.3,82,4
+36.2,72.3,94,"Brigham Young University","Private not-for-profit",23102,1260,91.6,77,49
+26.3,47.4,57,"Brigham Young University Hawaii","Private not-for-profit",24752,1097,89.3,49,37
+15.6,43.8,32,"Utah State University","Public",13228,1109,84.6,97,64
+23.7,59.9,152,"University of Utah","Public",18337,1114,70,83,21
+88.6,94.3,35,"Middlebury College","Private not-for-profit",230665,1390,98.9,93,2
+52.4,73.8,42,"University of Vermont","Public",22306,1188,89,82,7
+86.7,91.6,83,"College of William and Mary","Public",68129,1347,99.1,80,0
+34.2,52.6,38,"Christopher Newport University","Public",2616,1177,97,67,1
+32.7,64.5,349,"George Mason University","Public",1807,1148,77.8,38,24
+66.7,86.9,153,"James Madison University","Public",2617,1141,95.4,73,1
+25.6,37.2,43,"Liberty University","Private not-for-profit",1230,NA,62.4,13,66
+61.7,70.2,47,"University of Mary Washington","Public",7335,1170,88.1,46,1
+26.3,60.5,38,"Marymount University","Private not-for-profit",6366,985,88.3,31,24
+23.4,55.5,128,"Old Dominion University","Public",7120,1038,76.2,43,34
+34,49.1,53,"Radford University","Public",4051,1006,95.9,66,17
+90.3,93.5,31,"University of Richmond","Private not-for-profit",386919,1287,89.6,65,9
+48.4,80.6,335,"Virginia Tech","Public",15911,1220,98.1,91,2
+32.1,63.1,358,"Virginia Commonwealth University","Public",8325,1090,83.5,27,18
+91,97,335,"University of Virginia","Public",157513,1336,94.5,97,0
+82.6,82.6,23,"Washington and Lee University","Private not-for-profit",456181,1376,99.9,87,1
+10.9,43.5,46,"Central Washington University","Public",1350,994,87.1,65,33
+18.9,52.7,74,"Eastern Washington University","Public",2319,958,88.4,54,54
+48,60,25,"Evergreen State College","Public",1360,1108,90.1,58,75
+62.7,81.4,59,"Gonzaga University","Private not-for-profit",16529,1192,97.8,96,15
+45.7,62.9,35,"Pacific Lutheran University","Private not-for-profit",18768,1131,95,92,33
+69.2,84.6,52,"University of Puget Sound","Private not-for-profit",79595,1244,98.6,84,20
+47.3,69.1,55,"Seattle Pacific University","Private not-for-profit",10477,1147,96.2,56,34
+58.8,76.4,148,"Seattle University","Private not-for-profit",20509,1174,95.3,64,22
+33.7,61.7,196,"Washington State University","Public",28144,1086,86.2,91,29
+48.7,81.3,1422,"University of Washington","Public",42660,1216,87.4,70,11
+35,69.1,220,"Western Washington University","Public",2888,1122,92.4,48,14
+76.3,78.9,38,"Whitman College","Private not-for-profit",229482,1317,98.3,79,4
+35.1,59.5,74,"West Virginia University","Public",10733,1056,93.3,73,21
+60.8,73,74,"Marquette University","Private not-for-profit",29837,1203,95.1,59,11
+21,37.1,62,"University of Wisconsin at Whitewater","Public",1084,1049,93.2,86,25
+17.4,63,46,"University of Wisconsin at Eau Claire","Public",2677,1130,91.4,82,19
+14.7,41.2,34,"University of Wisconsin at Green Bay","Public",42,1030,75.4,92,31
+10.5,50.9,57,"University of Wisconsin at La Crosse","Public",1627,1150,93.5,79,10
+11.9,37.3,59,"University of Wisconsin at Oshkosh","Public",1115,1030,77,57,26
+26.9,46.2,26,"University of Wisconsin-Parkside","Public",905,970,72.6,44,71
+14.6,36.6,41,"University of Wisconsin-Stout","Public",4009,1010,84.4,63,28
+41.3,77.8,329,"University of Wisconsin at Madison","Public",48872,1264,91.6,80,2
+5.2,27.7,191,"University of Wisconsin at Milwaukee","Public",2866,1010,82.9,56,37
+17,35.8,53,"University of Wisconsin at River Falls","Public",1544,1030,92.1,56,29
+14.3,53.6,28,"University of Wisconsin at Stevens Point","Public",1901,1070,93.7,86,42
+82.2,95.7,393,"Stanford University","Private not-for-profit",920646,1451,99.3,72,11
+31.4,65,369,"Purdue University at West Lafayette","Public",39139,1175,93.7,91,8
+16.7,47.2,72,"California State University at San Marcos","Public",1922,966,75.3,22,36
+4.8,11.3,62,"University of Phoenix Online","Private for-profit",NA,NA,100,3,24
+90.9,90.9,22,"Soka University of America","Private not-for-profit",1070024,1170,100,75,24
+4.2,4.2,24,"University of Phoenix-Southern California Campus","Private for-profit",NA,NA,100,7,14
+7.3,48.8,41,"California State University-Monterey Bay","Public",2189,981,92.8,28,66
+4.8,9.5,42,"University of Phoenix-Hawaii","Private for-profit",NA,NA,100,14,10

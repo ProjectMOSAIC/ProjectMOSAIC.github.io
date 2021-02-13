@@ -5,8 +5,8 @@
       "title": "About this site",
       "description": "Some additional details about the website",
       "author": [],
-      "contents": "\n\n\n\n",
-      "last_modified": "2021-01-06T08:28:04-05:00"
+      "contents": "\nWe’ll be filling this in soon.\n\n\n\n",
+      "last_modified": "2021-02-13T10:56:29-06:00"
     },
     {
       "path": "index.html",
@@ -14,7 +14,13 @@
       "description": "An NSF-funded project supporting Mathematics, Statistics, and Computation\n",
       "author": [],
       "contents": "\nPardon our dust\nWe are in the process of migrating to a new hosting site. We hope to have an improved website here soon.\n\n\n\n",
-      "last_modified": "2021-01-06T08:59:42-05:00"
+      "last_modified": "2021-02-13T10:56:29-06:00"
+    },
+    {
+      "path": "README.html",
+      "author": [],
+      "contents": "\nmosaic-web\nWelcome to the Project MOSAIC website\n\n\n",
+      "last_modified": "2021-02-13T10:56:29-06:00"
     }
   ],
   "collections": []
