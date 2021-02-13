@@ -6,7 +6,7 @@
       "description": "Some additional details about the website",
       "author": [],
       "contents": "\nWe’ll be filling this in soon.\n\n\n\n",
-      "last_modified": "2021-02-13T11:02:40-06:00"
+      "last_modified": "2021-02-13T11:21:09-06:00"
     },
     {
       "path": "index.html",
@@ -14,13 +14,21 @@
       "description": "An NSF-funded project supporting Mathematics, Statistics, and Computation\n",
       "author": [],
       "contents": "\nPardon our dust\nWe are in the process of migrating to a new hosting site. We hope to have an improved website here soon.\n\n\n\n",
-      "last_modified": "2021-02-13T11:02:40-06:00"
+      "last_modified": "2021-02-13T11:21:09-06:00"
+    },
+    {
+      "path": "R-packages.html",
+      "title": "MOSAIC R packages",
+      "description": "The various R packages produced by the MOSAIC team.",
+      "author": [],
+      "contents": "\nThis is where we can provide links to the various packages.\n{mosaic}\n{mosaicCore}\n{mosaicData}\n\n{ggformula}\n{mosaicCalc} – Those following the progress of the USAFA modeling-based calculus course should install from GitHub: remotes::install_github(\"ProjectMOSAIC/mosaicCalc@beta\")\n{mosaicModel} – This package is in an indeterminate state while we figure out how to integrate with the many modeling packages introduced as part of the {tidyverse}.\n\n\n\n",
+      "last_modified": "2021-02-13T11:21:10-06:00"
     },
     {
       "path": "README.html",
       "author": [],
       "contents": "\nmosaic-web\nWelcome to the Project MOSAIC website\n\n\n",
-      "last_modified": "2021-02-13T11:02:40-06:00"
+      "last_modified": "2021-02-13T11:21:10-06:00"
     }
   ],
   "collections": []

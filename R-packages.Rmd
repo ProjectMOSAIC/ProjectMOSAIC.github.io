@@ -1,0 +1,14 @@
+---
+title: "MOSAIC R packages"
+description: |
+  The various R packages produced by the MOSAIC team.
+---
+
+This is where we can provide links to the various packages.
+
+* `{mosaic}`
+    - `{mosaicCore}`
+    - `{mosaicData}`
+* `{ggformula}`
+* `{mosaicCalc}` -- Those following the progress of the USAFA modeling-based calculus course should install from GitHub: `remotes::install_github("ProjectMOSAIC/mosaicCalc@beta")`
+* `{mosaicModel}` -- This package is in an indeterminate state while we figure out how to integrate with the many modeling packages introduced as part of the `{tidyverse}`.
