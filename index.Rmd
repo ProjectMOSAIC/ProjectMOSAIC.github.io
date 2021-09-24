@@ -7,16 +7,38 @@ site: distill::distill_website
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
-
-# Learn more about creating websites with Distill at:
-# https://rstudio.github.io/distill/website.html
-
-# Learn more about publishing to GitHub Pages at:
-# https://rstudio.github.io/distill/publish_website.html#github-pages
-
+library(mosaic)
+library(ggformula)
+library(mosaicCalc)
 ```
 
-## Pardon our dust  
+## Project MOSAIC
 
-We are in the process of migrating to a new hosting site.  We hope to have an improved website here soon.
+**Project MOSAIC** is a community of educators working to develop a new way to introduce mathematics, statistics, computation and modeling to students in colleges and universities.
+
+From 2009 to 2016, Project MOSAIC was supported by a grant from the US National Science Foundation (NSF DUE-0920350).  The core resource developed during that time continue to be maintained and expanded.
+
+Among those resources are:
+
+- The `{mosaic}` package for R which supports teaching stats using a expressive, compact, and consistent formula syntax. This minimizes start up costs for students and enables students to calculate descriptive statistics, create statistical graphics, and construct statistical graphics. `{mosaic}` is one of three main syntaxes for teaching and doing statistics using R. (For a comparison, see Prof. Amelia McNamara's [video presentation](https://www.youtube.com/watch?v=aq5SrjXZDy4).) 
+
+    Hundreds of instructors have found `{mosaic}` in teaching introductory statistics.  Examples:
+```{r echo=TRUE}
+Stats <- df_stats(births ~ wday, data = Births2015, 
+                  center=mean, conf=ci.mean(0.95))
+Stats
+gf_jitter(births ~ wday, data = Births2015) %>%
+  gf_errorbar(conf_lower + conf_upper ~ wday, data = Stats, 
+              color = ~ wday, inherit=FALSE)
+```
+
+- The `{ggformula}` package, which enables ggplot2 graphics to be generated using the formula syntax.
+
+- The **LittleApps** developed with the [MAA StatPREP](www.statprep.org) project. These are data- and graphics-centric tools for teaching introductory statistics without coding. See [the LittleApps site](http://www.statprep.org/LittleAppSite/) for more information.
+
+- A complete [***MOSAIC Calculus***](http://www.mosaic-web.org/MOSAIC-Calculus/) course including an online, freely accessible textbook, exercises, and symbolic software in R, all following the Project MOSAIC philosophy of building courses around *modeling*, using *data*, and integrating *computing* directly into the subject matter. 
+
+- Online, freely accessible texts for teaching statistics that are coordinated with the `{mosaic}` R package.
+    - [*Statistical Modeling: A Fresh Approach*](https://dtkaplan.github.io/SM2-bookdown/) by Daniel Kaplan
+    
 

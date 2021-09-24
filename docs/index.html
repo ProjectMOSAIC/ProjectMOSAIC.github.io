@@ -2085,9 +2085,47 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
 <div class="d-article">
-<h2 id="pardon-our-dust">Pardon our dust</h2>
-<p>We are in the process of migrating to a new hosting site. We hope to have an improved website here soon.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<h2 id="project-mosaic">Project MOSAIC</h2>
+<p><strong>Project MOSAIC</strong> is a community of educators working to develop a new way to introduce mathematics, statistics, computation and modeling to students in colleges and universities.</p>
+<p>From 2009 to 2016, Project MOSAIC was supported by a grant from the US National Science Foundation (NSF DUE-0920350). The core resource developed during that time continue to be maintained and expanded.</p>
+<p>Among those resources are:</p>
+<ul>
+<li><p>The <code>{mosaic}</code> package for R which supports teaching stats using a expressive, compact, and consistent formula syntax. This minimizes start up costs for students and enables students to calculate descriptive statistics, create statistical graphics, and construct statistical graphics. <code>{mosaic}</code> is one of three main syntaxes for teaching and doing statistics using R. (For a comparison, see Prof. Amelia McNamara’s <a href="https://www.youtube.com/watch?v=aq5SrjXZDy4">video presentation</a>.)</p>
+<p>Hundreds of instructors have found <code>{mosaic}</code> in teaching introductory statistics. Examples:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>Stats</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/mosaicCore/man/df_stats.html'>df_stats</a></span><span class='op'>(</span><span class='va'>births</span> <span class='op'>~</span> <span class='va'>wday</span>, data <span class='op'>=</span> <span class='va'>Births2015</span>, 
+                center<span class='op'>=</span><span class='va'>mean</span>, conf<span class='op'>=</span><span class='fu'>ci.mean</span><span class='op'>(</span><span class='fl'>0.95</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>Stats</span>
+</code></pre>
+</div></li>
+</ul>
+<pre><code>  response wday    center conf_lower conf_upper
+1   births  Sun  7397.808   7319.233   7476.383
+2   births  Mon 11739.385  11490.746  11988.023
+3   births  Tue 12585.808  12461.750  12709.866
+4   births  Wed 12279.096  12140.249  12417.944
+5   births  Thu 12083.434  11775.866  12391.001
+6   births  Fri 11834.558  11550.568  12118.547
+7   births  Sat  8357.096   8250.949   8463.243</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/pkg/ggformula/man/gf_jitter.html'>gf_jitter</a></span><span class='op'>(</span><span class='va'>births</span> <span class='op'>~</span> <span class='va'>wday</span>, data <span class='op'>=</span> <span class='va'>Births2015</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggformula/man/gf_errorbar.html'>gf_errorbar</a></span><span class='op'>(</span><span class='va'>conf_lower</span> <span class='op'>+</span> <span class='va'>conf_upper</span> <span class='op'>~</span> <span class='va'>wday</span>, data <span class='op'>=</span> <span class='va'>Stats</span>, 
+              color <span class='op'>=</span> <span class='op'>~</span> <span class='va'>wday</span>, inherit<span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="index_files/figure-html5/unnamed-chunk-1-1.png" width="624" /></p>
+</div>
+<ul>
+<li><p>The <code>{ggformula}</code> package, which enables ggplot2 graphics to be generated using the formula syntax.</p></li>
+<li><p>The <strong>LittleApps</strong> developed with the <a href="www.statprep.org">MAA StatPREP</a> project. These are data- and graphics-centric tools for teaching introductory statistics without coding. See <a href="http://www.statprep.org/LittleAppSite/">the LittleApps site</a> for more information.</p></li>
+<li><p>A complete <a href="http://www.mosaic-web.org/MOSAIC-Calculus/"><strong><em>MOSAIC Calculus</em></strong></a> course including an online, freely accessible textbook, exercises, and symbolic software in R, all following the Project MOSAIC philosophy of building courses around <em>modeling</em>, using <em>data</em>, and integrating <em>computing</em> directly into the subject matter.</p></li>
+<li><p>Online, freely accessible texts for teaching statistics that are coordinated with the <code>{mosaic}</code> R package.</p>
+<ul>
+<li><a href="https://dtkaplan.github.io/SM2-bookdown/"><em>Statistical Modeling: A Fresh Approach</em></a> by Daniel Kaplan</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
