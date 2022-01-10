@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Statistical Modeling: Computational Technique</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="Up-to-date computational technique for Statistical Modeling: A Fresh Approach">
+  <meta name="generator" content="bookdown 0.1.6 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Statistical Modeling: Computational Technique" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Up-to-date computational technique for Statistical Modeling: A Fresh Approach" />
+  <meta name="github-repo" content="rstudio/SM3" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Statistical Modeling: Computational Technique" />
+  
+  <meta name="twitter:description" content="Up-to-date computational technique for Statistical Modeling: A Fresh Approach" />
+  
+
+<meta name="author" content="Daniel Kaplan and Frank Shaw">
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="index.html">
+<link rel="next" href="data-in-r.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Fresh Approach: Computational Technique</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface: Updating Computational Technique</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#the-story-in-more-detail"><i class="fa fa-check"></i>The story in more detail</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#the-story-continues"><i class="fa fa-check"></i>The story continues …</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#the-choice-of-software"><i class="fa fa-check"></i><b>1.1</b> The Choice of Software</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#the-r-command-console"><i class="fa fa-check"></i><b>1.2</b> The R Command Console</a></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#invoking-an-operation"><i class="fa fa-check"></i><b>1.3</b> Invoking an Operation</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="introduction.html"><a href="introduction.html#naming-and-storing-values"><i class="fa fa-check"></i><b>1.3.1</b> Naming and Storing Values</a></li>
+<li class="chapter" data-level="1.3.2" data-path="introduction.html"><a href="introduction.html#assignment-vs-algebra"><i class="fa fa-check"></i><b>1.3.2</b> Assignment vs Algebra</a></li>
+<li class="chapter" data-level="1.3.3" data-path="introduction.html"><a href="introduction.html#connecting-computations"><i class="fa fa-check"></i><b>1.3.3</b> Connecting Computations</a></li>
+<li class="chapter" data-level="1.3.4" data-path="introduction.html"><a href="introduction.html#numbers-and-arithmetic"><i class="fa fa-check"></i><b>1.3.4</b> Numbers and Arithmetic</a></li>
+<li class="chapter" data-level="1.3.5" data-path="introduction.html"><a href="introduction.html#aside:complex-numbers"><i class="fa fa-check"></i><b>1.3.5</b> Aside: Complex numbers</a></li>
+<li class="chapter" data-level="1.3.6" data-path="introduction.html"><a href="introduction.html#types-of-objects"><i class="fa fa-check"></i><b>1.3.6</b> Types of Objects</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="data-in-r.html"><a href="data-in-r.html"><i class="fa fa-check"></i><b>2</b> Data in R</a><ul>
+<li class="chapter" data-level="2.1" data-path="data-in-r.html"><a href="data-in-r.html#preliminaries"><i class="fa fa-check"></i><b>2.1</b> Preliminaries</a></li>
+<li class="chapter" data-level="2.2" data-path="data-in-r.html"><a href="data-in-r.html#reading-tabular-data-into-r"><i class="fa fa-check"></i><b>2.2</b> Reading Tabular Data into R</a></li>
+<li class="chapter" data-level="2.3" data-path="data-in-r.html"><a href="data-in-r.html#data-frames"><i class="fa fa-check"></i><b>2.3</b> Data Frames</a></li>
+<li class="chapter" data-level="2.4" data-path="data-in-r.html"><a href="data-in-r.html#variables-in-data-frames"><i class="fa fa-check"></i><b>2.4</b> Variables in Data Frames</a></li>
+<li class="chapter" data-level="2.5" data-path="data-in-r.html"><a href="data-in-r.html#adding-a-new-variable"><i class="fa fa-check"></i><b>2.5</b> Adding a New Variable</a></li>
+<li class="chapter" data-level="2.6" data-path="data-in-r.html"><a href="data-in-r.html#sampling-from-a-sample-frame"><i class="fa fa-check"></i><b>2.6</b> Sampling from a Sample Frame</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="describing-variation.html"><a href="describing-variation.html"><i class="fa fa-check"></i><b>3</b> Describing Variation</a><ul>
+<li class="chapter" data-level="3.1" data-path="describing-variation.html"><a href="describing-variation.html#simple-statistical-calculations"><i class="fa fa-check"></i><b>3.1</b> Simple Statistical Calculations</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="describing-variation.html"><a href="describing-variation.html#aside-the-base-versions"><i class="fa fa-check"></i><b>3.1.1</b> Aside: The “base” versions</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="describing-variation.html"><a href="describing-variation.html#simple-statistical-graphics"><i class="fa fa-check"></i><b>3.2</b> Simple Statistical Graphics</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="describing-variation.html"><a href="describing-variation.html#histograms-and-distributions"><i class="fa fa-check"></i><b>3.2.1</b> Histograms and Distributions</a></li>
+<li class="chapter" data-level="3.2.2" data-path="describing-variation.html"><a href="describing-variation.html#density-plots"><i class="fa fa-check"></i><b>3.2.2</b> Density Plots</a></li>
+<li class="chapter" data-level="3.2.3" data-path="describing-variation.html"><a href="describing-variation.html#box-and-whisker-plots"><i class="fa fa-check"></i><b>3.2.3</b> Box-and-Whisker Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="describing-variation.html"><a href="describing-variation.html#displays-of-categorical-variables"><i class="fa fa-check"></i><b>3.3</b> Displays of Categorical Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="groupwise-models.html"><a href="groupwise-models.html"><i class="fa fa-check"></i><b>4</b> Groupwise models</a><ul>
+<li class="chapter" data-level="4.1" data-path="groupwise-models.html"><a href="groupwise-models.html#model-values-and-residuals"><i class="fa fa-check"></i><b>4.1</b> Model Values and Residuals</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="confidence-intervals.html"><a href="confidence-intervals.html"><i class="fa fa-check"></i><b>5</b> Confidence intervals</a><ul>
+<li class="chapter" data-level="5.1" data-path="confidence-intervals.html"><a href="confidence-intervals.html#finding-a-sampling-distribution-through-bootstrapping"><i class="fa fa-check"></i><b>5.1</b> Finding a Sampling Distribution through Bootstrapping</a></li>
+<li class="chapter" data-level="5.2" data-path="confidence-intervals.html"><a href="confidence-intervals.html#computing-grade-point-averages"><i class="fa fa-check"></i><b>5.2</b> Computing Grade-Point Averages</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="language-of-models.html"><a href="language-of-models.html"><i class="fa fa-check"></i><b>6</b> Language of models</a><ul>
+<li class="chapter" data-level="6.1" data-path="language-of-models.html"><a href="language-of-models.html#bi-variate-plots"><i class="fa fa-check"></i><b>6.1</b> Bi-variate Plots</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="language-of-models.html"><a href="language-of-models.html#quantitative-explanatory-variable"><i class="fa fa-check"></i><b>6.1.1</b> Quantitative Explanatory Variable</a></li>
+<li class="chapter" data-level="6.1.2" data-path="language-of-models.html"><a href="language-of-models.html#categorical-explanatory-variable"><i class="fa fa-check"></i><b>6.1.2</b> Categorical Explanatory Variable</a></li>
+<li class="chapter" data-level="6.1.3" data-path="language-of-models.html"><a href="language-of-models.html#multiple-explanatory-variables"><i class="fa fa-check"></i><b>6.1.3</b> Multiple Explanatory Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="language-of-models.html"><a href="language-of-models.html#fitting-models-and-finding-model-values"><i class="fa fa-check"></i><b>6.2</b> Fitting Models and Finding Model Values</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="language-of-models.html"><a href="language-of-models.html#interactions-and-main-effects"><i class="fa fa-check"></i><b>6.2.1</b> Interactions and Main Effects</a></li>
+<li class="chapter" data-level="6.2.2" data-path="language-of-models.html"><a href="language-of-models.html#transformation-terms"><i class="fa fa-check"></i><b>6.2.2</b> Transformation Terms</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="model-formulas-and-coefficients.html"><a href="model-formulas-and-coefficients.html"><i class="fa fa-check"></i><b>7</b> Model formulas and coefficients</a><ul>
+<li class="chapter" data-level="7.1" data-path="model-formulas-and-coefficients.html"><a href="model-formulas-and-coefficients.html#examining-model-coefficients"><i class="fa fa-check"></i><b>7.1</b> Examining model coefficients</a></li>
+<li class="chapter" data-level="7.2" data-path="model-formulas-and-coefficients.html"><a href="model-formulas-and-coefficients.html#other-useful-operators"><i class="fa fa-check"></i><b>7.2</b> Other Useful Operators</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="fitting-models-to-data.html"><a href="fitting-models-to-data.html"><i class="fa fa-check"></i><b>8</b> Fitting models to data</a><ul>
+<li class="chapter" data-level="8.1" data-path="fitting-models-to-data.html"><a href="fitting-models-to-data.html#sums-of-squares"><i class="fa fa-check"></i><b>8.1</b> Sums of Squares</a></li>
+<li class="chapter" data-level="8.2" data-path="fitting-models-to-data.html"><a href="fitting-models-to-data.html#redundancy"><i class="fa fa-check"></i><b>8.2</b> Redundancy</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="correlation-and-partitioning-of-variation.html"><a href="correlation-and-partitioning-of-variation.html"><i class="fa fa-check"></i><b>9</b> Correlation and partitioning of variation</a></li>
+<li class="chapter" data-level="10" data-path="total-and-partial-relationships.html"><a href="total-and-partial-relationships.html"><i class="fa fa-check"></i><b>10</b> Total and partial relationships</a><ul>
+<li class="chapter" data-level="10.1" data-path="total-and-partial-relationships.html"><a href="total-and-partial-relationships.html#adjustment"><i class="fa fa-check"></i><b>10.1</b> Adjustment</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="modeling-randomness.html"><a href="modeling-randomness.html"><i class="fa fa-check"></i><b>11</b> Modeling randomness</a><ul>
+<li class="chapter" data-level="11.1" data-path="modeling-randomness.html"><a href="modeling-randomness.html#random-draws-from-probability-models"><i class="fa fa-check"></i><b>11.1</b> Random Draws from Probability Models</a></li>
+<li class="chapter" data-level="11.2" data-path="modeling-randomness.html"><a href="modeling-randomness.html#standard-probability-models"><i class="fa fa-check"></i><b>11.2</b> Standard Probability Models</a></li>
+<li class="chapter" data-level="11.3" data-path="modeling-randomness.html"><a href="modeling-randomness.html#quantiles-and-coverage-intervals"><i class="fa fa-check"></i><b>11.3</b> Quantiles and Coverage Intervals</a></li>
+<li class="chapter" data-level="11.4" data-path="modeling-randomness.html"><a href="modeling-randomness.html#percentiles"><i class="fa fa-check"></i><b>11.4</b> Percentiles</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="confidence-in-models.html"><a href="confidence-in-models.html"><i class="fa fa-check"></i><b>12</b> Confidence in models</a><ul>
+<li class="chapter" data-level="12.1" data-path="confidence-in-models.html"><a href="confidence-in-models.html#confidence-intervals-from-standard-errors"><i class="fa fa-check"></i><b>12.1</b> Confidence Intervals from Standard Errors</a></li>
+<li class="chapter" data-level="12.2" data-path="confidence-in-models.html"><a href="confidence-in-models.html#bootstrapping-confidence-intervals"><i class="fa fa-check"></i><b>12.2</b> Bootstrapping Confidence Intervals</a></li>
+<li class="chapter" data-level="12.3" data-path="confidence-in-models.html"><a href="confidence-in-models.html#prediction-confidence-intervals"><i class="fa fa-check"></i><b>12.3</b> Prediction Confidence Intervals</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="the-logic-of-hypothesis-testing.html"><a href="the-logic-of-hypothesis-testing.html"><i class="fa fa-check"></i><b>13</b> The logic of hypothesis testing</a></li>
+<li class="chapter" data-level="14" data-path="testing-whole-models.html"><a href="testing-whole-models.html"><i class="fa fa-check"></i><b>14</b> Testing whole models</a><ul>
+<li class="chapter" data-level="14.1" data-path="testing-whole-models.html"><a href="testing-whole-models.html#the-permutation-test"><i class="fa fa-check"></i><b>14.1</b> The Permutation Test</a></li>
+<li class="chapter" data-level="14.2" data-path="testing-whole-models.html"><a href="testing-whole-models.html#first-principle-tests"><i class="fa fa-check"></i><b>14.2</b> First-Principle Tests</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="testing-parts-of-models.html"><a href="testing-parts-of-models.html"><i class="fa fa-check"></i><b>15</b> Testing parts of models</a><ul>
+<li class="chapter" data-level="15.1" data-path="testing-parts-of-models.html"><a href="testing-parts-of-models.html#anova-reports"><i class="fa fa-check"></i><b>15.1</b> ANOVA reports</a></li>
+<li class="chapter" data-level="15.2" data-path="testing-parts-of-models.html"><a href="testing-parts-of-models.html#non-parametric-statistics"><i class="fa fa-check"></i><b>15.2</b> Non-Parametric Statistics</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="models-of-yesno-variables.html"><a href="models-of-yesno-variables.html"><i class="fa fa-check"></i><b>16</b> Models of Yes/No Variables</a><ul>
+<li class="chapter" data-level="16.1" data-path="models-of-yesno-variables.html"><a href="models-of-yesno-variables.html#fitting-logistic-models"><i class="fa fa-check"></i><b>16.1</b> Fitting Logistic Models</a></li>
+<li class="chapter" data-level="16.2" data-path="models-of-yesno-variables.html"><a href="models-of-yesno-variables.html#fitted-model-values"><i class="fa fa-check"></i><b>16.2</b> Fitted Model Values</a></li>
+<li class="chapter" data-level="16.3" data-path="models-of-yesno-variables.html"><a href="models-of-yesno-variables.html#which-level-is-yes"><i class="fa fa-check"></i><b>16.3</b> Which Level is “Yes”?</a></li>
+<li class="chapter" data-level="16.4" data-path="models-of-yesno-variables.html"><a href="models-of-yesno-variables.html#analysis-of-deviance"><i class="fa fa-check"></i><b>16.4</b> Analysis of Deviance</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="causation.html"><a href="causation.html"><i class="fa fa-check"></i><b>17</b> Causation</a></li>
+<li class="chapter" data-level="18" data-path="experiment.html"><a href="experiment.html"><i class="fa fa-check"></i><b>18</b> Experiment</a></li>
+<li class="divider"></li>
+<li><a href="http://project-mosaic-books.com/?page_id=13" target="blank">Statistical Modeling: A Fresh Approach</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistical Modeling: Computational Technique</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="introduction" class="section level1">
+<h1><span class="header-section-number">Chapter 1</span> Introduction</h1>
+<p>Modern statistics is done on the computer. There was a time, 60 years ago and before, when computation could only be done by hand or using balky mechanical calculators. The methods of applied statistics developed during this time reflected what could be done using such calculators, not necessarily what was best for illuminating the system under study. These methods took on a life of their own — they became the operational definition of statistics. They continue to be taught today, using electronic calculators or personal computers or even just using paper and pencil. For the old statistical methods, computers are merely a labor saving device.</p>
+<p>But not for modern statistics. The statistical methods at the core of this book cannot be applied in a authentic and realistic way without powerful computers. Thirty years ago, many of the methods could not be done at all unless you had access to the resources of a government agency or a large university. But with the revolutionary advances in computer hardware and numerical algorithms over the last half-century, modern statistical calculations can be performed on an ordinary home computer or laptop. (Even a cell phone has phenomenal computational power, often besting the mainframes of thirty years ago.) Hardware and software today pose no limitation; they are readily available.</p>
+<p>Each chapter of this book includes a section on computational technique. Many readers will be completely new to the use of computers for scientific and statistial work, so the first chapters cover the foundations, techniques that are useful for many different aspects of computation. Working through the early chapters is essential for developing the skills that will be used later in actual statistical work. It will take a few hours, but this investment will pay off handsomely.</p>
+<p>Chances are, you use a computer almost every day: for email, word-processing, managing your music or your photograph collection, perhaps even using a spreadsheet program for accounting. The software you use for such activities makes it easy to get started. Possibly you have never even looked at an instruction manual or used the “help” features on your computer.</p>
+<p>When you use a word processor or email, the bulk of what you enter into the computer — the content of your documents and email — is without meaning to the computer. This is not at all to say that it is meaningless. Your documents and letters are intended for human readers; most of the work you do is directed so that the recipients can understand them. But the computer doesn’t need to understand what you write in order to format it, print it, or transmit it over the Internet.</p>
+<p>When doing scientific and statistical computing, things are different. What you enter into the computer is instructions to the computer to perform calculations and re-arrangements of data. Those instructions have to be comprehensible to the computer. If they make no sense or if they are inconsistent or ill formed, the computer won’t be able to carry out your instructions. Worse, if the instructions make sense in some formal way but don’t convey your actual intentions, the computer will perform some operation but the result will mislead you.</p>
+<p>The difficulty with using software for mathematics and statistics is in making sure that your instructions make sense and do what you want them to do. This difficulty is not a matter of bad software design; it’s intrinsic to the problem of communicating your intentions to the computer. The same difficulty would arise in word processing if the computer had to make sense of your writing, rejecting it when a claim is unconvincing or when a sentence is ambiguous. Statistical computing pioneer John Chambers refers to the “Prime Directive” of software <span class="citation">(<span class="citeproc-not-found" data-reference-id="chambers-2008"><strong>???</strong></span>)</span>: “to program in such a way that computations can be understood and trusted.”</p>
+<p>Much of the design of software for scientific and statistical work is oriented around the difficulty of communicating intentions. A popular approach is based on the computer mouse: the program provides a list of possible operations — like the keys on a calculator — and lets the user choose which operation to apply to some selected data. This style of user interface is employed, for example, in spreadsheet software, letting users add up columns of numbers, make graphs, etc. The reason this style is popular is that it can make things extremely easy … so long as the operation that you want has been included in the software. But things get very hard if you need to construct your own operation and it can be difficult to understand or trust the operations performed by others.</p>
+<p>Another style of scientific computation — the one used in this book — is based on language. Rather than selecting an option with a mouse, you construct a <strong><em>command</em></strong> that conveys both the operation that you want and the data to which you want to apply that operation. There are dramatic advantages to this language-based style of computation:</p>
+<!-- begin itemize -->
+<ol>
+<li>It lets you connect computations to one another, so that the output of one operation can become the input to another.</li>
+<li>It lets you <strong>repeat</strong> the operation on new or modified data, allowing you to automate tedious tasks and, importantly, to verify the correctness of your computations on data where you already know the answer.</li>
+<li>It lets you <strong>accumulate</strong> the results of previous operations, treating those results as new data.</li>
+<li>It lets you <strong>document</strong> concisely what was done so that you can demonstrate that what you said you did is what you actually did. In this way, you or others can repeat the analysis later if necessary to confirm your results.</li>
+<li>It lets you <strong>modify</strong> the computation in a controlled way to correct it or to vary some aspect of it while holding other aspects exactly the same as in the original. <!-- end itemize --></li>
+</ol>
+<p>In order to use the language-based approach, you will need to learn a few principles of the language itself: some vocabulary, some syntax, some grammar. This is much, much easier for the computer language than for a natural language like English or Chinese; it will take you only a couple of hours before you are fluent enough to do useful computations. In addition to letting you perform scientific computations in ways that use the computer and your own time and effort effectively, the principles that you will learn are broadly applicable to many computer systems and can provide significant insight even to how to use mouse-based interfaces.</p>
+<div id="the-choice-of-software" class="section level2">
+<h2><span class="header-section-number">1.1</span> The Choice of Software</h2>
+<p>The software package used in this book is called R. The R package provides an environment for doing statistical and scientific computation at a professional level. It was designed for statistics work, but suitable for other forms of scientific calculations and the creation of high-quality scientific graphics.</p>
+<p>There are several other major software packages widely used in statistics. Among the leaders are SPSS, SAS, and Stata. Each of them provides the computational power needed for statistical modeling. Each has its own advantages and its own devoted group of users.   </p>
+<p>One reason for the choice of R is that it offers a command-based computing environment. That makes it much easier to write about computing and also reveals better the structure of the computing process. <span class="citation">(<span class="citeproc-not-found" data-reference-id="kaplan-tise-2007"><strong>???</strong></span>)</span> R is available for free and works on the major types of computers, e.g., Windows, Macintosh, and Unix/Linux. The RStudio software lets you work with a complete R system using an ordinary web browser or on your own computer.</p>
+<p>In making your own choice, the most important thing is this: <em>choose something</em>! Readers who are familiar with SPSS, SAS, or STATA can use the information in each chapter’s computational technique section to help them identify the facilities to look for in those packages.</p>
+<p>Another form of software that’s often used with data is the spreadsheet. Examples are Excel and Google Spreadsheets. Spreadsheets are effective for entering data and have nice facilities for formatting tables. The visual layout of the data seems to be intuitive to many people. Many businesses use spreadsheets and they are widely taught in high schools. Unfortunately, they are very difficult to use for statistical analyses of any sophistication. Indeed, even some very elementary statistical tasks such as making a histogram are difficult with spreadsheets and the results are usually unsatisfactory from a graphical point of view. Worse, spreadsheets can be very hard to use reliably. There are lots of opportunities to make mistakes that will go undetected. As a result, despite the popularity of spreadsheets, I encourage you to reserve them for data entry and consider other software for the analysis of your data.</p>
+</div>
+<div id="the-r-command-console" class="section level2">
+<h2><span class="header-section-number">1.2</span> The R Command Console</h2>
+<p>Depending on your circumstances, you may prefer to install R as software on your own computer, or use a web-based (“cloud computing”) service such as RStudio that runs through a web browser.<br />
+If you are using this book with a course, your instructor may have set up a system for you. If you are on your own, follow the set-up instructions available on-line at <www.r-project.org>.</p>
+<p>Depending on whether you run R on your own computer or in the cloud, you will start R either by clicking on an icon in the familiar way or by logging in to the web service. In either case, you will see a <strong><em>console panel</em></strong> in which you will be typing your commands to R. It will look something like Figure <a href="#console-picture"><strong>??</strong></a>.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></p>
+<div class="figure"><span id="fig:console-picture"></span>
+<img src="Images/console-picture-2011.png" alt="The R command console." width="260" />
+<p class="caption">
+Figure 1.1: The R command console.
+</p>
+</div>
+<p>The R console gives you great power to carry out statistical and other mathematical and scientific operations. To use this power, you need to learn a little bit about the syntax and meaning of R commands. Once you have learned this, operations become simple to perform.</p>
+</div>
+<div id="invoking-an-operation" class="section level2">
+<h2><span class="header-section-number">1.3</span> Invoking an Operation</h2>
+<p>People often think of computers as <em>doing</em> things: sending email, playing music, storing files. Your job in using a computer is to tell the computer <em>what</em> to do. There are many different words used to refer to the “what”: a procedure, a task, a function, a routine, and so on. I’ll use the word <strong><em>computation</em></strong>. Admittedly, this is a bit circular, but it is easy to remember: computers perform computations.</p>
+<p>Complex computations are built up from simpler computations. This may seem obvious, but it is a powerful idea. An <strong><em>algorithm</em></strong> is just a description of a computation in terms of other computations that you already know how to perform. To help distinguish between the computation as a whole and the simpler parts, it is helpful to introduce a new word: an <strong><em>operator</em></strong> <span class="citation">(<span class="citeproc-not-found" data-reference-id="R"><strong>???</strong></span> software!operator)</span> performs a computation.</p>
+<p>It’s helpful to think of the computation carried out by an operator as involving four parts: <!-- begin enumerate --></p>
+<ol>
+<li>The name of the operator</li>
+<li>The input arguments</li>
+<li>The output value</li>
+<li>Side effects <!-- end enumerate --> A typical operation takes one or more <strong>input arguments</strong> and uses the information in these to produce an <strong>output value</strong>. Along the way, the computer might take some action: display a graph, store a file, make a sound, etc. These actions are called <strong><em>side effects</em></strong>.</li>
+</ol>
+<p>To tell the computer to perform a computation — call this <strong>invoking an operation</strong> or giving a <strong>command</strong> — you need to provide the name and the input arguments in a specific format. The computer then returns the output value. For example, the command <code>sqrt(25)</code> invokes the square root operator (named <code>sqrt</code>) on the argument 25. The output from the computation will, of course, be 5.</p>
+<p>The syntax for invoking an operation consists of the operator’s name, followed by round parentheses. The input arguments go inside the parentheses.</p>
+<p>The software program that you use to invoke operators is called an <strong><em>interpreter</em></strong>. (The interpreter is the program you are running when you start R.) You enter your commands as a dialog between you and the interpreter. To start, the interpreter prints a prompt, after which you type your command:</p>
+<div class="figure">
+<img src="Images/tikz-1-1.png" />
+
+</div>
+<!-- 
+NOTE: There is a bit of tikz in the original. Probably best to pull these from the original PDF file, as I've done above.]
+```tikz{r engine = "tikz"}
+\begin{tikzpicture}
+\node (prompt) at (0,0) [fill=red!20] {\verb+>+};
+\node (promptlabel) at (-3,0) {\small\sc Prompt};
+\draw [->] (promptlabel.east) -- (prompt.west);
+\node (statement) at (1.5,0) [rectangle,fill=black!20] {\verb+sqrt(25)+};
+\node (commandlabel) at (4,0) {\small\sc Command};
+\draw [->] (commandlabel.west) -- (statement.east);
+\end{tikzpicture}
+```
+-->
+<p>When you press “Enter,” the interpreter reads your command and performs the computation. For commands such as this one, the interpreter will print the output value from the computation:</p>
+<div class="figure">
+<img src="Images/tikz-1-2.png" />
+
+</div>
+<!--
+```tikz
+\begin{tikzpicture}
+\node (prompt) at (0,0) [fill=red!20] {\verb+>+};
+\node (statement) at (1.5,0) [rectangle,fill=black!20] {\verb+sqrt(25)+};
+\node (output)  at (1,-.75)  {\verb+[1]   5+};
+\node (outputlabel) at (4,-.75) {\small\sc Output Value};
+\node (outputmarker) at (-2.25, -.75) {\small \sc Output Marker};
+\draw [->] (outputmarker.east) -- (output.west);
+\draw [->] (outputlabel.west) -- (output.east);
+\node (prompt2) at (0, -1.5) [ellipse,fill=red!20] {\verb+>+};
+\node (nextlabel) at (-2.5,-1.5) {\small\sc Next Prompt};
+\draw [->] (nextlabel.east) -- (prompt2.west);
+\end{tikzpicture}
+```
+-->
+<p>The dialog continues as the interpreter prints another prompt and waits for your further command.</p>
+<p>To save space, I’ll usually show just the give-and-take from one round of the dialog:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sqrt</span>(<span class="dv">25</span>)</code></pre></div>
+<pre><code>## [1] 5</code></pre>
+<p>(Go ahead! Type <code>sqrt(25)</code> after the prompt in the R interpreter, press ``enter,’’ and see what happens.)</p>
+<p>Often, operations involve more than one argument. The various arguments are separated by commas. For example, here is an operation named <code>seq</code></p>
+<p>that produces a sequence of numbers: <!--  to color text: TEX COMMAND NOT FOUND textcolor red the text to be colored --></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">seq</span>(<span class="dv">3</span>,<span class="dv">10</span>)</code></pre></div>
+<pre><code>## [1]  3  4  5  6  7  8  9 10</code></pre>
+<p>The first argument tells where to start the sequence, the second tells where to end it.</p>
+<p>The order of the arguments is important. Here is the sequence produced when 10 is the first argument and 3 the second:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">seq</span>(<span class="dv">10</span>,<span class="dv">3</span>)</code></pre></div>
+<pre><code>## [1] 10  9  8  7  6  5  4  3</code></pre>
+<p>For some operators, particularly those that have many input arguments, some of the arguments can be referred to by name rather than position. This is particularly useful when the named argument has a sensible default value. For example, the <code>seq</code> operator can be instructed how big a jump to take between successive items in the sequence. This is accomplished using an argument named <code>by</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">seq</span>(<span class="dv">3</span>,<span class="dv">10</span>,<span class="dt">by=</span><span class="dv">2</span>)</code></pre></div>
+<pre><code>## [1] 3 5 7 9</code></pre>
+<p>Depending on the circumstances, all four parts of a operation need not be present. For example, the <code>date</code></p>
+<p>operation returns the current time and date; no input arguments are needed.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">date</span>()</code></pre></div>
+<pre><code>## [1] &quot;Sat Sep  3 12:12:16 2016&quot;</code></pre>
+<p>Note that even though there are no arguments, the parentheses are still used. Think of the pair of parentheses as meaning, “Do this.”</p>
+<div id="naming-and-storing-values" class="section level3">
+<h3><span class="header-section-number">1.3.1</span> Naming and Storing Values</h3>
+<p>Often the value returned by an operation will be used later on. Values can be stored for later use with the <strong><em>assignment operator</em></strong> . This has a different syntax that reminds the user that a value is being stored. Here’s an example of a simple assignment:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="dv">16</span></code></pre></div>
+<p>This command has stored the value 16 under the name <code>x</code>. The syntax is always the same: an equal sign (<code>=</code>) with a name on the left and a value on the right.</p>
+<p>Such stored values are called <strong><em>objects</em></strong> . Making an assignment to an object defines the object. Once an object has been defined, it can be referred to and used in later computations.</p>
+<p>Notice that an assignment operation does not return a value or display a value. Its sole purpose is to have the side effects of defining the object and thereby storing a value under the object’s name.</p>
+<p>To refer to the value stored in the object, just use the object’s name itself. For instance:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x</code></pre></div>
+<pre><code>## [1] 16</code></pre>
+<p>Doing a computation on the value stored in an object is much the same: &lt;&lt;&gt;&gt;= sqrt(x) @</p>
+<p>You can create as many objects as you like and give them names that remind you of their purpose. Some examples: <code>wilma</code>, <code>ages</code>, <code>temp</code>, <code>dog.houses</code>, <code>foo3</code>. There are some rules for object names:</p>
+<!-- begin itemize -->
+<ol>
+<li>Use only letters and numbers and the two punctuation marks “dot” (<code>.</code>) and “underscore” (<code>_</code>).</li>
+<li>Do NOT use spaces anywhere in the name.</li>
+<li>A number or underscore cannot be the first character in the name.</li>
+<li>Capital letters are treated as distinct from lower-case letters. The objects named <code>wilma</code> and <code>Wilma</code> are different.<br />
+<!-- end itemize --> For the sake of readability, keep object names short. But if you really must have an object named something like <code>agesOfChildrenFromTheClinicalTrial</code>, feel free.</li>
+</ol>
+<p>Objects can store all sorts of things, for example a sequence of numbers:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">1</span>,<span class="dv">7</span>)</code></pre></div>
+<p>When you assign a new value to an existing object, as just done to <code>x</code>, the former value of that object is erased from the computer memory. The former value of <code>x</code> was 16, but after the above assignment command it is</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x</code></pre></div>
+<pre><code>## [1] 1 2 3 4 5 6 7</code></pre>
+<p>The value of an object is changed only <em>via</em> the assignment operator. Using an object in a computation does not change the value. For example, suppose you invoke the square-root operator on <code>x</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sqrt</span>(x)</code></pre></div>
+<pre><code>## [1] 1.000000 1.414214 1.732051 2.000000 2.236068 2.449490 2.645751</code></pre>
+<p>The square roots have been returned as a value, but this doesn’t change the value of <code>x</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x</code></pre></div>
+<pre><code>## [1] 1 2 3 4 5 6 7</code></pre>
+<p>If you want to change the value of <code>x</code>, you need to use the assignment operator:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">sqrt</span>(x)
+x</code></pre></div>
+<pre><code>## [1] 1.000000 1.414214 1.732051 2.000000 2.236068 2.449490 2.645751</code></pre>
+</div>
+<div id="assignment-vs-algebra" class="section level3">
+<h3><span class="header-section-number">1.3.2</span> Assignment vs Algebra</h3>
+<blockquote>
+<p>An assignment command like <code>x = sqrt(x)</code> can be confusing to people who are used to algebraic notation. In algebra, the equal sign describes a relationship between the left and right sides.<br />
+So, <span class="math inline">\(x = \sqrt{x}\)</span> tells us about how the quantity <span class="math inline">\(x\)</span> and the quantity <span class="math inline">\(\sqrt{x}\)</span> are related. Students are usually trained to “solve” such relationships, going through a series of algebraic steps to find values for <span class="math inline">\(x\)</span> that are consistent with the mathematical statement. (For <span class="math inline">\(x = \sqrt{x}\)</span>, the solutions are <span class="math inline">\(x=0\)</span> and <span class="math inline">\(x=1\)</span>.) In contrast, the assignment command <code>x = sqrt(x)</code> is a way of replacing the previous values stored in <code>x</code> with new values that are the square root of the old ones.</p>
+</blockquote>
+</div>
+<div id="connecting-computations" class="section level3">
+<h3><span class="header-section-number">1.3.3</span> Connecting Computations</h3>
+<p>The brilliant thing about organizing operators in terms of input arguments and output values is that the output of one operator can be used as an input to another. This lets complicated computations be built out of simpler ones.</p>
+<p>For example, suppose you have a list of 10000 voters in a precinct and you want to select a random sample of 20 of them for a survey. The <code>seq</code> operator can be used to generate a set of 10000 choices. The <code>sample</code> operator can be used to select some of these choices at random.</p>
+<p>One way to connect the computations is by using objects to store the intermediate outputs.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">choices =<span class="st"> </span><span class="kw">seq</span>(<span class="dv">1</span>,<span class="dv">10000</span>)
+<span class="kw">sample</span>( choices, <span class="dv">20</span> )</code></pre></div>
+<pre><code>##  [1] 9831 9797 9845 4901 4270 7064 2983 9339 5801 9553  111 7027 3502 3423
+## [15] 6580 9858 9232  938  204 6090</code></pre>
+<p>You can also pass the output of an operator <em>directly</em> as an argument to another operator. Here’s another way to accomplish exactly the same thing as the above.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sample</span>( <span class="kw">seq</span>(<span class="dv">1</span>,<span class="dv">10000</span>), <span class="dv">20</span> )</code></pre></div>
+<pre><code>##  [1] 6228 4446 7432 4398 2591 7417 3058 7853  872 4528 2149 5138 9200 5532
+## [15] 7369 1582 4311 4098 1675 9577</code></pre>
+</div>
+<div id="numbers-and-arithmetic" class="section level3">
+<h3><span class="header-section-number">1.3.4</span> Numbers and Arithmetic</h3>
+<p>The language has a concise notation for arithmetic that looks very much like the traditional one:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">7+2</span></code></pre></div>
+<pre><code>## [1] 9</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">3</span>*<span class="dv">4</span></code></pre></div>
+<pre><code>## [1] 12</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">5</span>/<span class="dv">2</span></code></pre></div>
+<pre><code>## [1] 2.5</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">3-8</span></code></pre></div>
+<pre><code>## [1] -5</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">-<span class="dv">3</span></code></pre></div>
+<pre><code>## [1] -3</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">5</span>^<span class="dv">2</span></code></pre></div>
+<pre><code>## [1] 25</code></pre>
+<p>Arithmetic operators, like any other operators, can be connected to form more complicated computations. For instance,</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">8+4</span>/<span class="dv">2</span></code></pre></div>
+<pre><code>## [1] 10</code></pre>
+<p>To a human reader, the command <code>8+4/2</code> might seem ambiguous. Is it intended to be <code>(8+4)/2</code> or <code>8+(4/2)</code>? The computer uses unambiguous rules to interpret the expression, but it’s a good idea for you to use parethesis so that you can make sure that what you intend is what the computer carries out:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">(<span class="dv">8+4</span>)/<span class="dv">2</span></code></pre></div>
+<pre><code>## [1] 6</code></pre>
+<p>Traditional mathematical notation uses superscripts and radicals to indicate exponentials and roots, e.g., <span class="math inline">\(3^2\)</span> or <span class="math inline">\(\sqrt{3}\)</span> or <span class="math inline">\(\sqrt[3]{8}\)</span>. This special typography doesn’t work well with an ordinary keyboard, so R and most other computer languages uses a different notation:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">3</span>^<span class="dv">2</span></code></pre></div>
+<pre><code>## [1] 9</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sqrt</span>(<span class="dv">3</span>)</code></pre></div>
+<pre><code>## [1] 1.732051</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">8</span>^(<span class="dv">1</span>/<span class="dv">3</span>)</code></pre></div>
+<pre><code>## [1] 2</code></pre>
+<p>There is a large set of mathematical functions: exponentials, logs, trigonometric and inverse trigonometric functions, etc. Some examples:</p>
+<p>    </p>
+<table>
+<thead>
+<tr class="header">
+<th>Traditional</th>
+<th>Computer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(e^2\)</span></td>
+<td><code>exp(2)</code></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\log_e(100)\)</span></td>
+<td><code>log(100)</code></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\log_{10}(100)\)</span></td>
+<td><code>log10(100)</code></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\log_{2}(100)\)</span></td>
+<td><code>log2(100)</code></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\cos( \frac{\pi}{2})\)</span></td>
+<td><code>cos(pi/2)</code></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\sin( \frac{\pi}{2})\)</span></td>
+<td><code>sin(pi/2)</code></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\tan( \frac{\pi}{2})\)</span></td>
+<td><code>tan(pi/2)</code></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\cos^{-1}(-1)\)</span></td>
+<td><code>acos(-1)</code></td>
+</tr>
+</tbody>
+</table>
+<p>Numbers can be written in <strong><em>scientific notation</em></strong>. For example, the “universal gravitational constant” that describes the gravitational attraction between masses is <span class="math inline">\(6.67428 \times 10^{-11}\)</span> (with units meters-cubed per kilogram per second squared). In the computer notation, this would be written <code>G=6.67428e-11</code>. The Avogradro constant, which gives the number of atoms in a mole, is <span class="math inline">\(6.02214179 \times 10^{23}\)</span> per mole, or <code>6.02214178e23</code>.</p>
+<p>The computer language does not directly support the recording of units. This is unfortunate, since in the real world numbers often have units and the units matter. For example, in 1999 the Mars Climate Orbiter crashed into Mars because the design engineers specified the engine’s thrust in units of pounds, while the guidance engineers thought the units were newtons.</p>
+<p>   Computer arithmetic is accurate and reliable, but it often involves very slight rounding of numbers. Ordinarily, this is not noticeable. However, it can become apparent in some calculations that produce results that are zero. For example, mathematically <span class="math inline">\(\sin(\pi) = 0\)</span>, however the computer does not duplicate this mathematical relationship exactly:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sin</span>(pi)</code></pre></div>
+<pre><code>## [1] 1.224647e-16</code></pre>
+<p>Whether a number like this is properly interpreted as “close to zero,” depends on the context and, for quantities that have units, on the units themselves. For instance, the unit “parsec” is used in astronomy in reporting distances between stars. The closest star to the sun is Proxima, at a distance of 1.3 parsecs.<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>   A distance of <span class="math inline">\(1.22 \times 10^{-16}\)</span> parsecs is tiny in astronomy but translates to about 2.5 meters — not so small on the human scale.</p>
+<p>In statistics, many calculations relate to probabilities which are always in the range 0 to 1. On this scale, <code>1.22e-16</code> is very close to zero.</p>
+<p>  </p>
+<p>There are two “special” numbers. <code>Inf</code> stands for <span class="math inline">\(\infty\)</span>, as in</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">1</span>/<span class="dv">0</span></code></pre></div>
+<pre><code>## [1] Inf</code></pre>
+<p><code>NaN</code> stands for “not a number,” and is the result when a numerical operation isn’t defined, for instance</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">0</span>/<span class="dv">0</span></code></pre></div>
+<pre><code>## [1] NaN</code></pre>
+</div>
+<div id="aside:complex-numbers" class="section level3">
+<h3><span class="header-section-number">1.3.5</span> Aside: Complex numbers</h3>
+<blockquote>
+<p>Mathematically oriented readers will wonder why R should have any trouble with a computation like <span class="math inline">\(\sqrt{-9}\)</span>; the result is the imaginary number <span class="math inline">\(3i\)</span>. R works with complex numbers, but you have to tell the system that this is what you want to do. To calculate <span class="math inline">\(\sqrt{-9}\)</span>, use .       </p>
+</blockquote>
+</div>
+<div id="types-of-objects" class="section level3">
+<h3><span class="header-section-number">1.3.6</span> Types of Objects</h3>
+<p>Most of the examples used so far have dealt with numbers. But computers work with other kinds of information as well: text, photographs, sounds, sets of data, and so on. The word <strong><em>type</em></strong> is used to refer to the kind of information.</p>
+<p>Modern computer languages support a great variety of types.<br />
+It’s important to know about the types of data because operators expect their input arguments to be of specific types. When you use the wrong type of input, the computer might not be able process your command.</p>
+<p>For the purpose of starting with R, it’s important to distinguish among three basic types: <!-- begin description --></p>
+<ol>
+<li><p><strong>numeric</strong> The numbers of the sort already encountered.</p></li>
+<li><p><strong>data frames</strong> Collections of data more or less in the form of a spreadsheet table. The Computation Technique section in Chapter @ref(“chap:data-cases-variables”) introduces the operators for working with data frames.</p></li>
+<li><p><strong>character</strong> Text data.</p></li>
+</ol>
+<p>You indicate character data to the computer by enclosing the text in double quotation marks. For example:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">filename =<span class="st"> &quot;swimmers.csv&quot;</span></code></pre></div>
+<p>There is something a bit subtle going on in the above command, so look at it carefully. The purpose of the command is to create an object, named <code>filename</code>, that stores a little bit of text data. Notice that the name of the object is not put in quotes, but the text characters are.</p>
+<p>Whenever you refer to an object name, make sure that you don’t use quotes, for example:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">filename</code></pre></div>
+<pre><code>## [1] &quot;swimmers.csv&quot;</code></pre>
+<p>If you make a command with the object name in quotes, it won’t be treated as referring to an object. Instead, it will merely mean the text itself:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="st">&quot;filename&quot;</span></code></pre></div>
+<pre><code>## [1] &quot;filename&quot;</code></pre>
+<p>Similarly, if you omit the quotation marks from around text, the computer will treat it as if it were an object name and will look for the object of that name. For instance, the following command directs the computer to look up the value contained in an object named <code>swimmers.csv</code> and insert that value into the object <code>filename</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">filename &lt;-<span class="st"> </span>swimmers.csv</code></pre></div>
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;swimmers.csv&#39; not found</code></pre>
+<p>As it happens, there was no object named <code>swimmers.csv</code> because it had not been defined by any previous assignment command. So, the computer generated an error.</p>
+<p>For the most part, you will not need to use very many operators on text data; you just need to remember to include text, such as file names, in quotation marks, <code>&quot;like this&quot;</code>.</p>
+<!-- end description -->
+
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>DRAFT: Look how out of date this is! No notion of RStudio. Do note that in the knitr chunk, the chunk label (“console-picture”) becomes part of the label for the picture, which can be put in with <code>\@ref(console-picture)</code> as in Figure <a href="#console-picture"><strong>??</strong></a>.<a href="introduction.html#fnref1">↩</a></p></li>
+<li id="fn2"><p>News from August 2016: Astronomers have announced that Proxima has a planet orbiting it in the “habitable zone.”<a href="introduction.html#fnref2">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-in-r.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/dtkaplan/01-introduction.Rmd",
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+},
+"collapse": "chapter"
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Statistical Modeling: Computational Technique</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="Up-to-date computational technique for Statistical Modeling: A Fresh Approach">
+  <meta name="generator" content="bookdown 0.1.6 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Statistical Modeling: Computational Technique" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Up-to-date computational technique for Statistical Modeling: A Fresh Approach" />
+  <meta name="github-repo" content="rstudio/SM3" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Statistical Modeling: Computational Technique" />
+  
+  <meta name="twitter:description" content="Up-to-date computational technique for Statistical Modeling: A Fresh Approach" />
+  
+
+<meta name="author" content="Daniel Kaplan and Frank Shaw">
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="model-formulas-and-coefficients.html">
+<link rel="next" href="correlation-and-partitioning-of-variation.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Fresh Approach: Computational Technique</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface: Updating Computational Technique</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#the-story-in-more-detail"><i class="fa fa-check"></i>The story in more detail</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#the-story-continues"><i class="fa fa-check"></i>The story continues …</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#the-choice-of-software"><i class="fa fa-check"></i><b>1.1</b> The Choice of Software</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#the-r-command-console"><i class="fa fa-check"></i><b>1.2</b> The R Command Console</a></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#invoking-an-operation"><i class="fa fa-check"></i><b>1.3</b> Invoking an Operation</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="introduction.html"><a href="introduction.html#naming-and-storing-values"><i class="fa fa-check"></i><b>1.3.1</b> Naming and Storing Values</a></li>
+<li class="chapter" data-level="1.3.2" data-path="introduction.html"><a href="introduction.html#assignment-vs-algebra"><i class="fa fa-check"></i><b>1.3.2</b> Assignment vs Algebra</a></li>
+<li class="chapter" data-level="1.3.3" data-path="introduction.html"><a href="introduction.html#connecting-computations"><i class="fa fa-check"></i><b>1.3.3</b> Connecting Computations</a></li>
+<li class="chapter" data-level="1.3.4" data-path="introduction.html"><a href="introduction.html#numbers-and-arithmetic"><i class="fa fa-check"></i><b>1.3.4</b> Numbers and Arithmetic</a></li>
+<li class="chapter" data-level="1.3.5" data-path="introduction.html"><a href="introduction.html#aside:complex-numbers"><i class="fa fa-check"></i><b>1.3.5</b> Aside: Complex numbers</a></li>
+<li class="chapter" data-level="1.3.6" data-path="introduction.html"><a href="introduction.html#types-of-objects"><i class="fa fa-check"></i><b>1.3.6</b> Types of Objects</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="data-in-r.html"><a href="data-in-r.html"><i class="fa fa-check"></i><b>2</b> Data in R</a><ul>
+<li class="chapter" data-level="2.1" data-path="data-in-r.html"><a href="data-in-r.html#preliminaries"><i class="fa fa-check"></i><b>2.1</b> Preliminaries</a></li>
+<li class="chapter" data-level="2.2" data-path="data-in-r.html"><a href="data-in-r.html#reading-tabular-data-into-r"><i class="fa fa-check"></i><b>2.2</b> Reading Tabular Data into R</a></li>
+<li class="chapter" data-level="2.3" data-path="data-in-r.html"><a href="data-in-r.html#data-frames"><i class="fa fa-check"></i><b>2.3</b> Data Frames</a></li>
+<li class="chapter" data-level="2.4" data-path="data-in-r.html"><a href="data-in-r.html#variables-in-data-frames"><i class="fa fa-check"></i><b>2.4</b> Variables in Data Frames</a></li>
+<li class="chapter" data-level="2.5" data-path="data-in-r.html"><a href="data-in-r.html#adding-a-new-variable"><i class="fa fa-check"></i><b>2.5</b> Adding a New Variable</a></li>
+<li class="chapter" data-level="2.6" data-path="data-in-r.html"><a href="data-in-r.html#sampling-from-a-sample-frame"><i class="fa fa-check"></i><b>2.6</b> Sampling from a Sample Frame</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="describing-variation.html"><a href="describing-variation.html"><i class="fa fa-check"></i><b>3</b> Describing Variation</a><ul>
+<li class="chapter" data-level="3.1" data-path="describing-variation.html"><a href="describing-variation.html#simple-statistical-calculations"><i class="fa fa-check"></i><b>3.1</b> Simple Statistical Calculations</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="describing-variation.html"><a href="describing-variation.html#aside-the-base-versions"><i class="fa fa-check"></i><b>3.1.1</b> Aside: The “base” versions</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="describing-variation.html"><a href="describing-variation.html#simple-statistical-graphics"><i class="fa fa-check"></i><b>3.2</b> Simple Statistical Graphics</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="describing-variation.html"><a href="describing-variation.html#histograms-and-distributions"><i class="fa fa-check"></i><b>3.2.1</b> Histograms and Distributions</a></li>
+<li class="chapter" data-level="3.2.2" data-path="describing-variation.html"><a href="describing-variation.html#density-plots"><i class="fa fa-check"></i><b>3.2.2</b> Density Plots</a></li>
+<li class="chapter" data-level="3.2.3" data-path="describing-variation.html"><a href="describing-variation.html#box-and-whisker-plots"><i class="fa fa-check"></i><b>3.2.3</b> Box-and-Whisker Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="describing-variation.html"><a href="describing-variation.html#displays-of-categorical-variables"><i class="fa fa-check"></i><b>3.3</b> Displays of Categorical Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="groupwise-models.html"><a href="groupwise-models.html"><i class="fa fa-check"></i><b>4</b> Groupwise models</a><ul>
+<li class="chapter" data-level="4.1" data-path="groupwise-models.html"><a href="groupwise-models.html#model-values-and-residuals"><i class="fa fa-check"></i><b>4.1</b> Model Values and Residuals</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="confidence-intervals.html"><a href="confidence-intervals.html"><i class="fa fa-check"></i><b>5</b> Confidence intervals</a><ul>
+<li class="chapter" data-level="5.1" data-path="confidence-intervals.html"><a href="confidence-intervals.html#finding-a-sampling-distribution-through-bootstrapping"><i class="fa fa-check"></i><b>5.1</b> Finding a Sampling Distribution through Bootstrapping</a></li>
+<li class="chapter" data-level="5.2" data-path="confidence-intervals.html"><a href="confidence-intervals.html#computing-grade-point-averages"><i class="fa fa-check"></i><b>5.2</b> Computing Grade-Point Averages</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="language-of-models.html"><a href="language-of-models.html"><i class="fa fa-check"></i><b>6</b> Language of models</a><ul>
+<li class="chapter" data-level="6.1" data-path="language-of-models.html"><a href="language-of-models.html#bi-variate-plots"><i class="fa fa-check"></i><b>6.1</b> Bi-variate Plots</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="language-of-models.html"><a href="language-of-models.html#quantitative-explanatory-variable"><i class="fa fa-check"></i><b>6.1.1</b> Quantitative Explanatory Variable</a></li>
+<li class="chapter" data-level="6.1.2" data-path="language-of-models.html"><a href="language-of-models.html#categorical-explanatory-variable"><i class="fa fa-check"></i><b>6.1.2</b> Categorical Explanatory Variable</a></li>
+<li class="chapter" data-level="6.1.3" data-path="language-of-models.html"><a href="language-of-models.html#multiple-explanatory-variables"><i class="fa fa-check"></i><b>6.1.3</b> Multiple Explanatory Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="language-of-models.html"><a href="language-of-models.html#fitting-models-and-finding-model-values"><i class="fa fa-check"></i><b>6.2</b> Fitting Models and Finding Model Values</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="language-of-models.html"><a href="language-of-models.html#interactions-and-main-effects"><i class="fa fa-check"></i><b>6.2.1</b> Interactions and Main Effects</a></li>
+<li class="chapter" data-level="6.2.2" data-path="language-of-models.html"><a href="language-of-models.html#transformation-terms"><i class="fa fa-check"></i><b>6.2.2</b> Transformation Terms</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="model-formulas-and-coefficients.html"><a href="model-formulas-and-coefficients.html"><i class="fa fa-check"></i><b>7</b> Model formulas and coefficients</a><ul>
+<li class="chapter" data-level="7.1" data-path="model-formulas-and-coefficients.html"><a href="model-formulas-and-coefficients.html#examining-model-coefficients"><i class="fa fa-check"></i><b>7.1</b> Examining model coefficients</a></li>
+<li class="chapter" data-level="7.2" data-path="model-formulas-and-coefficients.html"><a href="model-formulas-and-coefficients.html#other-useful-operators"><i class="fa fa-check"></i><b>7.2</b> Other Useful Operators</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="fitting-models-to-data.html"><a href="fitting-models-to-data.html"><i class="fa fa-check"></i><b>8</b> Fitting models to data</a><ul>
+<li class="chapter" data-level="8.1" data-path="fitting-models-to-data.html"><a href="fitting-models-to-data.html#sums-of-squares"><i class="fa fa-check"></i><b>8.1</b> Sums of Squares</a></li>
+<li class="chapter" data-level="8.2" data-path="fitting-models-to-data.html"><a href="fitting-models-to-data.html#redundancy"><i class="fa fa-check"></i><b>8.2</b> Redundancy</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="correlation-and-partitioning-of-variation.html"><a href="correlation-and-partitioning-of-variation.html"><i class="fa fa-check"></i><b>9</b> Correlation and partitioning of variation</a></li>
+<li class="chapter" data-level="10" data-path="total-and-partial-relationships.html"><a href="total-and-partial-relationships.html"><i class="fa fa-check"></i><b>10</b> Total and partial relationships</a><ul>
+<li class="chapter" data-level="10.1" data-path="total-and-partial-relationships.html"><a href="total-and-partial-relationships.html#adjustment"><i class="fa fa-check"></i><b>10.1</b> Adjustment</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="modeling-randomness.html"><a href="modeling-randomness.html"><i class="fa fa-check"></i><b>11</b> Modeling randomness</a><ul>
+<li class="chapter" data-level="11.1" data-path="modeling-randomness.html"><a href="modeling-randomness.html#random-draws-from-probability-models"><i class="fa fa-check"></i><b>11.1</b> Random Draws from Probability Models</a></li>
+<li class="chapter" data-level="11.2" data-path="modeling-randomness.html"><a href="modeling-randomness.html#standard-probability-models"><i class="fa fa-check"></i><b>11.2</b> Standard Probability Models</a></li>
+<li class="chapter" data-level="11.3" data-path="modeling-randomness.html"><a href="modeling-randomness.html#quantiles-and-coverage-intervals"><i class="fa fa-check"></i><b>11.3</b> Quantiles and Coverage Intervals</a></li>
+<li class="chapter" data-level="11.4" data-path="modeling-randomness.html"><a href="modeling-randomness.html#percentiles"><i class="fa fa-check"></i><b>11.4</b> Percentiles</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="confidence-in-models.html"><a href="confidence-in-models.html"><i class="fa fa-check"></i><b>12</b> Confidence in models</a><ul>
+<li class="chapter" data-level="12.1" data-path="confidence-in-models.html"><a href="confidence-in-models.html#confidence-intervals-from-standard-errors"><i class="fa fa-check"></i><b>12.1</b> Confidence Intervals from Standard Errors</a></li>
+<li class="chapter" data-level="12.2" data-path="confidence-in-models.html"><a href="confidence-in-models.html#bootstrapping-confidence-intervals"><i class="fa fa-check"></i><b>12.2</b> Bootstrapping Confidence Intervals</a></li>
+<li class="chapter" data-level="12.3" data-path="confidence-in-models.html"><a href="confidence-in-models.html#prediction-confidence-intervals"><i class="fa fa-check"></i><b>12.3</b> Prediction Confidence Intervals</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="the-logic-of-hypothesis-testing.html"><a href="the-logic-of-hypothesis-testing.html"><i class="fa fa-check"></i><b>13</b> The logic of hypothesis testing</a></li>
+<li class="chapter" data-level="14" data-path="testing-whole-models.html"><a href="testing-whole-models.html"><i class="fa fa-check"></i><b>14</b> Testing whole models</a><ul>
+<li class="chapter" data-level="14.1" data-path="testing-whole-models.html"><a href="testing-whole-models.html#the-permutation-test"><i class="fa fa-check"></i><b>14.1</b> The Permutation Test</a></li>
+<li class="chapter" data-level="14.2" data-path="testing-whole-models.html"><a href="testing-whole-models.html#first-principle-tests"><i class="fa fa-check"></i><b>14.2</b> First-Principle Tests</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="testing-parts-of-models.html"><a href="testing-parts-of-models.html"><i class="fa fa-check"></i><b>15</b> Testing parts of models</a><ul>
+<li class="chapter" data-level="15.1" data-path="testing-parts-of-models.html"><a href="testing-parts-of-models.html#anova-reports"><i class="fa fa-check"></i><b>15.1</b> ANOVA reports</a></li>
+<li class="chapter" data-level="15.2" data-path="testing-parts-of-models.html"><a href="testing-parts-of-models.html#non-parametric-statistics"><i class="fa fa-check"></i><b>15.2</b> Non-Parametric Statistics</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="models-of-yesno-variables.html"><a href="models-of-yesno-variables.html"><i class="fa fa-check"></i><b>16</b> Models of Yes/No Variables</a><ul>
+<li class="chapter" data-level="16.1" data-path="models-of-yesno-variables.html"><a href="models-of-yesno-variables.html#fitting-logistic-models"><i class="fa fa-check"></i><b>16.1</b> Fitting Logistic Models</a></li>
+<li class="chapter" data-level="16.2" data-path="models-of-yesno-variables.html"><a href="models-of-yesno-variables.html#fitted-model-values"><i class="fa fa-check"></i><b>16.2</b> Fitted Model Values</a></li>
+<li class="chapter" data-level="16.3" data-path="models-of-yesno-variables.html"><a href="models-of-yesno-variables.html#which-level-is-yes"><i class="fa fa-check"></i><b>16.3</b> Which Level is “Yes”?</a></li>
+<li class="chapter" data-level="16.4" data-path="models-of-yesno-variables.html"><a href="models-of-yesno-variables.html#analysis-of-deviance"><i class="fa fa-check"></i><b>16.4</b> Analysis of Deviance</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="causation.html"><a href="causation.html"><i class="fa fa-check"></i><b>17</b> Causation</a></li>
+<li class="chapter" data-level="18" data-path="experiment.html"><a href="experiment.html"><i class="fa fa-check"></i><b>18</b> Experiment</a></li>
+<li class="divider"></li>
+<li><a href="http://project-mosaic-books.com/?page_id=13" target="blank">Statistical Modeling: A Fresh Approach</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistical Modeling: Computational Technique</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="fitting-models-to-data" class="section level1">
+<h1><span class="header-section-number">Chapter 8</span> Fitting models to data</h1>
+<p>Using the <code>lm</code> software is largely a matter of familiarity with the model design language described in Chapter @ref(“chap:language”). Computing the fitted model values and the residuals is done with the <code>fitted</code> and <code>resid</code>. These operators take a model as an input. To illustrate:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Swim &lt;-<span class="st"> </span>SwimRecords  <span class="co"># from mosaicData</span>
+mod1 &lt;-<span class="st"> </span><span class="kw">lm</span>( time ~<span class="st"> </span>year +<span class="st"> </span>sex, <span class="dt">data =</span> Swim)
+<span class="kw">coef</span>(mod1)</code></pre></div>
+<pre><code>## (Intercept)        year        sexM 
+## 555.7167834  -0.2514637  -9.7979615</code></pre>
+<p>Once you have constucted the model, you can use <code>fitted</code> and <code>resid</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">modvals &lt;-<span class="st"> </span><span class="kw">fitted</span>(mod1)
+<span class="kw">head</span>(modvals)</code></pre></div>
+<pre><code>##        1        2        3        4        5        6 
+## 66.88051 66.12612 65.62319 65.12026 63.61148 63.10855</code></pre>
+<div id="sums-of-squares" class="section level2">
+<h2><span class="header-section-number">8.1</span> Sums of Squares</h2>
+<p>Computations can be performed on the fitted model values and the residuals, just like any other quantity:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(<span class="kw">fitted</span>(mod1))</code></pre></div>
+<pre><code>## [1] 59.92419</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">var</span>(<span class="kw">resid</span>(mod1))</code></pre></div>
+<pre><code>## [1] 15.34147</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sd</span>(<span class="kw">resid</span>(mod1))</code></pre></div>
+<pre><code>## [1] 3.916818</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(<span class="kw">resid</span>(mod1))</code></pre></div>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+## -4.7030 -2.7030 -0.5968  0.0000  1.2800 19.0800</code></pre>
+<p>Sums of squares are very important in statistics. Here’s how to calculate them for the response values, the fitted model values, and the residuals:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(Swim$time^<span class="dv">2</span>)</code></pre></div>
+<pre><code>## [1] 228635</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(<span class="kw">fitted</span>(mod1)^<span class="dv">2</span>)</code></pre></div>
+<pre><code>## [1] 227699.2</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(<span class="kw">resid</span>(mod1)^<span class="dv">2</span>)</code></pre></div>
+<pre><code>## [1] 935.8294</code></pre>
+<p>The partitioning of variation by models is seen by the way the sum of squares of the fitted and the residuals add up to the sum of squares of the response:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">227699</span> +<span class="st"> </span><span class="fl">935.8</span></code></pre></div>
+<pre><code>## [1] 228634.8</code></pre>
+<p>Don’t forget the squaring stage of the operation! The sum of the residuals (without squaring) is very different from the sum of squares of the residuals:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(<span class="kw">resid</span>(mod1))</code></pre></div>
+<pre><code>## [1] 1.848521e-14</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(<span class="kw">resid</span>(mod1)^<span class="dv">2</span>)</code></pre></div>
+<pre><code>## [1] 935.8294</code></pre>
+<p>Take care in reading numbers formatted like <code>1.849e-14</code>. The notation stands for <span class="math inline">\(1.849 \times 10^{-14}\)</span>. That number, <span class="math inline">\(0.00000000000001849\)</span>, is effectively zero compared to the residuals themselves!</p>
+</div>
+<div id="redundancy" class="section level2">
+<h2><span class="header-section-number">8.2</span> Redundancy</h2>
+<p>The <code>lm</code> operator will automatically detect redundancy and deal with it by leaving the redundant terms out of the model.</p>
+<p>To see how redundancy is handled, here is an example with a constructed redundant variable in the swimming dataset.<br />
+The following statement adds a new variable to the dataframe counting how many years after the end of World War II each record was established:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Swim$afterwar &lt;-<span class="st"> </span>Swim$year -<span class="st"> </span><span class="dv">1945</span></code></pre></div>
+<p>Here is a model that doesn’t involve redundancy</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mod1 &lt;-<span class="st"> </span><span class="kw">lm</span>( time ~<span class="st"> </span>year +<span class="st"> </span>sex, <span class="dt">data =</span> Swim)
+<span class="kw">coef</span>(mod1)</code></pre></div>
+<pre><code>## (Intercept)        year        sexM 
+## 555.7167834  -0.2514637  -9.7979615</code></pre>
+<p>When the redundant variable is added in, <code>lm</code> successfully detects the redundancy and handles it. This is indicated by a coefficient of NA on the redundant variable.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mod2 &lt;-<span class="st"> </span><span class="kw">lm</span>( time ~<span class="st"> </span>year +<span class="st"> </span>sex +<span class="st"> </span>afterwar, <span class="dt">data =</span> Swim)
+<span class="kw">coef</span>(mod2)</code></pre></div>
+<pre><code>## (Intercept)        year        sexM    afterwar 
+## 555.7167834  -0.2514637  -9.7979615          NA</code></pre>
+<p>In the absence of redundancy, the model coefficients don’t depend on the order in which the model terms are specified. But this is not the case when there is redundancy, since any redundancy is blamed on the later variables. For instance, here <code>afterwar</code> has been put first in the explanatory terms, so <code>lm</code> identifies <code>year</code> as the redundant variable:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mod3 &lt;-<span class="st"> </span><span class="kw">lm</span>( time ~<span class="st"> </span>afterwar +<span class="st"> </span>year +<span class="st"> </span>sex, <span class="dt">data =</span> Swim)
+<span class="kw">coef</span>(mod3)</code></pre></div>
+<pre><code>## (Intercept)    afterwar        year        sexM 
+##  66.6199228  -0.2514637          NA  -9.7979615</code></pre>
+<p>Even though the coefficients are different, the fitted model values and the residuals are exactly the same (to within computer round-off) regardless of the order of the model terms.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(<span class="kw">fitted</span>(mod2))</code></pre></div>
+<pre><code>##        1        2        3        4        5        6 
+## 66.88051 66.12612 65.62319 65.12026 63.61148 63.10855</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(<span class="kw">fitted</span>(mod3))</code></pre></div>
+<pre><code>##        1        2        3        4        5        6 
+## 66.88051 66.12612 65.62319 65.12026 63.61148 63.10855</code></pre>
+<p>Note that whenever you use a categorical variable and an intercept term in a model, there is a redundancy. This is not shown explicitly. For example, here is a model with no intercept term, and both levels of the categorical variable <code>sex</code> show up with coefficients:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mod &lt;-<span class="st"> </span><span class="kw">lm</span>( time ~<span class="st"> </span>sex -<span class="st"> </span><span class="dv">1</span>, <span class="dt">data =</span> Swim)
+<span class="kw">coef</span>(mod)</code></pre></div>
+<pre><code>##     sexF     sexM 
+## 65.19226 54.65613</code></pre>
+<p>If the intercept term is included (as it is by default unless <code>-1</code> is used in the model formula), one of the levels is simply dropped in the report:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mod &lt;-<span class="st"> </span><span class="kw">lm</span>( time ~<span class="st"> </span>sex, <span class="dt">data =</span> Swim)
+<span class="kw">coef</span>(mod)</code></pre></div>
+<pre><code>## (Intercept)        sexM 
+##    65.19226   -10.53613</code></pre>
+<p>Remember that this coefficient report implicitly involves a redundancy.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="model-formulas-and-coefficients.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="correlation-and-partitioning-of-variation.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/dtkaplan/08-Fitting.Rmd",
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+},
+"collapse": "chapter"
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

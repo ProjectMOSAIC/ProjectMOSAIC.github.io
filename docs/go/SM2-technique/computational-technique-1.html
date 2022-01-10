@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Statistical Modeling: Computational Technique</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="Up-to-date computational technique for Statistical Modeling: A Fresh Approach">
+  <meta name="generator" content="bookdown 0.1.6 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Statistical Modeling: Computational Technique" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Up-to-date computational technique for Statistical Modeling: A Fresh Approach" />
+  <meta name="github-repo" content="rstudio/SM3" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Statistical Modeling: Computational Technique" />
+  
+  <meta name="twitter:description" content="Up-to-date computational technique for Statistical Modeling: A Fresh Approach" />
+  
+
+<meta name="author" content="Daniel Kaplan and Frank Shaw">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="model-formulas-and-coefficients.html">
+<link rel="next" href="fitting-models-to-data.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Fresh Approach: Computational Technique</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface: Updating Computational Technique</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="data-in-r.html"><a href="data-in-r.html"><i class="fa fa-check"></i><b>2</b> Data in R</a></li>
+<li class="chapter" data-level="3" data-path="describing-variation.html"><a href="describing-variation.html"><i class="fa fa-check"></i><b>3</b> Describing Variation</a></li>
+<li class="chapter" data-level="4" data-path="computational-technique.html"><a href="computational-technique.html"><i class="fa fa-check"></i><b>4</b> Computational Technique</a></li>
+<li class="chapter" data-level="5" data-path="confidence-intervals.html"><a href="confidence-intervals.html"><i class="fa fa-check"></i><b>5</b> Confidence intervals</a></li>
+<li class="chapter" data-level="6" data-path="language-of-models.html"><a href="language-of-models.html"><i class="fa fa-check"></i><b>6</b> Language of models</a></li>
+<li class="chapter" data-level="7" data-path="model-formulas-and-coefficients.html"><a href="model-formulas-and-coefficients.html"><i class="fa fa-check"></i><b>7</b> Model formulas and coefficients</a></li>
+<li class="chapter" data-level="8" data-path="computational-technique-1.html"><a href="computational-technique-1.html"><i class="fa fa-check"></i><b>8</b> 7.10 Computational Technique</a><ul>
+<li class="chapter" data-level="8.0.1" data-path="computational-technique-1.html"><a href="computational-technique-1.html#other-useful-operators"><i class="fa fa-check"></i><b>8.0.1</b> Other Useful Operators</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="fitting-models-to-data.html"><a href="fitting-models-to-data.html"><i class="fa fa-check"></i><b>9</b> Fitting models to data</a></li>
+<li class="chapter" data-level="10" data-path="correlation-and-partitioning-of-variation.html"><a href="correlation-and-partitioning-of-variation.html"><i class="fa fa-check"></i><b>10</b> Correlation and partitioning of variation</a></li>
+<li class="chapter" data-level="11" data-path="total-and-partial-relationships.html"><a href="total-and-partial-relationships.html"><i class="fa fa-check"></i><b>11</b> Total and partial relationships</a></li>
+<li class="chapter" data-level="12" data-path="modeling-randomness.html"><a href="modeling-randomness.html"><i class="fa fa-check"></i><b>12</b> Modeling randomness</a></li>
+<li class="chapter" data-level="13" data-path="confidence-in-models.html"><a href="confidence-in-models.html"><i class="fa fa-check"></i><b>13</b> Confidence in models</a></li>
+<li class="chapter" data-level="14" data-path="the-logic-of-hypothesis-testing.html"><a href="the-logic-of-hypothesis-testing.html"><i class="fa fa-check"></i><b>14</b> The logic of hypothesis testing</a></li>
+<li class="chapter" data-level="15" data-path="testing-whole-models.html"><a href="testing-whole-models.html"><i class="fa fa-check"></i><b>15</b> Testing whole models</a></li>
+<li class="chapter" data-level="16" data-path="testing-parts-of-models.html"><a href="testing-parts-of-models.html"><i class="fa fa-check"></i><b>16</b> Testing parts of models</a></li>
+<li class="chapter" data-level="17" data-path="models-of-yesno-variables.html"><a href="models-of-yesno-variables.html"><i class="fa fa-check"></i><b>17</b> Models of Yes/No Variables</a></li>
+<li class="chapter" data-level="18" data-path="causation.html"><a href="causation.html"><i class="fa fa-check"></i><b>18</b> Causation</a></li>
+<li class="chapter" data-level="19" data-path="experiment.html"><a href="experiment.html"><i class="fa fa-check"></i><b>19</b> Experiment</a></li>
+<li class="divider"></li>
+<li><a href="http://project-mosaic-books.com/?page_id=13" target="blank">Statistical Modeling: A Fresh Approach</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistical Modeling: Computational Technique</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="computational-technique-1" class="section level1">
+<h1><span class="header-section-number">Chapter 8</span> 7.10 Computational Technique</h1>
+<p>Make sure <strong><code>mosaic</code></strong> is loaded.</p>
+<p>The <code>lm</code> operator finds model coefficients.</p>
+<p>To illustrate, here’s a pair of statements that read in a data frame and fit a model to it:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">swim &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;http://tiny.cc/mosaic/swim100m.csv&quot;</span>)
+mod &lt;-<span class="st"> </span><span class="kw">lm</span>( time ~<span class="st"> </span>year +<span class="st"> </span>sex, <span class="dt">data =</span> swim) </code></pre></div>
+<p>The first argument to <code>lm</code> is a model design, the second is the data frame.</p>
+<p>The object created by <code>lm</code> — here given the name <code>mod</code> — contains a variety of information about the model. To access the coefficients themselves, use the <code>coef</code></p>
+<p>operator applied to the model:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">coef</span>(mod)</code></pre></div>
+<pre><code>## (Intercept)        year        sexM 
+## 555.7167834  -0.2514637  -9.7979615</code></pre>
+<p>As shorthand to display the coefficients, just type the name of the object that is storing the model:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mod</code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = time ~ year + sex, data = swim)
+## 
+## Coefficients:
+## (Intercept)         year         sexM  
+##    555.7168      -0.2515      -9.7980</code></pre>
+<p>A more detailed report can be gotten with the <code>summary</code> operator.</p>
+<p>This gives additional statistical information that will be used in later chapters:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(mod)</code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = time ~ year + sex, data = swim)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -4.7027 -2.7027 -0.5968  1.2796 19.0759 
+## 
+## Coefficients:
+##              Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) 555.71678   33.79991  16.441  &lt; 2e-16 ***
+## year         -0.25146    0.01732 -14.516  &lt; 2e-16 ***
+## sexM         -9.79796    1.01287  -9.673 8.79e-14 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 3.983 on 59 degrees of freedom
+## Multiple R-squared:  0.844,  Adjusted R-squared:  0.8387 
+## F-statistic: 159.6 on 2 and 59 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p>From time to time in the exercises, you will be asked to calculate model values “by hand.” This is accomplished by multiplying the coefficients by the appropriate values and adding them up. For example, the model value for a male swimmer in 2010 would be:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="fl">555.7</span> -<span class="st"> </span><span class="fl">0.2515</span>*<span class="dv">2010</span> -<span class="st"> </span><span class="fl">9.798</span></code></pre></div>
+<pre><code>## [1] 40.387</code></pre>
+<p>Notice that the “value” used to multiply the intercept is always 1, and the “value” used for a categorical level is either 0 or 1 depending on whether there is a match with the level. In this example, since the swimmer in question was male, the value of <code>sex M</code> is 1. If the swimmer had been female, the value for <code>sex M</code> would have been 0.</p>
+<p>When a model includes interaction terms, the interaction coefficients need to be multiplied by all the values involved in the interaction. For example, here is a model with an interaction between <code>year</code> and <code>sex</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mod2 &lt;-<span class="st"> </span><span class="kw">lm</span>( time ~<span class="st"> </span>year *<span class="st"> </span>sex, <span class="dt">data =</span> swim)
+<span class="kw">coef</span>(mod2)</code></pre></div>
+<pre><code>##  (Intercept)         year         sexM    year:sexM 
+##  697.3012156   -0.3240459 -302.4638388    0.1499166</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="fl">697.3</span> -<span class="st"> </span><span class="fl">0.3240</span>*<span class="dv">2010</span> -<span class="st"> </span><span class="fl">302.5</span> +<span class="st"> </span><span class="fl">0.1499</span>*<span class="dv">2010</span></code></pre></div>
+<pre><code>## [1] 44.859</code></pre>
+<p>The <code>year:sexM</code> coefficient is being multiplied by the year (2010) and the value of <code>sex M</code>, which is 1 for this male swimmer.</p>
+<div id="other-useful-operators" class="section level3">
+<h3><span class="header-section-number">8.0.1</span> Other Useful Operators</h3>
+<!-- begin description -->
+<ol>
+<li><code>cross()</code> will combine two categorical variables into a single variable. For example, in the Current Population Survey data, the variable <code>sex</code> has levels F and M, while the variable <code>race</code> has levels W and NW. Crossing the two variables combines them; the new variable has four levels: F.NW, M.NW, F.W, M.W:</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">CPS &lt;-<span class="st"> </span>CPS85  <span class="co"># from mosaicData</span>
+RaceSex &lt;-<span class="st"> </span><span class="kw">cross</span>(CPS$sex, CPS$race)
+<span class="kw">summary</span>(RaceSex)</code></pre></div>
+<pre><code>## F:NW  F:W M:NW  M:W 
+##   28  217   39  250</code></pre>
+<p>The summary tells us that there are 28 non-white females, 270 white females, etc, in the new categorical variable called RaceSex.</p>
+<ol>
+<li><code>as.factor()</code> will convert a quantitative variable to a categorical variable. This is useful when a quantity like <code>month</code> has been coded as a number, say 1 for January and 2 for February, etc. but you do not want models to treat it as such.</li>
+</ol>
+<p>To illustrate, consider two different models of the usage temperature versus month:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">utils &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;http://tiny.cc/mosaic/utilities.csv&quot;</span>)
+mod1 &lt;-<span class="st"> </span><span class="kw">lm</span>( temp ~<span class="st"> </span>month, <span class="dt">data =</span> utils)
+mod2 &lt;-<span class="st"> </span><span class="kw">lm</span>( temp ~<span class="st"> </span><span class="kw">as.factor</span>(month), <span class="dt">data =</span> utils)</code></pre></div>
+<p>Here are the graphs of those models:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">xyplot</span>(temp +<span class="st"> </span><span class="kw">fitted</span>(mod1) ~<span class="st"> </span>month, <span class="dt">data =</span> utils)</code></pre></div>
+<p><img src="Statistical_Modeling__Computational_Technique_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">xyplot</span>( temp +<span class="st"> </span><span class="kw">fitted</span>(mod2) ~<span class="st"> </span>month, <span class="dt">data =</span> utils )</code></pre></div>
+<p><img src="Statistical_Modeling__Computational_Technique_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<!-- 
+
+utils <- read.csv("/users/kaplan/kaplanfiles/sbook/datasets/utilities.csv")
+mod1 <- lm( temp ~ month, data = utils)
+xyplot( temp ~ month, data = utils, main = "Model 1")
+trellis.focus()
+x <- seq(1,12)
+y <- 39.04 + 1.63*x
+llines(x,y,col = 'red',lwd = 3)
+trellis.unfocus()
+
+mod2 <- lm( temp ~ as.factor(month)-1, data = utils)
+x <- 1:12
+y <- as.numeric( coefficients(mod2))
+xyplot( temp ~ month, data = utils, main = "Model 2")
+trellis.focus()
+llines(  x,y, lwd = 3, col = 'red')
+trellis.unfocus()
+end comment -->
+<p>In the first model, month is treated quantitatively, so the model term <code>month</code> produces a straight-line relationship that does not correspond well to the data.</p>
+<p>In the second model, month is treated categorically, allowing a more complicated model relationship. In fact, this is a groupwise model: the model values represent the mean temperature for each month.</p>
+<!--  #. abbreviate] shortens the names of factors -->
+<!-- end description -->
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="model-formulas-and-coefficients.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="fitting-models-to-data.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/dtkaplan/07-Coefficients.Rmd",
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+},
+"collapse": "chapter"
+});
+});
+</script>
+
+</body>
+
+</html>

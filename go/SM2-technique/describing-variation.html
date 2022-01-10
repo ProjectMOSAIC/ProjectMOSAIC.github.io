@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Statistical Modeling: Computational Technique</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="Up-to-date computational technique for Statistical Modeling: A Fresh Approach">
+  <meta name="generator" content="bookdown 0.1.6 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Statistical Modeling: Computational Technique" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Up-to-date computational technique for Statistical Modeling: A Fresh Approach" />
+  <meta name="github-repo" content="rstudio/SM3" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Statistical Modeling: Computational Technique" />
+  
+  <meta name="twitter:description" content="Up-to-date computational technique for Statistical Modeling: A Fresh Approach" />
+  
+
+<meta name="author" content="Daniel Kaplan and Frank Shaw">
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="data-in-r.html">
+<link rel="next" href="groupwise-models.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Fresh Approach: Computational Technique</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface: Updating Computational Technique</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#the-story-in-more-detail"><i class="fa fa-check"></i>The story in more detail</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#the-story-continues"><i class="fa fa-check"></i>The story continues …</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#the-choice-of-software"><i class="fa fa-check"></i><b>1.1</b> The Choice of Software</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#the-r-command-console"><i class="fa fa-check"></i><b>1.2</b> The R Command Console</a></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#invoking-an-operation"><i class="fa fa-check"></i><b>1.3</b> Invoking an Operation</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="introduction.html"><a href="introduction.html#naming-and-storing-values"><i class="fa fa-check"></i><b>1.3.1</b> Naming and Storing Values</a></li>
+<li class="chapter" data-level="1.3.2" data-path="introduction.html"><a href="introduction.html#assignment-vs-algebra"><i class="fa fa-check"></i><b>1.3.2</b> Assignment vs Algebra</a></li>
+<li class="chapter" data-level="1.3.3" data-path="introduction.html"><a href="introduction.html#connecting-computations"><i class="fa fa-check"></i><b>1.3.3</b> Connecting Computations</a></li>
+<li class="chapter" data-level="1.3.4" data-path="introduction.html"><a href="introduction.html#numbers-and-arithmetic"><i class="fa fa-check"></i><b>1.3.4</b> Numbers and Arithmetic</a></li>
+<li class="chapter" data-level="1.3.5" data-path="introduction.html"><a href="introduction.html#aside:complex-numbers"><i class="fa fa-check"></i><b>1.3.5</b> Aside: Complex numbers</a></li>
+<li class="chapter" data-level="1.3.6" data-path="introduction.html"><a href="introduction.html#types-of-objects"><i class="fa fa-check"></i><b>1.3.6</b> Types of Objects</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="data-in-r.html"><a href="data-in-r.html"><i class="fa fa-check"></i><b>2</b> Data in R</a><ul>
+<li class="chapter" data-level="2.1" data-path="data-in-r.html"><a href="data-in-r.html#preliminaries"><i class="fa fa-check"></i><b>2.1</b> Preliminaries</a></li>
+<li class="chapter" data-level="2.2" data-path="data-in-r.html"><a href="data-in-r.html#reading-tabular-data-into-r"><i class="fa fa-check"></i><b>2.2</b> Reading Tabular Data into R</a></li>
+<li class="chapter" data-level="2.3" data-path="data-in-r.html"><a href="data-in-r.html#data-frames"><i class="fa fa-check"></i><b>2.3</b> Data Frames</a></li>
+<li class="chapter" data-level="2.4" data-path="data-in-r.html"><a href="data-in-r.html#variables-in-data-frames"><i class="fa fa-check"></i><b>2.4</b> Variables in Data Frames</a></li>
+<li class="chapter" data-level="2.5" data-path="data-in-r.html"><a href="data-in-r.html#adding-a-new-variable"><i class="fa fa-check"></i><b>2.5</b> Adding a New Variable</a></li>
+<li class="chapter" data-level="2.6" data-path="data-in-r.html"><a href="data-in-r.html#sampling-from-a-sample-frame"><i class="fa fa-check"></i><b>2.6</b> Sampling from a Sample Frame</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="describing-variation.html"><a href="describing-variation.html"><i class="fa fa-check"></i><b>3</b> Describing Variation</a><ul>
+<li class="chapter" data-level="3.1" data-path="describing-variation.html"><a href="describing-variation.html#simple-statistical-calculations"><i class="fa fa-check"></i><b>3.1</b> Simple Statistical Calculations</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="describing-variation.html"><a href="describing-variation.html#aside-the-base-versions"><i class="fa fa-check"></i><b>3.1.1</b> Aside: The “base” versions</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="describing-variation.html"><a href="describing-variation.html#simple-statistical-graphics"><i class="fa fa-check"></i><b>3.2</b> Simple Statistical Graphics</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="describing-variation.html"><a href="describing-variation.html#histograms-and-distributions"><i class="fa fa-check"></i><b>3.2.1</b> Histograms and Distributions</a></li>
+<li class="chapter" data-level="3.2.2" data-path="describing-variation.html"><a href="describing-variation.html#density-plots"><i class="fa fa-check"></i><b>3.2.2</b> Density Plots</a></li>
+<li class="chapter" data-level="3.2.3" data-path="describing-variation.html"><a href="describing-variation.html#box-and-whisker-plots"><i class="fa fa-check"></i><b>3.2.3</b> Box-and-Whisker Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="describing-variation.html"><a href="describing-variation.html#displays-of-categorical-variables"><i class="fa fa-check"></i><b>3.3</b> Displays of Categorical Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="groupwise-models.html"><a href="groupwise-models.html"><i class="fa fa-check"></i><b>4</b> Groupwise models</a><ul>
+<li class="chapter" data-level="4.1" data-path="groupwise-models.html"><a href="groupwise-models.html#model-values-and-residuals"><i class="fa fa-check"></i><b>4.1</b> Model Values and Residuals</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="confidence-intervals.html"><a href="confidence-intervals.html"><i class="fa fa-check"></i><b>5</b> Confidence intervals</a><ul>
+<li class="chapter" data-level="5.1" data-path="confidence-intervals.html"><a href="confidence-intervals.html#finding-a-sampling-distribution-through-bootstrapping"><i class="fa fa-check"></i><b>5.1</b> Finding a Sampling Distribution through Bootstrapping</a></li>
+<li class="chapter" data-level="5.2" data-path="confidence-intervals.html"><a href="confidence-intervals.html#computing-grade-point-averages"><i class="fa fa-check"></i><b>5.2</b> Computing Grade-Point Averages</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="language-of-models.html"><a href="language-of-models.html"><i class="fa fa-check"></i><b>6</b> Language of models</a><ul>
+<li class="chapter" data-level="6.1" data-path="language-of-models.html"><a href="language-of-models.html#bi-variate-plots"><i class="fa fa-check"></i><b>6.1</b> Bi-variate Plots</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="language-of-models.html"><a href="language-of-models.html#quantitative-explanatory-variable"><i class="fa fa-check"></i><b>6.1.1</b> Quantitative Explanatory Variable</a></li>
+<li class="chapter" data-level="6.1.2" data-path="language-of-models.html"><a href="language-of-models.html#categorical-explanatory-variable"><i class="fa fa-check"></i><b>6.1.2</b> Categorical Explanatory Variable</a></li>
+<li class="chapter" data-level="6.1.3" data-path="language-of-models.html"><a href="language-of-models.html#multiple-explanatory-variables"><i class="fa fa-check"></i><b>6.1.3</b> Multiple Explanatory Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="language-of-models.html"><a href="language-of-models.html#fitting-models-and-finding-model-values"><i class="fa fa-check"></i><b>6.2</b> Fitting Models and Finding Model Values</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="language-of-models.html"><a href="language-of-models.html#interactions-and-main-effects"><i class="fa fa-check"></i><b>6.2.1</b> Interactions and Main Effects</a></li>
+<li class="chapter" data-level="6.2.2" data-path="language-of-models.html"><a href="language-of-models.html#transformation-terms"><i class="fa fa-check"></i><b>6.2.2</b> Transformation Terms</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="model-formulas-and-coefficients.html"><a href="model-formulas-and-coefficients.html"><i class="fa fa-check"></i><b>7</b> Model formulas and coefficients</a><ul>
+<li class="chapter" data-level="7.1" data-path="model-formulas-and-coefficients.html"><a href="model-formulas-and-coefficients.html#examining-model-coefficients"><i class="fa fa-check"></i><b>7.1</b> Examining model coefficients</a></li>
+<li class="chapter" data-level="7.2" data-path="model-formulas-and-coefficients.html"><a href="model-formulas-and-coefficients.html#other-useful-operators"><i class="fa fa-check"></i><b>7.2</b> Other Useful Operators</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="fitting-models-to-data.html"><a href="fitting-models-to-data.html"><i class="fa fa-check"></i><b>8</b> Fitting models to data</a><ul>
+<li class="chapter" data-level="8.1" data-path="fitting-models-to-data.html"><a href="fitting-models-to-data.html#sums-of-squares"><i class="fa fa-check"></i><b>8.1</b> Sums of Squares</a></li>
+<li class="chapter" data-level="8.2" data-path="fitting-models-to-data.html"><a href="fitting-models-to-data.html#redundancy"><i class="fa fa-check"></i><b>8.2</b> Redundancy</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="correlation-and-partitioning-of-variation.html"><a href="correlation-and-partitioning-of-variation.html"><i class="fa fa-check"></i><b>9</b> Correlation and partitioning of variation</a></li>
+<li class="chapter" data-level="10" data-path="total-and-partial-relationships.html"><a href="total-and-partial-relationships.html"><i class="fa fa-check"></i><b>10</b> Total and partial relationships</a><ul>
+<li class="chapter" data-level="10.1" data-path="total-and-partial-relationships.html"><a href="total-and-partial-relationships.html#adjustment"><i class="fa fa-check"></i><b>10.1</b> Adjustment</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="modeling-randomness.html"><a href="modeling-randomness.html"><i class="fa fa-check"></i><b>11</b> Modeling randomness</a><ul>
+<li class="chapter" data-level="11.1" data-path="modeling-randomness.html"><a href="modeling-randomness.html#random-draws-from-probability-models"><i class="fa fa-check"></i><b>11.1</b> Random Draws from Probability Models</a></li>
+<li class="chapter" data-level="11.2" data-path="modeling-randomness.html"><a href="modeling-randomness.html#standard-probability-models"><i class="fa fa-check"></i><b>11.2</b> Standard Probability Models</a></li>
+<li class="chapter" data-level="11.3" data-path="modeling-randomness.html"><a href="modeling-randomness.html#quantiles-and-coverage-intervals"><i class="fa fa-check"></i><b>11.3</b> Quantiles and Coverage Intervals</a></li>
+<li class="chapter" data-level="11.4" data-path="modeling-randomness.html"><a href="modeling-randomness.html#percentiles"><i class="fa fa-check"></i><b>11.4</b> Percentiles</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="confidence-in-models.html"><a href="confidence-in-models.html"><i class="fa fa-check"></i><b>12</b> Confidence in models</a><ul>
+<li class="chapter" data-level="12.1" data-path="confidence-in-models.html"><a href="confidence-in-models.html#confidence-intervals-from-standard-errors"><i class="fa fa-check"></i><b>12.1</b> Confidence Intervals from Standard Errors</a></li>
+<li class="chapter" data-level="12.2" data-path="confidence-in-models.html"><a href="confidence-in-models.html#bootstrapping-confidence-intervals"><i class="fa fa-check"></i><b>12.2</b> Bootstrapping Confidence Intervals</a></li>
+<li class="chapter" data-level="12.3" data-path="confidence-in-models.html"><a href="confidence-in-models.html#prediction-confidence-intervals"><i class="fa fa-check"></i><b>12.3</b> Prediction Confidence Intervals</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="the-logic-of-hypothesis-testing.html"><a href="the-logic-of-hypothesis-testing.html"><i class="fa fa-check"></i><b>13</b> The logic of hypothesis testing</a></li>
+<li class="chapter" data-level="14" data-path="testing-whole-models.html"><a href="testing-whole-models.html"><i class="fa fa-check"></i><b>14</b> Testing whole models</a><ul>
+<li class="chapter" data-level="14.1" data-path="testing-whole-models.html"><a href="testing-whole-models.html#the-permutation-test"><i class="fa fa-check"></i><b>14.1</b> The Permutation Test</a></li>
+<li class="chapter" data-level="14.2" data-path="testing-whole-models.html"><a href="testing-whole-models.html#first-principle-tests"><i class="fa fa-check"></i><b>14.2</b> First-Principle Tests</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="testing-parts-of-models.html"><a href="testing-parts-of-models.html"><i class="fa fa-check"></i><b>15</b> Testing parts of models</a><ul>
+<li class="chapter" data-level="15.1" data-path="testing-parts-of-models.html"><a href="testing-parts-of-models.html#anova-reports"><i class="fa fa-check"></i><b>15.1</b> ANOVA reports</a></li>
+<li class="chapter" data-level="15.2" data-path="testing-parts-of-models.html"><a href="testing-parts-of-models.html#non-parametric-statistics"><i class="fa fa-check"></i><b>15.2</b> Non-Parametric Statistics</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="models-of-yesno-variables.html"><a href="models-of-yesno-variables.html"><i class="fa fa-check"></i><b>16</b> Models of Yes/No Variables</a><ul>
+<li class="chapter" data-level="16.1" data-path="models-of-yesno-variables.html"><a href="models-of-yesno-variables.html#fitting-logistic-models"><i class="fa fa-check"></i><b>16.1</b> Fitting Logistic Models</a></li>
+<li class="chapter" data-level="16.2" data-path="models-of-yesno-variables.html"><a href="models-of-yesno-variables.html#fitted-model-values"><i class="fa fa-check"></i><b>16.2</b> Fitted Model Values</a></li>
+<li class="chapter" data-level="16.3" data-path="models-of-yesno-variables.html"><a href="models-of-yesno-variables.html#which-level-is-yes"><i class="fa fa-check"></i><b>16.3</b> Which Level is “Yes”?</a></li>
+<li class="chapter" data-level="16.4" data-path="models-of-yesno-variables.html"><a href="models-of-yesno-variables.html#analysis-of-deviance"><i class="fa fa-check"></i><b>16.4</b> Analysis of Deviance</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="causation.html"><a href="causation.html"><i class="fa fa-check"></i><b>17</b> Causation</a></li>
+<li class="chapter" data-level="18" data-path="experiment.html"><a href="experiment.html"><i class="fa fa-check"></i><b>18</b> Experiment</a></li>
+<li class="divider"></li>
+<li><a href="http://project-mosaic-books.com/?page_id=13" target="blank">Statistical Modeling: A Fresh Approach</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistical Modeling: Computational Technique</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="describing-variation" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Describing Variation</h1>
+<p>As a setting to illustrate computer techniques for describing variability, take the data that Galton collected on the heights of adult children and their parents. These data, in a modern case/variable format, are made available as <code>Galton</code> when the <code>mosaic</code> package is used.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(mosaic)
+Galton =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;http://tiny.cc/mosaic/galton.csv&quot;</span>)
+<span class="co"># As it happens, Galton is already loaded by mosaic from the mosaicData package. </span>
+<span class="co"># So you don&#39;t need the read.csv(); we use it here for the sake of generality.</span></code></pre></div>
+<div id="simple-statistical-calculations" class="section level2">
+<h2><span class="header-section-number">3.1</span> Simple Statistical Calculations</h2>
+<p>Simple numerical descriptions are easy to compute. Here are the mean, median, standard deviation and variance of the children’s heights (in inches).</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># [Always a space on both sides of an operator]</span>
+<span class="kw">mean</span>( ~<span class="st"> </span>height, <span class="dt">data =</span> Galton)</code></pre></div>
+<pre><code>## [1] 66.76069</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">median</span>( ~<span class="st"> </span>height, <span class="dt">data =</span> Galton)</code></pre></div>
+<pre><code>## [1] 66.5</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sd</span>( ~<span class="st"> </span>height, <span class="dt">data =</span> Galton)</code></pre></div>
+<pre><code>## [1] 3.582918</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">var</span>( ~<span class="st"> </span>height, <span class="dt">data =</span> Galton)</code></pre></div>
+<pre><code>## [1] 12.8373</code></pre>
+<p>Notice that the variance function <code>var()</code> returns the square of the standard deviation produced by <code>sd()</code>. Having both is merely a convenience.</p>
+<p>Why the tilde? In all these commands the first argument (<code>~ height</code>) is recognized by the interpreter as a <strong><em>model formula</em></strong>. Model language involves the tilde, and the tilde must be followed by a variable.</p>
+<div id="aside-the-base-versions" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> Aside: The “base” versions</h3>
+<blockquote>
+<p>The built-in, base R version of commands such as <code>mean()</code>, <code>median()</code>, <code>sd()</code>, and so on (that is, in their default non-<code>mosaic</code> form) take numeric vectors (columns of numbers) as arguments, but then the convenience of the <code>data =</code> designation is not available. For instance:</p>
+</blockquote>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(Galton$height)</code></pre></div>
+<pre><code>## [1] 66.76069</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">median</span>(Galton$height)</code></pre></div>
+<pre><code>## [1] 66.5</code></pre>
+<p>As we have seen before, R’s model language also allows more sophisticated model arguments, as in</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">median</span>(height ~<span class="st"> </span>sex, <span class="dt">data =</span> Galton)</code></pre></div>
+<pre><code>##    F    M 
+## 64.0 69.2</code></pre>
+<p>A percentile tells where a given value falls in a distribution. For example, a height of 63 inches is on the short side in Galton’s data:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pdata</span>( ~<span class="st"> </span>height, <span class="dv">63</span>, <span class="dt">data =</span> Galton)</code></pre></div>
+<pre><code>## [1] 0.1915367</code></pre>
+<p>Only about 19 % of the cases have a height less than or equal to 63 inches. The <code>pdata</code> operator takes one or more values as a second argument (here, 63) and finds where they fall in the distribution of values in the first argument (<code>height</code>).</p>
+<p>A quantile refers to the same sort of calculation, but inverted. Instead of giving a value in the same units as the distribution, you give a probability: a number between 0 and 1. The <code>qdata</code> operator then calculates the value whose percentile would be that value. What’s the 20th percentile of Galton’s heights?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qdata</span>( ~<span class="st"> </span>height, <span class="fl">0.2</span>, <span class="dt">data =</span> Galton)</code></pre></div>
+<pre><code>##        p quantile 
+##      0.2     63.5</code></pre>
+<p>Remember that the probability is given as a number between 0 and 1, so use 0.50 to indicate that you want the value which falls at the 50th percentile.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qdata</span>( ~<span class="st"> </span>height, <span class="fl">0.5</span>, <span class="dt">data =</span> Galton)</code></pre></div>
+<pre><code>##        p quantile 
+##      0.5     66.5</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">median</span>( ~<span class="st"> </span>height, <span class="dt">data =</span> Galton)</code></pre></div>
+<pre><code>## [1] 66.5</code></pre>
+<!-- begin itemize -->
+<ol>
+<li>The 25th and 75th percentile in a single command — in other words, the 50 percent coverage interval:</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># [Note: formula should be first argument.]</span>
+<span class="kw">qdata</span>( ~<span class="st"> </span>height, <span class="kw">c</span>(<span class="fl">0.25</span>, <span class="fl">0.75</span>), <span class="dt">data =</span> Galton)</code></pre></div>
+<pre><code>##     quantile    p
+## 25%     64.0 0.25
+## 75%     69.7 0.75</code></pre>
+<ol>
+<li>The 2.5th and 97.5th percentile — in other words, the 95 percent coverage interval:</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qdata</span>( ~<span class="st"> </span>height, <span class="kw">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>), <span class="dt">data =</span> Galton)</code></pre></div>
+<pre><code>##       quantile     p
+## 2.5%        60 0.025
+## 97.5%       73 0.975</code></pre>
+<!-- end itemize -->
+<p>The interquartile range is the width of the 50 percent coverage interval:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">IQR</span>( ~<span class="st"> </span>height, <span class="dt">data =</span> Galton)</code></pre></div>
+<pre><code>## [1] 5.7</code></pre>
+<p>Some other useful operators are <code>min()</code>, <code>max()</code>, and <code>range()</code>.</p>
+</div>
+</div>
+<div id="simple-statistical-graphics" class="section level2">
+<h2><span class="header-section-number">3.2</span> Simple Statistical Graphics</h2>
+<p>There are several basic types of statistical graphics to display the distribution of a variable: histograms, density plots, and boxplots. These are easily mastered by example.</p>
+<div id="histograms-and-distributions" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> Histograms and Distributions</h3>
+<p>Constructing a histogram involves dividing the range of a variable up into bins and counting how many cases fall into each bin. This is done in an almost entirely automatic way:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">histogram</span>( ~<span class="st"> </span>height, <span class="dt">data =</span> Galton)</code></pre></div>
+<p><img src="Statistical_Modeling__Computational_Technique_files/figure-html/unnamed-chunk-57-1.png" width="672" /></p>
+<p>When constructing a histogram, R makes an automatic but sensible choice of the number of bins. If you like, you can control this yourself. For instance:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">histogram</span>( ~<span class="st"> </span>height, <span class="dt">data =</span> Galton, <span class="dt">breaks =</span> <span class="dv">25</span> )</code></pre></div>
+<p><img src="Statistical_Modeling__Computational_Technique_files/figure-html/unnamed-chunk-58-1.png" width="672" /></p>
+<p>The horizontal axis of the histogram is always in the units of the variable. For the histograms above, the horizontal axis is in “inches” because that is the unit of the <code>height</code> variable.</p>
+<p>The vertical axis is conventionally drawn in one of three ways: controlled by an optional argument named <code>type</code>. <!-- begin description --></p>
+<ol>
+<li><strong>Absolute Frequency or Counts</strong></li>
+</ol>
+<p>A simple count of the number of cases that falls into each bin. This mode is set with <code>type=&quot;count&quot;</code> as in</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">histogram</span>( ~<span class="st"> </span>height, <span class="dt">data =</span> Galton, <span class="dt">type =</span> <span class="st">&quot;count&quot;</span>)</code></pre></div>
+<p><img src="Statistical_Modeling__Computational_Technique_files/figure-html/unnamed-chunk-59-1.png" width="672" /> Figures/variation-var3-hist</p>
+<ol>
+<li><strong>Relative Frequency</strong></li>
+</ol>
+<p>The vertical axis is scaled so that the height of the bar give the proportion of cases that fall into the bin. This is the default, that is, this is the <code>type</code> if you don’t specify <code>type</code> in the command.</p>
+<ol>
+<li><strong>Density</strong></li>
+</ol>
+<p>The vertical axis <em>area</em> of the bar gives the relative proportion of cases that fall into the bin. Set <code>type = &quot;density&quot;</code>. <!-- end description --> In a density plot, areas can be interpreted as probabilities and the area under the entire histogram is equal to 1.</p>
+<p>Other useful optional arguments set the labels for the axes and the graph as a whole and color the bars. For example,</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">histogram</span>( ~<span class="st"> </span>height, <span class="dt">data =</span> Galton, <span class="dt">type =</span> <span class="st">&quot;density&quot;</span>,
+     <span class="dt">xlab=</span><span class="st">&quot;Height (inches)&quot;</span>, 
+     <span class="dt">main=</span><span class="st">&quot;Distribution of Heights&quot;</span>,
+     <span class="dt">col=</span><span class="st">&quot;gray&quot;</span>)</code></pre></div>
+<p><img src="Statistical_Modeling__Computational_Technique_files/figure-html/unnamed-chunk-60-1.png" width="672" /></p>
+<p>The above command is so long that it has been broken into several lines for display purposes. R ignores the line breaks, holding off on executing the command until it sees the final closing parentheses. Notice the use of quotation marks to delimit the labels and names like <code>&quot;blue&quot;</code>. Also note the <code>+</code> signs that appear in place of the prompt (<code>&gt;</code>) on new lines when the command is still incomplete. If a plus sign appears when you are expecting a prompt, R is telling you that the previous command is incomplete. You need to complete it before you get back to the prompt.</p>
+</div>
+<div id="density-plots" class="section level3">
+<h3><span class="header-section-number">3.2.2</span> Density Plots</h3>
+<p>A <strong><em>density plot</em></strong> avoids the need to create bins and plots out the distribution as a continuous curve. Making a density plot involves two operators. The <strong><em>density</em></strong> operator performs the basic computation which is then displayed using either the <code>plot</code> or the <code>lines</code> operator. For example:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">densityplot</span>( ~<span class="st"> </span>height, <span class="dt">data =</span> Galton) </code></pre></div>
+<p><img src="Statistical_Modeling__Computational_Technique_files/figure-html/unnamed-chunk-61-1.png" width="672" /></p>
+<p>If you want to suppress the rug-like plotting of points at the bottom of the graph, use <code>densityplot( ~ height, data = Galton, plot.points = FALSE)</code>.</p>
+</div>
+<div id="box-and-whisker-plots" class="section level3">
+<h3><span class="header-section-number">3.2.3</span> Box-and-Whisker Plots</h3>
+<p>Box-and-whisker plots are made with the <code>bwplot</code> command:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">bwplot</span>( ~<span class="st"> </span>height, <span class="dt">data =</span> Galton)</code></pre></div>
+<p><img src="Statistical_Modeling__Computational_Technique_files/figure-html/unnamed-chunk-62-1.png" width="672" /></p>
+<p>The median is represented by the heavy dot in the middle. Outliers, if any, are marked by dots outside the whiskers.</p>
+<p>The real power of the box-and-whisker plot is for comparing distributions. This will be raised again more systematically in later chapters, but just to illustrate, here is how to compare the heights of males and females:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">bwplot</span>(height ~<span class="st"> </span>sex, <span class="dt">data =</span> Galton)</code></pre></div>
+<p><img src="Statistical_Modeling__Computational_Technique_files/figure-html/unnamed-chunk-63-1.png" width="672" /></p>
+</div>
+</div>
+<div id="displays-of-categorical-variables" class="section level2">
+<h2><span class="header-section-number">3.3</span> Displays of Categorical Variables</h2>
+<p>For categorical variables, it makes no sense to compute descriptive statistics such as the mean, standard deviation, or variance. Instead, look at the number of cases at each level of the variable.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tally</span>( ~<span class="st"> </span>sex, <span class="dt">data =</span> Galton)</code></pre></div>
+<pre><code>## 
+##   F   M 
+## 433 465</code></pre>
+<p>Proportions can be found by dividing the tallies by the total:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tally</span>( ~<span class="st"> </span>sex, <span class="dt">data =</span> Galton)/<span class="kw">nrow</span>(Galton)</code></pre></div>
+<pre><code>## 
+##         F         M 
+## 0.4821826 0.5178174</code></pre>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="data-in-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="groupwise-models.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/dtkaplan/03-Variation.Rmd",
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+},
+"collapse": "chapter"
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

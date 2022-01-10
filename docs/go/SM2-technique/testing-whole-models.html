@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Statistical Modeling: Computational Technique</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="Up-to-date computational technique for Statistical Modeling: A Fresh Approach">
+  <meta name="generator" content="bookdown 0.1.6 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Statistical Modeling: Computational Technique" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Up-to-date computational technique for Statistical Modeling: A Fresh Approach" />
+  <meta name="github-repo" content="rstudio/SM3" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Statistical Modeling: Computational Technique" />
+  
+  <meta name="twitter:description" content="Up-to-date computational technique for Statistical Modeling: A Fresh Approach" />
+  
+
+<meta name="author" content="Daniel Kaplan and Frank Shaw">
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="the-logic-of-hypothesis-testing.html">
+<link rel="next" href="testing-parts-of-models.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Fresh Approach: Computational Technique</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface: Updating Computational Technique</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#the-story-in-more-detail"><i class="fa fa-check"></i>The story in more detail</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#the-story-continues"><i class="fa fa-check"></i>The story continues …</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#the-choice-of-software"><i class="fa fa-check"></i><b>1.1</b> The Choice of Software</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#the-r-command-console"><i class="fa fa-check"></i><b>1.2</b> The R Command Console</a></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#invoking-an-operation"><i class="fa fa-check"></i><b>1.3</b> Invoking an Operation</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="introduction.html"><a href="introduction.html#naming-and-storing-values"><i class="fa fa-check"></i><b>1.3.1</b> Naming and Storing Values</a></li>
+<li class="chapter" data-level="1.3.2" data-path="introduction.html"><a href="introduction.html#assignment-vs-algebra"><i class="fa fa-check"></i><b>1.3.2</b> Assignment vs Algebra</a></li>
+<li class="chapter" data-level="1.3.3" data-path="introduction.html"><a href="introduction.html#connecting-computations"><i class="fa fa-check"></i><b>1.3.3</b> Connecting Computations</a></li>
+<li class="chapter" data-level="1.3.4" data-path="introduction.html"><a href="introduction.html#numbers-and-arithmetic"><i class="fa fa-check"></i><b>1.3.4</b> Numbers and Arithmetic</a></li>
+<li class="chapter" data-level="1.3.5" data-path="introduction.html"><a href="introduction.html#aside:complex-numbers"><i class="fa fa-check"></i><b>1.3.5</b> Aside: Complex numbers</a></li>
+<li class="chapter" data-level="1.3.6" data-path="introduction.html"><a href="introduction.html#types-of-objects"><i class="fa fa-check"></i><b>1.3.6</b> Types of Objects</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="data-in-r.html"><a href="data-in-r.html"><i class="fa fa-check"></i><b>2</b> Data in R</a><ul>
+<li class="chapter" data-level="2.1" data-path="data-in-r.html"><a href="data-in-r.html#preliminaries"><i class="fa fa-check"></i><b>2.1</b> Preliminaries</a></li>
+<li class="chapter" data-level="2.2" data-path="data-in-r.html"><a href="data-in-r.html#reading-tabular-data-into-r"><i class="fa fa-check"></i><b>2.2</b> Reading Tabular Data into R</a></li>
+<li class="chapter" data-level="2.3" data-path="data-in-r.html"><a href="data-in-r.html#data-frames"><i class="fa fa-check"></i><b>2.3</b> Data Frames</a></li>
+<li class="chapter" data-level="2.4" data-path="data-in-r.html"><a href="data-in-r.html#variables-in-data-frames"><i class="fa fa-check"></i><b>2.4</b> Variables in Data Frames</a></li>
+<li class="chapter" data-level="2.5" data-path="data-in-r.html"><a href="data-in-r.html#adding-a-new-variable"><i class="fa fa-check"></i><b>2.5</b> Adding a New Variable</a></li>
+<li class="chapter" data-level="2.6" data-path="data-in-r.html"><a href="data-in-r.html#sampling-from-a-sample-frame"><i class="fa fa-check"></i><b>2.6</b> Sampling from a Sample Frame</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="describing-variation.html"><a href="describing-variation.html"><i class="fa fa-check"></i><b>3</b> Describing Variation</a><ul>
+<li class="chapter" data-level="3.1" data-path="describing-variation.html"><a href="describing-variation.html#simple-statistical-calculations"><i class="fa fa-check"></i><b>3.1</b> Simple Statistical Calculations</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="describing-variation.html"><a href="describing-variation.html#aside-the-base-versions"><i class="fa fa-check"></i><b>3.1.1</b> Aside: The “base” versions</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="describing-variation.html"><a href="describing-variation.html#simple-statistical-graphics"><i class="fa fa-check"></i><b>3.2</b> Simple Statistical Graphics</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="describing-variation.html"><a href="describing-variation.html#histograms-and-distributions"><i class="fa fa-check"></i><b>3.2.1</b> Histograms and Distributions</a></li>
+<li class="chapter" data-level="3.2.2" data-path="describing-variation.html"><a href="describing-variation.html#density-plots"><i class="fa fa-check"></i><b>3.2.2</b> Density Plots</a></li>
+<li class="chapter" data-level="3.2.3" data-path="describing-variation.html"><a href="describing-variation.html#box-and-whisker-plots"><i class="fa fa-check"></i><b>3.2.3</b> Box-and-Whisker Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="describing-variation.html"><a href="describing-variation.html#displays-of-categorical-variables"><i class="fa fa-check"></i><b>3.3</b> Displays of Categorical Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="groupwise-models.html"><a href="groupwise-models.html"><i class="fa fa-check"></i><b>4</b> Groupwise models</a><ul>
+<li class="chapter" data-level="4.1" data-path="groupwise-models.html"><a href="groupwise-models.html#model-values-and-residuals"><i class="fa fa-check"></i><b>4.1</b> Model Values and Residuals</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="confidence-intervals.html"><a href="confidence-intervals.html"><i class="fa fa-check"></i><b>5</b> Confidence intervals</a><ul>
+<li class="chapter" data-level="5.1" data-path="confidence-intervals.html"><a href="confidence-intervals.html#finding-a-sampling-distribution-through-bootstrapping"><i class="fa fa-check"></i><b>5.1</b> Finding a Sampling Distribution through Bootstrapping</a></li>
+<li class="chapter" data-level="5.2" data-path="confidence-intervals.html"><a href="confidence-intervals.html#computing-grade-point-averages"><i class="fa fa-check"></i><b>5.2</b> Computing Grade-Point Averages</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="language-of-models.html"><a href="language-of-models.html"><i class="fa fa-check"></i><b>6</b> Language of models</a><ul>
+<li class="chapter" data-level="6.1" data-path="language-of-models.html"><a href="language-of-models.html#bi-variate-plots"><i class="fa fa-check"></i><b>6.1</b> Bi-variate Plots</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="language-of-models.html"><a href="language-of-models.html#quantitative-explanatory-variable"><i class="fa fa-check"></i><b>6.1.1</b> Quantitative Explanatory Variable</a></li>
+<li class="chapter" data-level="6.1.2" data-path="language-of-models.html"><a href="language-of-models.html#categorical-explanatory-variable"><i class="fa fa-check"></i><b>6.1.2</b> Categorical Explanatory Variable</a></li>
+<li class="chapter" data-level="6.1.3" data-path="language-of-models.html"><a href="language-of-models.html#multiple-explanatory-variables"><i class="fa fa-check"></i><b>6.1.3</b> Multiple Explanatory Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="language-of-models.html"><a href="language-of-models.html#fitting-models-and-finding-model-values"><i class="fa fa-check"></i><b>6.2</b> Fitting Models and Finding Model Values</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="language-of-models.html"><a href="language-of-models.html#interactions-and-main-effects"><i class="fa fa-check"></i><b>6.2.1</b> Interactions and Main Effects</a></li>
+<li class="chapter" data-level="6.2.2" data-path="language-of-models.html"><a href="language-of-models.html#transformation-terms"><i class="fa fa-check"></i><b>6.2.2</b> Transformation Terms</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="model-formulas-and-coefficients.html"><a href="model-formulas-and-coefficients.html"><i class="fa fa-check"></i><b>7</b> Model formulas and coefficients</a><ul>
+<li class="chapter" data-level="7.1" data-path="model-formulas-and-coefficients.html"><a href="model-formulas-and-coefficients.html#examining-model-coefficients"><i class="fa fa-check"></i><b>7.1</b> Examining model coefficients</a></li>
+<li class="chapter" data-level="7.2" data-path="model-formulas-and-coefficients.html"><a href="model-formulas-and-coefficients.html#other-useful-operators"><i class="fa fa-check"></i><b>7.2</b> Other Useful Operators</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="fitting-models-to-data.html"><a href="fitting-models-to-data.html"><i class="fa fa-check"></i><b>8</b> Fitting models to data</a><ul>
+<li class="chapter" data-level="8.1" data-path="fitting-models-to-data.html"><a href="fitting-models-to-data.html#sums-of-squares"><i class="fa fa-check"></i><b>8.1</b> Sums of Squares</a></li>
+<li class="chapter" data-level="8.2" data-path="fitting-models-to-data.html"><a href="fitting-models-to-data.html#redundancy"><i class="fa fa-check"></i><b>8.2</b> Redundancy</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="correlation-and-partitioning-of-variation.html"><a href="correlation-and-partitioning-of-variation.html"><i class="fa fa-check"></i><b>9</b> Correlation and partitioning of variation</a></li>
+<li class="chapter" data-level="10" data-path="total-and-partial-relationships.html"><a href="total-and-partial-relationships.html"><i class="fa fa-check"></i><b>10</b> Total and partial relationships</a><ul>
+<li class="chapter" data-level="10.1" data-path="total-and-partial-relationships.html"><a href="total-and-partial-relationships.html#adjustment"><i class="fa fa-check"></i><b>10.1</b> Adjustment</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="modeling-randomness.html"><a href="modeling-randomness.html"><i class="fa fa-check"></i><b>11</b> Modeling randomness</a><ul>
+<li class="chapter" data-level="11.1" data-path="modeling-randomness.html"><a href="modeling-randomness.html#random-draws-from-probability-models"><i class="fa fa-check"></i><b>11.1</b> Random Draws from Probability Models</a></li>
+<li class="chapter" data-level="11.2" data-path="modeling-randomness.html"><a href="modeling-randomness.html#standard-probability-models"><i class="fa fa-check"></i><b>11.2</b> Standard Probability Models</a></li>
+<li class="chapter" data-level="11.3" data-path="modeling-randomness.html"><a href="modeling-randomness.html#quantiles-and-coverage-intervals"><i class="fa fa-check"></i><b>11.3</b> Quantiles and Coverage Intervals</a></li>
+<li class="chapter" data-level="11.4" data-path="modeling-randomness.html"><a href="modeling-randomness.html#percentiles"><i class="fa fa-check"></i><b>11.4</b> Percentiles</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="confidence-in-models.html"><a href="confidence-in-models.html"><i class="fa fa-check"></i><b>12</b> Confidence in models</a><ul>
+<li class="chapter" data-level="12.1" data-path="confidence-in-models.html"><a href="confidence-in-models.html#confidence-intervals-from-standard-errors"><i class="fa fa-check"></i><b>12.1</b> Confidence Intervals from Standard Errors</a></li>
+<li class="chapter" data-level="12.2" data-path="confidence-in-models.html"><a href="confidence-in-models.html#bootstrapping-confidence-intervals"><i class="fa fa-check"></i><b>12.2</b> Bootstrapping Confidence Intervals</a></li>
+<li class="chapter" data-level="12.3" data-path="confidence-in-models.html"><a href="confidence-in-models.html#prediction-confidence-intervals"><i class="fa fa-check"></i><b>12.3</b> Prediction Confidence Intervals</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="the-logic-of-hypothesis-testing.html"><a href="the-logic-of-hypothesis-testing.html"><i class="fa fa-check"></i><b>13</b> The logic of hypothesis testing</a></li>
+<li class="chapter" data-level="14" data-path="testing-whole-models.html"><a href="testing-whole-models.html"><i class="fa fa-check"></i><b>14</b> Testing whole models</a><ul>
+<li class="chapter" data-level="14.1" data-path="testing-whole-models.html"><a href="testing-whole-models.html#the-permutation-test"><i class="fa fa-check"></i><b>14.1</b> The Permutation Test</a></li>
+<li class="chapter" data-level="14.2" data-path="testing-whole-models.html"><a href="testing-whole-models.html#first-principle-tests"><i class="fa fa-check"></i><b>14.2</b> First-Principle Tests</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="testing-parts-of-models.html"><a href="testing-parts-of-models.html"><i class="fa fa-check"></i><b>15</b> Testing parts of models</a><ul>
+<li class="chapter" data-level="15.1" data-path="testing-parts-of-models.html"><a href="testing-parts-of-models.html#anova-reports"><i class="fa fa-check"></i><b>15.1</b> ANOVA reports</a></li>
+<li class="chapter" data-level="15.2" data-path="testing-parts-of-models.html"><a href="testing-parts-of-models.html#non-parametric-statistics"><i class="fa fa-check"></i><b>15.2</b> Non-Parametric Statistics</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="models-of-yesno-variables.html"><a href="models-of-yesno-variables.html"><i class="fa fa-check"></i><b>16</b> Models of Yes/No Variables</a><ul>
+<li class="chapter" data-level="16.1" data-path="models-of-yesno-variables.html"><a href="models-of-yesno-variables.html#fitting-logistic-models"><i class="fa fa-check"></i><b>16.1</b> Fitting Logistic Models</a></li>
+<li class="chapter" data-level="16.2" data-path="models-of-yesno-variables.html"><a href="models-of-yesno-variables.html#fitted-model-values"><i class="fa fa-check"></i><b>16.2</b> Fitted Model Values</a></li>
+<li class="chapter" data-level="16.3" data-path="models-of-yesno-variables.html"><a href="models-of-yesno-variables.html#which-level-is-yes"><i class="fa fa-check"></i><b>16.3</b> Which Level is “Yes”?</a></li>
+<li class="chapter" data-level="16.4" data-path="models-of-yesno-variables.html"><a href="models-of-yesno-variables.html#analysis-of-deviance"><i class="fa fa-check"></i><b>16.4</b> Analysis of Deviance</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="causation.html"><a href="causation.html"><i class="fa fa-check"></i><b>17</b> Causation</a></li>
+<li class="chapter" data-level="18" data-path="experiment.html"><a href="experiment.html"><i class="fa fa-check"></i><b>18</b> Experiment</a></li>
+<li class="divider"></li>
+<li><a href="http://project-mosaic-books.com/?page_id=13" target="blank">Statistical Modeling: A Fresh Approach</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistical Modeling: Computational Technique</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="testing-whole-models" class="section level1">
+<h1><span class="header-section-number">Chapter 14</span> Testing whole models</h1>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(mosaic)  <span class="co"># mosaic operators and data will be used in this section</span></code></pre></div>
+<p>The chapter presents two ways of doing hypothesis tests on whole models: (1) permutation tests where the connection is severed between the explanatory and response variables, (2) tests such as <code>ANOVA</code> where the sampling distribution is calculated from first principles. In practice, first-principle tests are used most of the time. Still, the permutation test is useful for developing intuition about hypothesis testing — our main purpose here — and for those not-so-rare occasions where the assumptions behind the first-principle tests are dubious.</p>
+<div id="the-permutation-test" class="section level2">
+<h2><span class="header-section-number">14.1</span> The Permutation Test</h2>
+<p>The idea of a permutation test is to enforce the null hypothesis that there is no connection between the response variables and the explanatory variables. An effective way to do this is to randomize the response variable in a way that is consistent with sampling variability. When constructing confidence intervals, the <code>resample()</code> function was used. Re-sampling will typically repeat some cases and omit others. Here, the <code>shuffle()</code> function will be used instead, to scramble the order of one or more variables while leaving the others in their original state.</p>
+<p>To illustrate, consider a model for exploring whether <code>sex</code> and <code>mother</code>’s height are related to the height of the child:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">G &lt;-<span class="st"> </span>Galton <span class="co"># from mosaicData</span>
+mod &lt;-<span class="st"> </span><span class="kw">lm</span>( height ~<span class="st"> </span>sex +<span class="st"> </span>mother, <span class="dt">data =</span> G)
+<span class="kw">coefficients</span>(mod)</code></pre></div>
+<pre><code>## (Intercept)        sexM      mother 
+##  41.4495235   5.1766949   0.3531371</code></pre>
+<p>The coefficients indicate that typical males are taller than typical females by about 5 inches and that for each inch taller the mother is, a child will typically be taller by 0.35 inches.<br />
+A reasonable test statistic to summarize the whole model is <span class="math inline">\(R^2\)</span>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rsquared</span>(mod)</code></pre></div>
+<pre><code>## [1] 0.5618019</code></pre>
+<p>For confidence intervals, re-sampling was applied to the entire data frame. This selects random cases, but each selected case is an authentic one that matches exactly the original values for that case. The point of re-sampling is to get an idea of the variability introduced by random sampling of authentic cases.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">do</span>(<span class="dv">5</span>) *<span class="st"> </span><span class="kw">lm</span>( height ~<span class="st"> </span>sex +<span class="st"> </span>mother, <span class="dt">data =</span> <span class="kw">resample</span>(G))</code></pre></div>
+<pre><code>##   Intercept     sexM    mother    sigma r.squared        F numdf dendf .row .index
+## 1  42.62282 5.198677 0.3344904 2.357899 0.5689608 590.6887     2   895    1      1
+## 2  41.33571 5.167612 0.3528718 2.347953 0.5587133 566.5800     2   895    1      2
+## 3  40.63105 5.166878 0.3651324 2.310658 0.5821128 623.3632     2   895    1      3
+## 4  39.34922 5.110852 0.3869812 2.368210 0.5574939 563.7855     2   895    1      4
+## 5  37.85104 5.312496 0.4077655 2.416791 0.5631884 576.9692     2   895    1      5</code></pre>
+<p>The <code>sex M</code> coefficients are tightly grouped near 5 inches, the <code>mother</code> coefficients are around 0.3 to 0.4.</p>
+<p>In order to carry out a permutation test, do not randomize the whole data frame. Instead, shuffle just the response variable:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">do</span>(<span class="dv">5</span>) *<span class="st"> </span><span class="kw">lm</span>( <span class="kw">shuffle</span>(height) ~<span class="st"> </span>sex +<span class="st"> </span>mother, <span class="dt">data =</span> G)</code></pre></div>
+<pre><code>##   Intercept        sexM      mother    sigma    r.squared         F numdf dendf .row .index
+## 1  66.43890  0.26931216  0.00284531 3.584389 0.0014106973 0.6321789     2   895    1      1
+## 2  65.95435  0.10753345  0.01171354 3.586428 0.0002739812 0.1226402     2   895    1      2
+## 3  68.23226  0.07942871 -0.02360484 3.586263 0.0003658552 0.1637801     2   895    1      3
+## 4  63.22838 -0.03380593  0.05539274 3.584576 0.0013063829 0.5853711     2   895    1      4
+## 5  67.93034 -0.15586484 -0.01699231 3.585887 0.0005757963 0.2578173     2   895    1      5</code></pre>
+<p>Now the <code>sex M</code> and <code>mother</code> coefficients are close to zero, as would be expected when there is no relationship between the response variable and the explanatory variables.</p>
+<p>In constructing the sampling distribution under the null hypothesis, you should do hundreds of trials of fitting the model to the scrambled data, calculating the test statistic (<span class="math inline">\(R^2\)</span> here) for each trial. Note that each trial itself involves all of the cases in your sample, but those cases have been changed so that the shuffled variable almost certainly takes on a different value in every case than in the original data.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">nulltrials =<span class="st"> </span><span class="kw">do</span>(<span class="dv">500</span>) *<span class="st">  </span><span class="kw">rsquared</span>(
+     <span class="kw">lm</span>(<span class="kw">shuffle</span>(height) ~<span class="st"> </span>sex +<span class="st"> </span>mother, <span class="dt">data =</span> G))</code></pre></div>
+<p>Notice that the <code>rsquared()</code> operator has been used to calculate the test statistic <span class="math inline">\(R^2\)</span> from the model. The output of <code>do()</code> is a data frame:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(nulltrials)</code></pre></div>
+<pre><code>##       rsquared
+## 1 0.0022598018
+## 2 0.0003179839
+## 3 0.0010647410
+## 4 0.0050407000
+## 5 0.0047568723
+## 6 0.0006001192</code></pre>
+<p>Naturally, all of the <span class="math inline">\(R^2\)</span> values for the trials are close to zero. After all, there is no relation between the response variable (after randomization with <code>shuffle()</code>) and the explanatory variables.</p>
+<p>The p-value can be calculated directly from the trials, by comparison to the observed value in the actual data: <span class="math inline">\(R^2\)</span> was 0.5618.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tally</span>(nulltrials$rsquared &gt;<span class="st"> </span><span class="fl">0.5618</span>)</code></pre></div>
+<pre><code>## 
+##  TRUE FALSE 
+##     0   500</code></pre>
+<p>None of the 500 trials were greater than the value of the test statistic, 0.5618. It wouldn’t be fair to claim that <span class="math inline">\(p=0\)</span>, since we only did 500 trials, but it is reasonable to say that the permutation test shows the p-value is <span class="math inline">\(p \leq 1/500\)</span>.</p>
+<p>For interst’s sake, have a look at the null distribution for <span class="math inline">\(R^2\)</span>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">densityplot</span>(nulltrials$rsquared)</code></pre></div>
+<p><img src="Statistical_Modeling__Computational_Technique_files/figure-html/unnamed-chunk-205-1.png" width="672" /></p>
+<p>These values are a long way from 0.5618. The p-value is likely to be much less than <span class="math inline">\(1/500\)</span>.</p>
+</div>
+<div id="first-principle-tests" class="section level2">
+<h2><span class="header-section-number">14.2</span> First-Principle Tests</h2>
+<p>On modern computers, the permutation test is entirely practical. But a few decades ago, it was not. Great creativity was applied to finding test statistics where the sampling distribution could be estimated without extensive calculation. One of these is the F statistic. This is still very useful today and is a standard part of the regression report in many statistical packages.</p>
+<p>Here is the regression report from the <code>height</code> ~ <code>sex</code>+<code>mother</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mod &lt;-<span class="st"> </span><span class="kw">lm</span>( height ~<span class="st"> </span>sex +<span class="st"> </span>mother, <span class="dt">data =</span> G)
+<span class="kw">summary</span>(mod)</code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = height ~ sex + mother, data = G)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -9.4036 -1.6024  0.1528  1.5890  9.4199 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) 41.44952    2.20949   18.76   &lt;2e-16 ***
+## sexM         5.17669    0.15867   32.62   &lt;2e-16 ***
+## mother       0.35314    0.03439   10.27   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 2.374 on 895 degrees of freedom
+## Multiple R-squared:  0.5618, Adjusted R-squared:  0.5608 
+## F-statistic: 573.7 on 2 and 895 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p>The last line of the report shows an F statistic of 574 based on an <span class="math inline">\(R^2\)</span> of 0.562 and translates this to a p-value that is practically zero: <code>&lt;2e-16</code>.</p>
+<p>By way of showing that the regression report is rooted in the same approach shown in the chapter, you can confirm the calculations. There are <span class="math inline">\(m=3\)</span> coefficients and <span class="math inline">\(n=898\)</span> cases, producing <span class="math inline">\(n-m=895\)</span> degrees of freedom in the denominator and <span class="math inline">\(m-1=2\)</span> degrees of freedom in the numerator. The calculation of the F statistic from <span class="math inline">\(R^2\)</span> and the degrees of freedom follows the formula given in the chapter.<br />
+<span class="math display">\[ F = \frac{\frac{R^2}{m-1}}{\frac{1-R^2} {n-m}} \]</span> Plugging the values into the formula</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">(<span class="fl">0.562</span> /<span class="st"> </span><span class="dv">2</span>) /<span class="st"> </span>((<span class="dv">1</span><span class="fl">-.562</span>) /<span class="st"> </span><span class="dv">895</span>)</code></pre></div>
+<pre><code>## [1] 574.1895</code></pre>
+<p>F is the test statistic. To convert it to a p-value, you need to calculate how extreme the value of F<span class="math inline">\(=574.2\)</span> is with reference to the F distribution with 895 and 2 degrees of freedom.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">1</span> -<span class="st"> </span><span class="kw">pf</span>( <span class="fl">574.2</span>, <span class="dv">2</span>, <span class="dv">895</span>)</code></pre></div>
+<pre><code>## [1] 0</code></pre>
+<p>The calculation of p-values from F always follows this form. In the context of the F distribution, “extreme” always means “bigger than.” So, calculate the area under the F distribution to the right of the observed value.</p>
+<p>Here’s a picture of the relevant F distribution:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">f &lt;-<span class="st"> </span><span class="kw">rf</span>(<span class="dv">1000</span>, <span class="dv">2</span>, <span class="dv">895</span>) <span class="co"># 1000 values from the f distribution</span>
+<span class="kw">densityplot</span>( f, <span class="dt">xlim =</span> <span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">10</span>), <span class="dt">main=</span><span class="st">&quot;density plot for F(2,895)&quot;</span> )  </code></pre></div>
+<p><img src="Statistical_Modeling__Computational_Technique_files/figure-html/unnamed-chunk-209-1.png" width="672" /></p>
+<p>Very little of this distribution lies to the right of 6; virtually none of it lies to the right of 574.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="the-logic-of-hypothesis-testing.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="testing-parts-of-models.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/dtkaplan/14-testing-whole-models.Rmd",
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+},
+"collapse": "chapter"
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Statistical Modeling: Computational Technique</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="Up-to-date computational technique for Statistical Modeling: A Fresh Approach">
+  <meta name="generator" content="bookdown 0.1.6 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Statistical Modeling: Computational Technique" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Up-to-date computational technique for Statistical Modeling: A Fresh Approach" />
+  <meta name="github-repo" content="rstudio/SM3" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Statistical Modeling: Computational Technique" />
+  
+  <meta name="twitter:description" content="Up-to-date computational technique for Statistical Modeling: A Fresh Approach" />
+  
+
+<meta name="author" content="Daniel Kaplan and Frank Shaw">
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="total-and-partial-relationships.html">
+<link rel="next" href="confidence-in-models.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Fresh Approach: Computational Technique</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface: Updating Computational Technique</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#the-story-in-more-detail"><i class="fa fa-check"></i>The story in more detail</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#the-story-continues"><i class="fa fa-check"></i>The story continues …</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#the-choice-of-software"><i class="fa fa-check"></i><b>1.1</b> The Choice of Software</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#the-r-command-console"><i class="fa fa-check"></i><b>1.2</b> The R Command Console</a></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#invoking-an-operation"><i class="fa fa-check"></i><b>1.3</b> Invoking an Operation</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="introduction.html"><a href="introduction.html#naming-and-storing-values"><i class="fa fa-check"></i><b>1.3.1</b> Naming and Storing Values</a></li>
+<li class="chapter" data-level="1.3.2" data-path="introduction.html"><a href="introduction.html#assignment-vs-algebra"><i class="fa fa-check"></i><b>1.3.2</b> Assignment vs Algebra</a></li>
+<li class="chapter" data-level="1.3.3" data-path="introduction.html"><a href="introduction.html#connecting-computations"><i class="fa fa-check"></i><b>1.3.3</b> Connecting Computations</a></li>
+<li class="chapter" data-level="1.3.4" data-path="introduction.html"><a href="introduction.html#numbers-and-arithmetic"><i class="fa fa-check"></i><b>1.3.4</b> Numbers and Arithmetic</a></li>
+<li class="chapter" data-level="1.3.5" data-path="introduction.html"><a href="introduction.html#aside:complex-numbers"><i class="fa fa-check"></i><b>1.3.5</b> Aside: Complex numbers</a></li>
+<li class="chapter" data-level="1.3.6" data-path="introduction.html"><a href="introduction.html#types-of-objects"><i class="fa fa-check"></i><b>1.3.6</b> Types of Objects</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="data-in-r.html"><a href="data-in-r.html"><i class="fa fa-check"></i><b>2</b> Data in R</a><ul>
+<li class="chapter" data-level="2.1" data-path="data-in-r.html"><a href="data-in-r.html#preliminaries"><i class="fa fa-check"></i><b>2.1</b> Preliminaries</a></li>
+<li class="chapter" data-level="2.2" data-path="data-in-r.html"><a href="data-in-r.html#reading-tabular-data-into-r"><i class="fa fa-check"></i><b>2.2</b> Reading Tabular Data into R</a></li>
+<li class="chapter" data-level="2.3" data-path="data-in-r.html"><a href="data-in-r.html#data-frames"><i class="fa fa-check"></i><b>2.3</b> Data Frames</a></li>
+<li class="chapter" data-level="2.4" data-path="data-in-r.html"><a href="data-in-r.html#variables-in-data-frames"><i class="fa fa-check"></i><b>2.4</b> Variables in Data Frames</a></li>
+<li class="chapter" data-level="2.5" data-path="data-in-r.html"><a href="data-in-r.html#adding-a-new-variable"><i class="fa fa-check"></i><b>2.5</b> Adding a New Variable</a></li>
+<li class="chapter" data-level="2.6" data-path="data-in-r.html"><a href="data-in-r.html#sampling-from-a-sample-frame"><i class="fa fa-check"></i><b>2.6</b> Sampling from a Sample Frame</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="describing-variation.html"><a href="describing-variation.html"><i class="fa fa-check"></i><b>3</b> Describing Variation</a><ul>
+<li class="chapter" data-level="3.1" data-path="describing-variation.html"><a href="describing-variation.html#simple-statistical-calculations"><i class="fa fa-check"></i><b>3.1</b> Simple Statistical Calculations</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="describing-variation.html"><a href="describing-variation.html#aside-the-base-versions"><i class="fa fa-check"></i><b>3.1.1</b> Aside: The “base” versions</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="describing-variation.html"><a href="describing-variation.html#simple-statistical-graphics"><i class="fa fa-check"></i><b>3.2</b> Simple Statistical Graphics</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="describing-variation.html"><a href="describing-variation.html#histograms-and-distributions"><i class="fa fa-check"></i><b>3.2.1</b> Histograms and Distributions</a></li>
+<li class="chapter" data-level="3.2.2" data-path="describing-variation.html"><a href="describing-variation.html#density-plots"><i class="fa fa-check"></i><b>3.2.2</b> Density Plots</a></li>
+<li class="chapter" data-level="3.2.3" data-path="describing-variation.html"><a href="describing-variation.html#box-and-whisker-plots"><i class="fa fa-check"></i><b>3.2.3</b> Box-and-Whisker Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="describing-variation.html"><a href="describing-variation.html#displays-of-categorical-variables"><i class="fa fa-check"></i><b>3.3</b> Displays of Categorical Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="groupwise-models.html"><a href="groupwise-models.html"><i class="fa fa-check"></i><b>4</b> Groupwise models</a><ul>
+<li class="chapter" data-level="4.1" data-path="groupwise-models.html"><a href="groupwise-models.html#model-values-and-residuals"><i class="fa fa-check"></i><b>4.1</b> Model Values and Residuals</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="confidence-intervals.html"><a href="confidence-intervals.html"><i class="fa fa-check"></i><b>5</b> Confidence intervals</a><ul>
+<li class="chapter" data-level="5.1" data-path="confidence-intervals.html"><a href="confidence-intervals.html#finding-a-sampling-distribution-through-bootstrapping"><i class="fa fa-check"></i><b>5.1</b> Finding a Sampling Distribution through Bootstrapping</a></li>
+<li class="chapter" data-level="5.2" data-path="confidence-intervals.html"><a href="confidence-intervals.html#computing-grade-point-averages"><i class="fa fa-check"></i><b>5.2</b> Computing Grade-Point Averages</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="language-of-models.html"><a href="language-of-models.html"><i class="fa fa-check"></i><b>6</b> Language of models</a><ul>
+<li class="chapter" data-level="6.1" data-path="language-of-models.html"><a href="language-of-models.html#bi-variate-plots"><i class="fa fa-check"></i><b>6.1</b> Bi-variate Plots</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="language-of-models.html"><a href="language-of-models.html#quantitative-explanatory-variable"><i class="fa fa-check"></i><b>6.1.1</b> Quantitative Explanatory Variable</a></li>
+<li class="chapter" data-level="6.1.2" data-path="language-of-models.html"><a href="language-of-models.html#categorical-explanatory-variable"><i class="fa fa-check"></i><b>6.1.2</b> Categorical Explanatory Variable</a></li>
+<li class="chapter" data-level="6.1.3" data-path="language-of-models.html"><a href="language-of-models.html#multiple-explanatory-variables"><i class="fa fa-check"></i><b>6.1.3</b> Multiple Explanatory Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="language-of-models.html"><a href="language-of-models.html#fitting-models-and-finding-model-values"><i class="fa fa-check"></i><b>6.2</b> Fitting Models and Finding Model Values</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="language-of-models.html"><a href="language-of-models.html#interactions-and-main-effects"><i class="fa fa-check"></i><b>6.2.1</b> Interactions and Main Effects</a></li>
+<li class="chapter" data-level="6.2.2" data-path="language-of-models.html"><a href="language-of-models.html#transformation-terms"><i class="fa fa-check"></i><b>6.2.2</b> Transformation Terms</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="model-formulas-and-coefficients.html"><a href="model-formulas-and-coefficients.html"><i class="fa fa-check"></i><b>7</b> Model formulas and coefficients</a><ul>
+<li class="chapter" data-level="7.1" data-path="model-formulas-and-coefficients.html"><a href="model-formulas-and-coefficients.html#examining-model-coefficients"><i class="fa fa-check"></i><b>7.1</b> Examining model coefficients</a></li>
+<li class="chapter" data-level="7.2" data-path="model-formulas-and-coefficients.html"><a href="model-formulas-and-coefficients.html#other-useful-operators"><i class="fa fa-check"></i><b>7.2</b> Other Useful Operators</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="fitting-models-to-data.html"><a href="fitting-models-to-data.html"><i class="fa fa-check"></i><b>8</b> Fitting models to data</a><ul>
+<li class="chapter" data-level="8.1" data-path="fitting-models-to-data.html"><a href="fitting-models-to-data.html#sums-of-squares"><i class="fa fa-check"></i><b>8.1</b> Sums of Squares</a></li>
+<li class="chapter" data-level="8.2" data-path="fitting-models-to-data.html"><a href="fitting-models-to-data.html#redundancy"><i class="fa fa-check"></i><b>8.2</b> Redundancy</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="correlation-and-partitioning-of-variation.html"><a href="correlation-and-partitioning-of-variation.html"><i class="fa fa-check"></i><b>9</b> Correlation and partitioning of variation</a></li>
+<li class="chapter" data-level="10" data-path="total-and-partial-relationships.html"><a href="total-and-partial-relationships.html"><i class="fa fa-check"></i><b>10</b> Total and partial relationships</a><ul>
+<li class="chapter" data-level="10.1" data-path="total-and-partial-relationships.html"><a href="total-and-partial-relationships.html#adjustment"><i class="fa fa-check"></i><b>10.1</b> Adjustment</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="modeling-randomness.html"><a href="modeling-randomness.html"><i class="fa fa-check"></i><b>11</b> Modeling randomness</a><ul>
+<li class="chapter" data-level="11.1" data-path="modeling-randomness.html"><a href="modeling-randomness.html#random-draws-from-probability-models"><i class="fa fa-check"></i><b>11.1</b> Random Draws from Probability Models</a></li>
+<li class="chapter" data-level="11.2" data-path="modeling-randomness.html"><a href="modeling-randomness.html#standard-probability-models"><i class="fa fa-check"></i><b>11.2</b> Standard Probability Models</a></li>
+<li class="chapter" data-level="11.3" data-path="modeling-randomness.html"><a href="modeling-randomness.html#quantiles-and-coverage-intervals"><i class="fa fa-check"></i><b>11.3</b> Quantiles and Coverage Intervals</a></li>
+<li class="chapter" data-level="11.4" data-path="modeling-randomness.html"><a href="modeling-randomness.html#percentiles"><i class="fa fa-check"></i><b>11.4</b> Percentiles</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="confidence-in-models.html"><a href="confidence-in-models.html"><i class="fa fa-check"></i><b>12</b> Confidence in models</a><ul>
+<li class="chapter" data-level="12.1" data-path="confidence-in-models.html"><a href="confidence-in-models.html#confidence-intervals-from-standard-errors"><i class="fa fa-check"></i><b>12.1</b> Confidence Intervals from Standard Errors</a></li>
+<li class="chapter" data-level="12.2" data-path="confidence-in-models.html"><a href="confidence-in-models.html#bootstrapping-confidence-intervals"><i class="fa fa-check"></i><b>12.2</b> Bootstrapping Confidence Intervals</a></li>
+<li class="chapter" data-level="12.3" data-path="confidence-in-models.html"><a href="confidence-in-models.html#prediction-confidence-intervals"><i class="fa fa-check"></i><b>12.3</b> Prediction Confidence Intervals</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="the-logic-of-hypothesis-testing.html"><a href="the-logic-of-hypothesis-testing.html"><i class="fa fa-check"></i><b>13</b> The logic of hypothesis testing</a></li>
+<li class="chapter" data-level="14" data-path="testing-whole-models.html"><a href="testing-whole-models.html"><i class="fa fa-check"></i><b>14</b> Testing whole models</a><ul>
+<li class="chapter" data-level="14.1" data-path="testing-whole-models.html"><a href="testing-whole-models.html#the-permutation-test"><i class="fa fa-check"></i><b>14.1</b> The Permutation Test</a></li>
+<li class="chapter" data-level="14.2" data-path="testing-whole-models.html"><a href="testing-whole-models.html#first-principle-tests"><i class="fa fa-check"></i><b>14.2</b> First-Principle Tests</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="testing-parts-of-models.html"><a href="testing-parts-of-models.html"><i class="fa fa-check"></i><b>15</b> Testing parts of models</a><ul>
+<li class="chapter" data-level="15.1" data-path="testing-parts-of-models.html"><a href="testing-parts-of-models.html#anova-reports"><i class="fa fa-check"></i><b>15.1</b> ANOVA reports</a></li>
+<li class="chapter" data-level="15.2" data-path="testing-parts-of-models.html"><a href="testing-parts-of-models.html#non-parametric-statistics"><i class="fa fa-check"></i><b>15.2</b> Non-Parametric Statistics</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="models-of-yesno-variables.html"><a href="models-of-yesno-variables.html"><i class="fa fa-check"></i><b>16</b> Models of Yes/No Variables</a><ul>
+<li class="chapter" data-level="16.1" data-path="models-of-yesno-variables.html"><a href="models-of-yesno-variables.html#fitting-logistic-models"><i class="fa fa-check"></i><b>16.1</b> Fitting Logistic Models</a></li>
+<li class="chapter" data-level="16.2" data-path="models-of-yesno-variables.html"><a href="models-of-yesno-variables.html#fitted-model-values"><i class="fa fa-check"></i><b>16.2</b> Fitted Model Values</a></li>
+<li class="chapter" data-level="16.3" data-path="models-of-yesno-variables.html"><a href="models-of-yesno-variables.html#which-level-is-yes"><i class="fa fa-check"></i><b>16.3</b> Which Level is “Yes”?</a></li>
+<li class="chapter" data-level="16.4" data-path="models-of-yesno-variables.html"><a href="models-of-yesno-variables.html#analysis-of-deviance"><i class="fa fa-check"></i><b>16.4</b> Analysis of Deviance</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="causation.html"><a href="causation.html"><i class="fa fa-check"></i><b>17</b> Causation</a></li>
+<li class="chapter" data-level="18" data-path="experiment.html"><a href="experiment.html"><i class="fa fa-check"></i><b>18</b> Experiment</a></li>
+<li class="divider"></li>
+<li><a href="http://project-mosaic-books.com/?page_id=13" target="blank">Statistical Modeling: A Fresh Approach</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistical Modeling: Computational Technique</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="modeling-randomness" class="section level1">
+<h1><span class="header-section-number">Chapter 11</span> Modeling randomness</h1>
+<p>One of the most surprising outcomes of the revolution in computing technology has been the discovery of diverse uses for randomness in the analysis of data and in science generally. Most young people have little trouble with the idea of a computer generating random data; they see it in computer games and simulations. Older people, raised with the idea that computers do mathematical operations and that such operations are completely deterministic, sometimes find computer-generated randomness suspect. Indeed, conventional algebraic notation (<span class="math inline">\(+\)</span>, <span class="math inline">\(-\)</span>, <span class="math inline">\(\sqrt{ }\)</span>, <span class="math inline">\(\cos\)</span>, and so on) has no notation for “generate at random.”</p>
+<p>One of the simplest operators for generating random events is <code>resample</code>. This takes two arguments: the first is a set of items to choose from at random, the second is how many events to generate. Each item is equally likely to be choosen. For example, here is a simulation of a coin flip:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">coin &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;H&quot;</span>,<span class="st">&quot;T&quot;</span>)
+<span class="kw">resample</span>(coin, <span class="dv">5</span>)</code></pre></div>
+<pre><code>## [1] &quot;T&quot; &quot;T&quot; &quot;H&quot; &quot;T&quot; &quot;T&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">resample</span>(coin, <span class="dv">5</span>)</code></pre></div>
+<pre><code>## [1] &quot;T&quot; &quot;T&quot; &quot;H&quot; &quot;T&quot; &quot;T&quot;</code></pre>
+<p>The first command creates an object holding the possible outcome of each event, called <code>coin</code>. The next command generated five events, each event being a random choice of the outcomes in <code>coin</code>.</p>
+<p>Another example is rolling dice. First, construct a set of the possible outcomes: the numbers 1, 2, 3, 4, 5, 6.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">die &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">1</span>,<span class="dv">6</span>)
+die</code></pre></div>
+<pre><code>## [1] 1 2 3 4 5 6</code></pre>
+<p>Then generate random events. Here is a roll of two dice.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">resample</span>(die,<span class="dv">2</span>)</code></pre></div>
+<pre><code>## [1] 3 5</code></pre>
+<p>The <code>resample()</code> function is also useful for selecting cases at random from a data frame. You have already seen it put to use in generating sampling distributions via the bootstrap. This technique will be further developed in later chapters.</p>
+<div id="random-draws-from-probability-models" class="section level2">
+<h2><span class="header-section-number">11.1</span> Random Draws from Probability Models</h2>
+<p>Although <code>resample()</code> is useful for random sampling, it can work only with finite sets of possible outcomes such as H/T or 1/2/3/4/5/6 or the cases in a data frame. By default in <code>resample()</code>, the underlying probability model is <strong><em>equiprobability</em></strong> — each possible outcome is equally likely. You can specify another probability model by using the <code>prob =</code> argument to <code>resample()</code>. For instance, to flip coins that are very likely (90% of the time, on average) to come up heads:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">resample</span>( coin, <span class="dv">10</span>, <span class="dt">prob =</span> <span class="kw">c</span>(.<span class="dv">9</span>,.<span class="dv">1</span>))</code></pre></div>
+<pre><code>##  [1] &quot;T&quot; &quot;H&quot; &quot;H&quot; &quot;T&quot; &quot;T&quot; &quot;H&quot; &quot;H&quot; &quot;H&quot; &quot;T&quot; &quot;H&quot;</code></pre>
+<p>R provides other operators that allow draws to be made from outcome sets that are infinite.</p>
+<p>For example, the <code>rnorm()</code> function makes random draws from a normal probability distribution. The required argument tells how many draws to make. Optional, named arguments let you specify the mean and standard deviation of the particular normal distribution that you want. To illustrate, here is a set of 15 random numbers from a normal distribution with mean 1000 and standard deviation 75:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">samps &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">15</span>, <span class="dt">mean =</span> <span class="dv">1000</span>, <span class="dt">sd =</span> <span class="dv">75</span>)
+samps</code></pre></div>
+<pre><code>##  [1] 1171.4984  895.8354  979.0908  990.0009 1047.6963  978.6810  800.7658  816.9650 1099.0085
+## [10]  977.0021  866.4019  987.1062 1091.1006 1142.1395  967.7148</code></pre>
+<p>In this example, the output was assigned to an object <code>samps</code> to facilitate some additional computations to the values. For instance, here is the mean and standard deviation of the sample:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(samps)</code></pre></div>
+<pre><code>## [1] 987.4005</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sd</span>(samps)</code></pre></div>
+<pre><code>## [1] 110.9166</code></pre>
+<p>Don’t be surprised that the mean and standard deviation of the sample don’t match exactly the parameters that were set with the arguments <code>mean = 1000, sd = 75</code>. The sample was drawn at random and so the sample statistics are going to vary from one sample to the next. Part of the statistical methodology to be studied in later chapters has to do with determining how close the statistics calculated from a sample are likely to be to the parameters of the underlying population.</p>
+<p>Often you will generate very large samples. In these situations you usually don’t want to display all the samples, just do calculations with them. The practical limits of “large” depend on the computer you are using and how much time you are willing to spend on a calculation. For an operator like <code>rnorm</code> and the others to be introduced in this chapter, it’s feasible to generate samples of size 10,000 or 100,000 on an ordinary laptop computer.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">samps &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">100000</span>, <span class="dt">mean =</span> <span class="dv">1000</span>, <span class="dt">sd =</span> <span class="dv">75</span>)
+<span class="kw">mean</span>( samps )</code></pre></div>
+<pre><code>## [1] 999.6824</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sd</span>( samps )</code></pre></div>
+<pre><code>## [1] 75.23447</code></pre>
+<p>Notice that the sample mean and standard deviation are quite close to the population parameters in this large sample. (Remember not to put commas in as punctuation in large numbers: it’s <code>100000</code> not 100,000.)</p>
+<p>The simulations that you will do in later chapters will be much more elaborate than the simple draws here. Even with today’s computers, you will want to use only a few hundred trials.</p>
+</div>
+<div id="standard-probability-models" class="section level2">
+<h2><span class="header-section-number">11.2</span> Standard Probability Models</h2>
+<p>R provides a large set of operators like <code>rnorm</code> for different probability models. All of these operators work in the same way: <!-- begin itemize --></p>
+<ul>
+<li><p>Each has a required first argument that gives the number of draws to make.</p></li>
+<li><p>Each has an optional set of parameters that specify the particular probability distribution you want. <!-- end itemize --></p></li>
+</ul>
+<p>All the operators start with the letter <code>r</code> — standing for “random” — followed by the name of the probability model:</p>
+<table style="width:64%;">
+<colgroup>
+<col width="11%" />
+<col width="12%" />
+<col width="26%" />
+<col width="13%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Family</th>
+<th>R name</th>
+<th>Parameters</th>
+<th>Nature</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Normal</td>
+<td><code>rnorm</code></td>
+<td><code>mean</code>,<code>sd</code></td>
+<td>continuous</td>
+</tr>
+<tr class="even">
+<td>Uniform</td>
+<td><code>runif</code></td>
+<td><code>min</code>,<code>max</code></td>
+<td>continuous</td>
+</tr>
+<tr class="odd">
+<td>Binomial</td>
+<td><code>rbinom</code></td>
+<td><code>size</code>,<code>prob</code></td>
+<td>discrete</td>
+</tr>
+<tr class="even">
+<td>Poisson</td>
+<td><code>rpois</code></td>
+<td>Average rate (written <code>lambda</code>)</td>
+<td>discrete</td>
+</tr>
+<tr class="odd">
+<td>Exponential</td>
+<td><code>rexp</code></td>
+<td>Same rate as in poisson but the parameter is called <code>rate</code>.</td>
+<td>continuous</td>
+</tr>
+<tr class="even">
+<td>Lognormal</td>
+<td><code>rlnorm</code></td>
+<td>Mean and sd of the natural logarithm. <code>meanlog</code>, <code>sdlog</code></td>
+<td>continuous</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\chi^2\)</span></td>
+<td><code>rchisq</code></td>
+<td>Degrees of freedom (<code>df</code>)</td>
+<td>continuous</td>
+</tr>
+<tr class="even">
+<td>t</td>
+<td><code>rt</code></td>
+<td>Degrees of freedom (<code>df</code>)</td>
+<td>continuous</td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td><code>rf</code></td>
+<td>Degrees of freedom in the numerator and in the denominator (<code>df1</code>, <code>df2</code>)</td>
+<td>continuous</td>
+</tr>
+</tbody>
+</table>
+<p>To use these operators, you first must choose a particular probability model based on the setting that applies in your situation. This setting will usually indicate what the population parameters should be. Some examples: <!-- begin itemize --></p>
+<ul>
+<li>You are in charge of a hiring committee that is going to interview three candidates selected from a population of job applicants that is 63% female. How many of the interviewees will be female? Modeling this as random selection from the applicant pool, a binomial model is appropriate. The <code>size</code> of each trial is 3, the probability of being female is 63% :</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">samps &lt;-<span class="st"> </span><span class="kw">rbinom</span>(<span class="dv">40</span>, <span class="dt">size =</span> <span class="dv">3</span>, <span class="dt">prob =</span> <span class="fl">0.63</span>)
+samps</code></pre></div>
+<pre><code>##  [1] 2 2 2 3 2 2 3 2 1 1 2 1 3 2 2 2 2 1 2 2 1 3 2 3 2 2 3 3 1 3 2 2 2 1 1 2 1 3 1 2</code></pre>
+<p>There are 40 trials here, since the first argument was set to 40. Remember, each of the trials is a simulation of one hiring event. In the first simulated event, two of the interviewees were female; in the third only one was female. Typically, you will be summarizing all the simulations, for example to see how likely each possible outcome is.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">table</span>(samps)</code></pre></div>
+<pre><code>## samps
+##  1  2  3 
+## 10 21  9</code></pre>
+<ul>
+<li>You want to simulate the number of customers who come into a store over the course of an hour. The average rate is 15 per hour. To simulate a situation where customers arrive randomly, the poisson model is appropriate:</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rpois</span>(<span class="dv">25</span>, <span class="dt">lambda =</span> <span class="dv">15</span>)</code></pre></div>
+<pre><code>##  [1] 17 15 19 25 10 17 15 12 11 15 19 17 13 13 13 12 18 14 21 17 15 11 17 18 11</code></pre>
+<ul>
+<li>You want to generate a simulation of the interval between earthquakes as in Example @ref(“example:earthquake-intervals”). To simulate the random intervals with a typical rate of 0.03 earthquakes per year, you would use</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rexp</span>( <span class="dv">15</span>, <span class="dt">rate =</span> <span class="fl">0.03</span> )</code></pre></div>
+<pre><code>##  [1]  49.5057149  37.6415609 177.9802139   0.1406587  29.8780978  42.6115631   0.1706456  40.2302083
+##  [9]  45.6183367 210.6326415  63.0320137  35.7448324   2.7317871  16.6463322  89.4471805</code></pre>
+<p>Notice the huge variation in the intervals, from less than two months to more than 210 years between earthquakes.</p>
+<!-- end itemize -->
+</div>
+<div id="quantiles-and-coverage-intervals" class="section level2">
+<h2><span class="header-section-number">11.3</span> Quantiles and Coverage Intervals</h2>
+<p>You will often need to compute coverage intervals in order to describe the range of likely outcomes from a random process. R provides a series of operators for this purpose; a separate operator for each named probability model. The operators all begin with <code>q</code>, standing for <strong><em>quantiles</em></strong>. In all cases, the first argument is the set of quantiles you want to calculate for the particular probability model. The optional named arguments are the parameters.</p>
+<p>Remember that to find a 95% coverage interval you need the 0.025 and 0.975 quantiles. For a 99% interval, you need the 0.005 and 0.995 quantiles.</p>
+<p>To illustrate, here are 95% coverage intervals for a few probability models. <!-- begin itemize --></p>
+<ul>
+<li>A normal distribution with mean 0 and standard deviation 1:</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qnorm</span>( <span class="kw">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>), <span class="dt">mean =</span> <span class="dv">0</span>, <span class="dt">sd =</span> <span class="dv">1</span>)</code></pre></div>
+<pre><code>## [1] -1.959964  1.959964</code></pre>
+<ul>
+<li>The hiring committee situation modelled by a binomial distribution with <code>size = 3</code> and <code>prob = 0.63</code>:</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qbinom</span>( <span class="kw">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>), <span class="dt">size =</span> <span class="dv">3</span>, <span class="dt">prob =</span> <span class="fl">0.63</span>)</code></pre></div>
+<pre><code>## [1] 0 3</code></pre>
+<p>Perhaps you are surprised to see that the coverage interval includes all the possible outcomes. That’s because the number of cases in each trial (<span class="math inline">\(n = 3\)</span>) is quite small.</p>
+<ul>
+<li>The number of customers entering a store during an hour as modelled by a poisson distribution with an average rate of 15 per hour.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qpois</span>( <span class="kw">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>), <span class="dt">lambda =</span> <span class="dv">15</span>)</code></pre></div>
+<pre><code>## [1]  8 23</code></pre>
+<ul>
+<li>The interval between earthquakes modelled by an exponential distribution with a typical rate of 0.03 earthquakes per year:</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qexp</span>( <span class="kw">c</span>(.<span class="dv">025</span>, .<span class="dv">975</span>), <span class="dt">rate =</span> <span class="fl">0.03</span>)</code></pre></div>
+<pre><code>## [1]   0.8439269 122.9626485</code></pre>
+<!-- end itemize -->
+<p>You can also use the <code>q</code> operators to find the value that would be at a particular percentile. For example, the exponential model with <code>rate = 0.03</code> gives the 25th percentile of the interval between earthquakes as:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qexp</span>( .<span class="dv">25</span>, <span class="dt">rate =</span> <span class="fl">0.03</span>)</code></pre></div>
+<pre><code>## [1] 9.589402</code></pre>
+<p>A quarter of the time, the interval between earthquakes will be 9.59 years or less.</p>
+<p>It’s entirely feasible to calculate percentiles and coverage intervals by combining the random-number generators with <code>quantile</code>. For example, here is the 95% coverage interval from a normal distribution with mean 0 and standard deviation 1:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">samps &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">10000</span>, <span class="dt">mean =</span> <span class="dv">0</span>, <span class="dt">sd =</span> <span class="dv">1</span>)
+<span class="kw">qdata</span>( samps, <span class="kw">c</span>(.<span class="dv">025</span>, .<span class="dv">975</span>) )</code></pre></div>
+<pre><code>##        quantile     p
+## 2.5%  -1.961533 0.025
+## 97.5%  1.892216 0.975</code></pre>
+<p>The disadvantage of this approach is that it is a simulation and the results will vary randomly. By making the sample size large enough — here it is <span class="math inline">\(n = 10000\)</span> — you can reduce the random variation. Using the <code>q</code> operators uses mathematical analysis to give you what is effectively an infinite sample size. For this reason, it’s advisable to use the <code>q</code> operators when you can. However, for many of the techniques to be introduced in later chapters you will have to generate a random sample and then apply <code>quantile</code> to approximate the coverage intervals.</p>
+</div>
+<div id="percentiles" class="section level2">
+<h2><span class="header-section-number">11.4</span> Percentiles</h2>
+<p>A percentile computation applies to situations where you have a measured value and you want to know where that value ranks relative to the entire set of possible outcomes. You have already seen percentiles computed from samples; they also apply to probability models.</p>
+<p>It’s easy to confuse percentiles with quantiles because they are so closely related. Mathematically, the percentile operators are the inverse of the quantile operators. To help you remember which is which, it’s helpful to distinguish them based on the type of argument that you give to the operator: <!-- begin description --></p>
+<ul>
+<li><p><strong>Percentile</strong> (e.g. <code>pnorm</code>) The input argument is a measured value, something that could be the output of a single draw from the probability distribution. The output is always a number between 0 and 1 — a percentile.</p></li>
+<li><p><strong>Quantile</strong> (e.g. <code>qnorm</code>) The input is a percentile, a number between 0 and 1. The output is on the scale of the measured variable. <!-- end description --></p></li>
+</ul>
+<p>Example: You have just gotten your score, 670, on a professional school admissions test. According to the information published by the testing company, the scores are normally distributed with a mean of 600 and a standard deviation of 100. So, your ranking on the test, as indicated by a percentile, is:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pnorm</span>(<span class="dv">670</span>, <span class="dt">mean =</span> <span class="dv">600</span>, <span class="dt">sd =</span> <span class="dv">100</span>)</code></pre></div>
+<pre><code>## [1] 0.7580363</code></pre>
+<p>Your score is at about the 75th percentile.</p>
+<p>Example: Unfortunately, the professional school that you want to go to accepts only students with scores in the top 15 percent. Your score, at 75.8%, isn’t good enough. So, you will study some more and take practice tests until your score is good enough. How well will you need to score to reach the 85th percentile?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qnorm</span>(<span class="fl">0.85</span>, <span class="dt">mean =</span> <span class="dv">600</span>, <span class="dt">sd =</span> <span class="dv">100</span>)</code></pre></div>
+<pre><code>## [1] 703.6433</code></pre>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="total-and-partial-relationships.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="confidence-in-models.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/dtkaplan/11-randomness.Rmd",
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+},
+"collapse": "chapter"
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

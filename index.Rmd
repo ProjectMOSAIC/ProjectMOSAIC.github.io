@@ -40,5 +40,6 @@ gf_jitter(births ~ wday, data = Births2015) %>%
 
 - Online, freely accessible texts for teaching statistics that are coordinated with the `{mosaic}` R package.
     - [*Statistical Modeling: A Fresh Approach*](https://dtkaplan.github.io/SM2-bookdown/) by Daniel Kaplan
+    - [*Statistical Modeling: Computational Technique*](go/SM2-technique/index.html) by Daniel Kaplan and Frank Shaw. This booklet introduces the R language commands for the methods introduced in *A Fresh Approach*.
     
 

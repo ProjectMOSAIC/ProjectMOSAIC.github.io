@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Statistical Modeling: Computational Technique</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="Up-to-date computational technique for Statistical Modeling: A Fresh Approach">
+  <meta name="generator" content="bookdown 0.1.6 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Statistical Modeling: Computational Technique" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Up-to-date computational technique for Statistical Modeling: A Fresh Approach" />
+  <meta name="github-repo" content="rstudio/SM3" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Statistical Modeling: Computational Technique" />
+  
+  <meta name="twitter:description" content="Up-to-date computational technique for Statistical Modeling: A Fresh Approach" />
+  
+
+<meta name="author" content="Daniel Kaplan and Frank Shaw">
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="describing-variation.html">
+<link rel="next" href="confidence-intervals.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Fresh Approach: Computational Technique</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface: Updating Computational Technique</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#the-story-in-more-detail"><i class="fa fa-check"></i>The story in more detail</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#the-story-continues"><i class="fa fa-check"></i>The story continues …</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#the-choice-of-software"><i class="fa fa-check"></i><b>1.1</b> The Choice of Software</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#the-r-command-console"><i class="fa fa-check"></i><b>1.2</b> The R Command Console</a></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#invoking-an-operation"><i class="fa fa-check"></i><b>1.3</b> Invoking an Operation</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="introduction.html"><a href="introduction.html#naming-and-storing-values"><i class="fa fa-check"></i><b>1.3.1</b> Naming and Storing Values</a></li>
+<li class="chapter" data-level="1.3.2" data-path="introduction.html"><a href="introduction.html#assignment-vs-algebra"><i class="fa fa-check"></i><b>1.3.2</b> Assignment vs Algebra</a></li>
+<li class="chapter" data-level="1.3.3" data-path="introduction.html"><a href="introduction.html#connecting-computations"><i class="fa fa-check"></i><b>1.3.3</b> Connecting Computations</a></li>
+<li class="chapter" data-level="1.3.4" data-path="introduction.html"><a href="introduction.html#numbers-and-arithmetic"><i class="fa fa-check"></i><b>1.3.4</b> Numbers and Arithmetic</a></li>
+<li class="chapter" data-level="1.3.5" data-path="introduction.html"><a href="introduction.html#aside:complex-numbers"><i class="fa fa-check"></i><b>1.3.5</b> Aside: Complex numbers</a></li>
+<li class="chapter" data-level="1.3.6" data-path="introduction.html"><a href="introduction.html#types-of-objects"><i class="fa fa-check"></i><b>1.3.6</b> Types of Objects</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="data-in-r.html"><a href="data-in-r.html"><i class="fa fa-check"></i><b>2</b> Data in R</a><ul>
+<li class="chapter" data-level="2.1" data-path="data-in-r.html"><a href="data-in-r.html#preliminaries"><i class="fa fa-check"></i><b>2.1</b> Preliminaries</a></li>
+<li class="chapter" data-level="2.2" data-path="data-in-r.html"><a href="data-in-r.html#reading-tabular-data-into-r"><i class="fa fa-check"></i><b>2.2</b> Reading Tabular Data into R</a></li>
+<li class="chapter" data-level="2.3" data-path="data-in-r.html"><a href="data-in-r.html#data-frames"><i class="fa fa-check"></i><b>2.3</b> Data Frames</a></li>
+<li class="chapter" data-level="2.4" data-path="data-in-r.html"><a href="data-in-r.html#variables-in-data-frames"><i class="fa fa-check"></i><b>2.4</b> Variables in Data Frames</a></li>
+<li class="chapter" data-level="2.5" data-path="data-in-r.html"><a href="data-in-r.html#adding-a-new-variable"><i class="fa fa-check"></i><b>2.5</b> Adding a New Variable</a></li>
+<li class="chapter" data-level="2.6" data-path="data-in-r.html"><a href="data-in-r.html#sampling-from-a-sample-frame"><i class="fa fa-check"></i><b>2.6</b> Sampling from a Sample Frame</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="describing-variation.html"><a href="describing-variation.html"><i class="fa fa-check"></i><b>3</b> Describing Variation</a><ul>
+<li class="chapter" data-level="3.1" data-path="describing-variation.html"><a href="describing-variation.html#simple-statistical-calculations"><i class="fa fa-check"></i><b>3.1</b> Simple Statistical Calculations</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="describing-variation.html"><a href="describing-variation.html#aside-the-base-versions"><i class="fa fa-check"></i><b>3.1.1</b> Aside: The “base” versions</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="describing-variation.html"><a href="describing-variation.html#simple-statistical-graphics"><i class="fa fa-check"></i><b>3.2</b> Simple Statistical Graphics</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="describing-variation.html"><a href="describing-variation.html#histograms-and-distributions"><i class="fa fa-check"></i><b>3.2.1</b> Histograms and Distributions</a></li>
+<li class="chapter" data-level="3.2.2" data-path="describing-variation.html"><a href="describing-variation.html#density-plots"><i class="fa fa-check"></i><b>3.2.2</b> Density Plots</a></li>
+<li class="chapter" data-level="3.2.3" data-path="describing-variation.html"><a href="describing-variation.html#box-and-whisker-plots"><i class="fa fa-check"></i><b>3.2.3</b> Box-and-Whisker Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="describing-variation.html"><a href="describing-variation.html#displays-of-categorical-variables"><i class="fa fa-check"></i><b>3.3</b> Displays of Categorical Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="groupwise-models.html"><a href="groupwise-models.html"><i class="fa fa-check"></i><b>4</b> Groupwise models</a><ul>
+<li class="chapter" data-level="4.1" data-path="groupwise-models.html"><a href="groupwise-models.html#model-values-and-residuals"><i class="fa fa-check"></i><b>4.1</b> Model Values and Residuals</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="confidence-intervals.html"><a href="confidence-intervals.html"><i class="fa fa-check"></i><b>5</b> Confidence intervals</a><ul>
+<li class="chapter" data-level="5.1" data-path="confidence-intervals.html"><a href="confidence-intervals.html#finding-a-sampling-distribution-through-bootstrapping"><i class="fa fa-check"></i><b>5.1</b> Finding a Sampling Distribution through Bootstrapping</a></li>
+<li class="chapter" data-level="5.2" data-path="confidence-intervals.html"><a href="confidence-intervals.html#computing-grade-point-averages"><i class="fa fa-check"></i><b>5.2</b> Computing Grade-Point Averages</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="language-of-models.html"><a href="language-of-models.html"><i class="fa fa-check"></i><b>6</b> Language of models</a><ul>
+<li class="chapter" data-level="6.1" data-path="language-of-models.html"><a href="language-of-models.html#bi-variate-plots"><i class="fa fa-check"></i><b>6.1</b> Bi-variate Plots</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="language-of-models.html"><a href="language-of-models.html#quantitative-explanatory-variable"><i class="fa fa-check"></i><b>6.1.1</b> Quantitative Explanatory Variable</a></li>
+<li class="chapter" data-level="6.1.2" data-path="language-of-models.html"><a href="language-of-models.html#categorical-explanatory-variable"><i class="fa fa-check"></i><b>6.1.2</b> Categorical Explanatory Variable</a></li>
+<li class="chapter" data-level="6.1.3" data-path="language-of-models.html"><a href="language-of-models.html#multiple-explanatory-variables"><i class="fa fa-check"></i><b>6.1.3</b> Multiple Explanatory Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="language-of-models.html"><a href="language-of-models.html#fitting-models-and-finding-model-values"><i class="fa fa-check"></i><b>6.2</b> Fitting Models and Finding Model Values</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="language-of-models.html"><a href="language-of-models.html#interactions-and-main-effects"><i class="fa fa-check"></i><b>6.2.1</b> Interactions and Main Effects</a></li>
+<li class="chapter" data-level="6.2.2" data-path="language-of-models.html"><a href="language-of-models.html#transformation-terms"><i class="fa fa-check"></i><b>6.2.2</b> Transformation Terms</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="model-formulas-and-coefficients.html"><a href="model-formulas-and-coefficients.html"><i class="fa fa-check"></i><b>7</b> Model formulas and coefficients</a><ul>
+<li class="chapter" data-level="7.1" data-path="model-formulas-and-coefficients.html"><a href="model-formulas-and-coefficients.html#examining-model-coefficients"><i class="fa fa-check"></i><b>7.1</b> Examining model coefficients</a></li>
+<li class="chapter" data-level="7.2" data-path="model-formulas-and-coefficients.html"><a href="model-formulas-and-coefficients.html#other-useful-operators"><i class="fa fa-check"></i><b>7.2</b> Other Useful Operators</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="fitting-models-to-data.html"><a href="fitting-models-to-data.html"><i class="fa fa-check"></i><b>8</b> Fitting models to data</a><ul>
+<li class="chapter" data-level="8.1" data-path="fitting-models-to-data.html"><a href="fitting-models-to-data.html#sums-of-squares"><i class="fa fa-check"></i><b>8.1</b> Sums of Squares</a></li>
+<li class="chapter" data-level="8.2" data-path="fitting-models-to-data.html"><a href="fitting-models-to-data.html#redundancy"><i class="fa fa-check"></i><b>8.2</b> Redundancy</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="correlation-and-partitioning-of-variation.html"><a href="correlation-and-partitioning-of-variation.html"><i class="fa fa-check"></i><b>9</b> Correlation and partitioning of variation</a></li>
+<li class="chapter" data-level="10" data-path="total-and-partial-relationships.html"><a href="total-and-partial-relationships.html"><i class="fa fa-check"></i><b>10</b> Total and partial relationships</a><ul>
+<li class="chapter" data-level="10.1" data-path="total-and-partial-relationships.html"><a href="total-and-partial-relationships.html#adjustment"><i class="fa fa-check"></i><b>10.1</b> Adjustment</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="modeling-randomness.html"><a href="modeling-randomness.html"><i class="fa fa-check"></i><b>11</b> Modeling randomness</a><ul>
+<li class="chapter" data-level="11.1" data-path="modeling-randomness.html"><a href="modeling-randomness.html#random-draws-from-probability-models"><i class="fa fa-check"></i><b>11.1</b> Random Draws from Probability Models</a></li>
+<li class="chapter" data-level="11.2" data-path="modeling-randomness.html"><a href="modeling-randomness.html#standard-probability-models"><i class="fa fa-check"></i><b>11.2</b> Standard Probability Models</a></li>
+<li class="chapter" data-level="11.3" data-path="modeling-randomness.html"><a href="modeling-randomness.html#quantiles-and-coverage-intervals"><i class="fa fa-check"></i><b>11.3</b> Quantiles and Coverage Intervals</a></li>
+<li class="chapter" data-level="11.4" data-path="modeling-randomness.html"><a href="modeling-randomness.html#percentiles"><i class="fa fa-check"></i><b>11.4</b> Percentiles</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="confidence-in-models.html"><a href="confidence-in-models.html"><i class="fa fa-check"></i><b>12</b> Confidence in models</a><ul>
+<li class="chapter" data-level="12.1" data-path="confidence-in-models.html"><a href="confidence-in-models.html#confidence-intervals-from-standard-errors"><i class="fa fa-check"></i><b>12.1</b> Confidence Intervals from Standard Errors</a></li>
+<li class="chapter" data-level="12.2" data-path="confidence-in-models.html"><a href="confidence-in-models.html#bootstrapping-confidence-intervals"><i class="fa fa-check"></i><b>12.2</b> Bootstrapping Confidence Intervals</a></li>
+<li class="chapter" data-level="12.3" data-path="confidence-in-models.html"><a href="confidence-in-models.html#prediction-confidence-intervals"><i class="fa fa-check"></i><b>12.3</b> Prediction Confidence Intervals</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="the-logic-of-hypothesis-testing.html"><a href="the-logic-of-hypothesis-testing.html"><i class="fa fa-check"></i><b>13</b> The logic of hypothesis testing</a></li>
+<li class="chapter" data-level="14" data-path="testing-whole-models.html"><a href="testing-whole-models.html"><i class="fa fa-check"></i><b>14</b> Testing whole models</a><ul>
+<li class="chapter" data-level="14.1" data-path="testing-whole-models.html"><a href="testing-whole-models.html#the-permutation-test"><i class="fa fa-check"></i><b>14.1</b> The Permutation Test</a></li>
+<li class="chapter" data-level="14.2" data-path="testing-whole-models.html"><a href="testing-whole-models.html#first-principle-tests"><i class="fa fa-check"></i><b>14.2</b> First-Principle Tests</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="testing-parts-of-models.html"><a href="testing-parts-of-models.html"><i class="fa fa-check"></i><b>15</b> Testing parts of models</a><ul>
+<li class="chapter" data-level="15.1" data-path="testing-parts-of-models.html"><a href="testing-parts-of-models.html#anova-reports"><i class="fa fa-check"></i><b>15.1</b> ANOVA reports</a></li>
+<li class="chapter" data-level="15.2" data-path="testing-parts-of-models.html"><a href="testing-parts-of-models.html#non-parametric-statistics"><i class="fa fa-check"></i><b>15.2</b> Non-Parametric Statistics</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="models-of-yesno-variables.html"><a href="models-of-yesno-variables.html"><i class="fa fa-check"></i><b>16</b> Models of Yes/No Variables</a><ul>
+<li class="chapter" data-level="16.1" data-path="models-of-yesno-variables.html"><a href="models-of-yesno-variables.html#fitting-logistic-models"><i class="fa fa-check"></i><b>16.1</b> Fitting Logistic Models</a></li>
+<li class="chapter" data-level="16.2" data-path="models-of-yesno-variables.html"><a href="models-of-yesno-variables.html#fitted-model-values"><i class="fa fa-check"></i><b>16.2</b> Fitted Model Values</a></li>
+<li class="chapter" data-level="16.3" data-path="models-of-yesno-variables.html"><a href="models-of-yesno-variables.html#which-level-is-yes"><i class="fa fa-check"></i><b>16.3</b> Which Level is “Yes”?</a></li>
+<li class="chapter" data-level="16.4" data-path="models-of-yesno-variables.html"><a href="models-of-yesno-variables.html#analysis-of-deviance"><i class="fa fa-check"></i><b>16.4</b> Analysis of Deviance</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="causation.html"><a href="causation.html"><i class="fa fa-check"></i><b>17</b> Causation</a></li>
+<li class="chapter" data-level="18" data-path="experiment.html"><a href="experiment.html"><i class="fa fa-check"></i><b>18</b> Experiment</a></li>
+<li class="divider"></li>
+<li><a href="http://project-mosaic-books.com/?page_id=13" target="blank">Statistical Modeling: A Fresh Approach</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistical Modeling: Computational Technique</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="groupwise-models" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> Groupwise models</h1>
+<p>Calculating means and other simple statistics is a matter of using the right function in R. The <strong><code>mosaic</code></strong> package — which you should load in to R as shown in Section @ref(“sec:loading-mosaic”) — makes it straightforward to calculate either a “grand” statistic or a “group-wise” statistic. To illustrate:</p>
+<p>Load the <strong><code>mosaic</code></strong> package, needed only once per session.</p>
+<p>Read in data you are interested in analyzing, for instance the Cherry-Blossom 2008 data described earlier:<a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Runners =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;http://tiny.cc/mosaic/Cherry-Blossom-2008.csv&quot;</span>)
+<span class="kw">names</span>( Runners )</code></pre></div>
+<pre><code>## [1] &quot;position&quot; &quot;division&quot; &quot;total&quot;    &quot;name&quot;     &quot;age&quot;      &quot;place&quot;    &quot;net&quot;      &quot;gun&quot;     
+## [9] &quot;sex&quot;</code></pre>
+<p>Calculate a grand mean on the “gun” time — the time between the start of the race, signalled by a gun, and when each runner crossed the finish line. Here, to emphasize that this is a group–wise model, we use the function <code>gwm()</code> from the <strong><code>mosaic</code></strong> package. It works the same as <code>mean()</code>, but its output is more formally the output of a model.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">gwm</span>(gun ~<span class="st"> </span><span class="dv">1</span>, <span class="dt">data =</span> Runners)</code></pre></div>
+<pre><code>## 
+## Groupwise Model Call:
+## gwm(formula = gun ~ 1, data = Runners)
+## 
+##   model_value
+## 1       93.73</code></pre>
+<p>The model formula <code>gun ~ 1</code> is an “all cases the same” model. You will refer to the <code>1</code> as the “Intercept term” later in the text, but for now, think of it as “one value.” The one value here is the grand mean. Grand mean and other “grand” statistics.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>( gun ~<span class="st"> </span><span class="dv">1</span>, <span class="dt">data =</span> Runners)</code></pre></div>
+<pre><code>##        1 
+## 93.72504</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">median</span>( gun ~<span class="st"> </span><span class="dv">1</span>, <span class="dt">data =</span> Runners )</code></pre></div>
+<pre><code>##        1 
+## 93.68333</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sd</span>( gun ~<span class="st"> </span><span class="dv">1</span>, <span class="dt">data =</span> Runners )</code></pre></div>
+<pre><code>##        1 
+## 14.96899</code></pre>
+<p>To tell R that you want to break the statistics down by groups, replace the <code>1</code> with the variable which defines the groups. You will be using this notation frequently in building models. Here, as before, the <code>~</code> means, “model by” or “broken down by” or “versus.” To find the means for the gun time broken down by sex, enter</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">gwm</span>( gun ~<span class="st"> </span>sex, <span class="dt">data =</span> Runners )</code></pre></div>
+<pre><code>## 
+## Groupwise Model Call:
+## gwm(formula = gun ~ sex, data = Runners)
+## 
+##   sex model_value
+## 1   F       98.77
+## 2   M       88.26</code></pre>
+<p>Other statistics work the same way, for instance,</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sd</span>( gun ~<span class="st"> </span>sex, <span class="dt">data =</span> Runners )</code></pre></div>
+<pre><code>##        F        M 
+## 13.33713 14.71851</code></pre>
+<p>Another example … wage broken down by sector of the economy, using data <code>cps.csv</code>:<a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">CPS =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;http://tiny.cc/mosaic/cps.csv&quot;</span>)
+<span class="kw">gwm</span>( wage ~<span class="st"> </span>sector, <span class="dt">data =</span> CPS )</code></pre></div>
+<pre><code>## 
+## Groupwise Model Call:
+## gwm(formula = wage ~ sector, data = CPS)
+## 
+##     sector model_value
+## 1 clerical       7.423
+## 2    const       9.502
+## 3    manag      12.704
+## 4    manuf       8.036
+## 5    other       8.501
+## 6     prof      11.947
+## 7    sales       7.593
+## 8  service       6.537</code></pre>
+<p>In the Whickham smoking data example<a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a>, the <code>outcome</code> for each person was not a number but a category: Alive or Dead at the time of the follow-up.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">W &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;http://tiny.cc/mosaic/whickham.csv&quot;</span>)
+<span class="kw">names</span>(W)</code></pre></div>
+<pre><code>## [1] &quot;outcome&quot; &quot;smoker&quot;  &quot;age&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">levels</span>(W$outcome)</code></pre></div>
+<pre><code>## [1] &quot;Alive&quot; &quot;Dead&quot;</code></pre>
+<p>The <code>gwm()</code> function recognizes that <code>outcome</code> is a categorical variable and outputs proportions. In the case of “all cases the same,” this is porportions of the data in the <code>outcome</code> levels:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">gwm</span>( outcome ~<span class="st"> </span><span class="dv">1</span>, <span class="dt">data =</span> W )</code></pre></div>
+<pre><code>## 
+## Groupwise Model Call:
+## gwm(formula = outcome ~ 1, data = W)
+## 
+##   outcome model_value
+## 1   Alive      0.7192
+## 2    Dead      0.2808</code></pre>
+<p>Here’s the breakdown of the levels <code>Alive</code> and <code>Dead</code> according to smoking status:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">gwm</span>( outcome ~<span class="st"> </span>smoker, <span class="dt">data =</span> W )</code></pre></div>
+<pre><code>## 
+## Groupwise Model Call:
+## gwm(formula = outcome ~ smoker, data = W)
+## 
+##   outcome smoker model_value
+## 1   Alive     No      0.3820
+## 2    Dead     No      0.1750
+## 3   Alive    Yes      0.3371
+## 4    Dead    Yes      0.1058</code></pre>
+<p>You may be surbrised by this result. But don’t be misled. A more meaningful question is whether smokers are different from non-smokers when holding other variables constant, such as age. To address this question, you need to add age into the model.</p>
+<p>It might be natural to consider each age — 35, 36, 37, and so on — as a separate group, but you won’t get very many members of each group. And, likely, the data for 35 year-olds has quite a lot to say about 36 year-olds, so it doesn’t make sense to treat them as completely separate groups.</p>
+<p>You can use the <code>cut()</code> function to divide up a quantitative variable into groups. You get to specify the breaks between groups.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">W$ageGroups &lt;-<span class="st"> </span><span class="kw">cut</span>(W$age, <span class="dt">breaks=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">30</span>,<span class="dv">40</span>,<span class="dv">53</span>,<span class="dv">64</span>,<span class="dv">75</span>,<span class="dv">100</span>) )
+<span class="kw">gwm</span>( outcome ~<span class="st"> </span>ageGroups, <span class="dt">data =</span> W )</code></pre></div>
+<pre><code>## 
+## Groupwise Model Call:
+## gwm(formula = outcome ~ ageGroups, data = W)
+## 
+##    outcome ageGroups model_value
+## 1    Alive    (0,30]    0.214612
+## 2     Dead    (0,30]    0.004566
+## 3    Alive   (30,40]    0.181887
+## 4     Dead   (30,40]    0.009893
+## 5    Alive   (40,53]    0.177321
+## 6     Dead   (40,53]    0.035769
+## 7    Alive   (53,64]    0.119482
+## 8     Dead   (53,64]    0.071537
+## 9    Alive   (64,75]    0.025875
+## 10    Dead   (64,75]    0.102740
+## 11   Alive  (75,100]    0.000000
+## 12    Dead  (75,100]    0.056317</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">gwm</span>( outcome ~<span class="st"> </span>smoker +<span class="st"> </span>ageGroups, <span class="dt">data =</span> W )</code></pre></div>
+<pre><code>## 
+## Groupwise Model Call:
+## gwm(formula = outcome ~ smoker + ageGroups, data = W)
+## 
+##    outcome smoker ageGroups model_value
+## 1    Alive     No    (0,30]    0.123288
+## 2     Dead     No    (0,30]    0.002283
+## 3    Alive    Yes    (0,30]    0.091324
+## 4     Dead    Yes    (0,30]    0.002283
+## 5    Alive     No   (30,40]    0.097412
+## 6     Dead     No   (30,40]    0.004566
+## 7    Alive    Yes   (30,40]    0.084475
+## 8     Dead    Yes   (30,40]    0.005327
+## 9    Alive     No   (40,53]    0.075342
+## 10    Dead     No   (40,53]    0.010654
+## 11   Alive    Yes   (40,53]    0.101979
+## 12    Dead    Yes   (40,53]    0.025114
+## 13   Alive     No   (53,64]    0.064688
+## 14    Dead     No   (53,64]    0.031963
+## 15   Alive    Yes   (53,64]    0.054795
+## 16    Dead    Yes   (53,64]    0.039574
+## 17   Alive     No   (64,75]    0.021309
+## 18    Dead     No   (64,75]    0.078387
+## 19   Alive    Yes   (64,75]    0.004566
+## 20    Dead    Yes   (64,75]    0.024353
+## 21   Alive     No  (75,100]    0.000000
+## 22    Dead     No  (75,100]    0.047184
+## 23   Alive    Yes  (75,100]    0.000000
+## 24    Dead    Yes  (75,100]    0.009132</code></pre>
+<p>With modeling techniques, to be introduced in later chapters, you can use quantitative variables without the need to divide them into groups.</p>
+<div id="model-values-and-residuals" class="section level2">
+<h2><span class="header-section-number">4.1</span> Model Values and Residuals</h2>
+<p>A group-wise model tells you a model value for each group, but often you will need these in a case-by-case format: the model value for each case in a data set. The <code>fitted()</code> function carries out this simple calculation, taking each case in turn, figuring out which group it belongs to, and then returning the set of model values for all the cases. It requires two arguments: the model (here provided by <code>gwm()</code>) the data on which the model was based. For example:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Kids &lt;-<span class="st"> </span>KidsFeet   <span class="co"># just get this from mosaicData instead of going out on the web with read.csv</span>
+mod &lt;-<span class="st"> </span><span class="kw">gwm</span>( width ~<span class="st"> </span>sex, <span class="dt">data =</span> Kids )
+<span class="kw">fitted</span>( mod, Kids )</code></pre></div>
+<pre><code>##  [1] 9.190000 9.190000 9.190000 9.190000 9.190000 9.190000 9.190000 8.784211 8.784211 9.190000
+## [11] 9.190000 9.190000 9.190000 9.190000 8.784211 8.784211 8.784211 8.784211 8.784211 8.784211
+## [21] 9.190000 9.190000 8.784211 8.784211 8.784211 9.190000 8.784211 9.190000 9.190000 9.190000
+## [31] 8.784211 8.784211 8.784211 9.190000 9.190000 8.784211 8.784211 8.784211 8.784211</code></pre>
+<p>The residuals are found by subtracting the case-by-case model value from the actual values for each case.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">res &lt;-<span class="st"> </span>Kids$width -<span class="st"> </span><span class="kw">fitted</span>(mod, Kids)
+<span class="kw">head</span>(res) <span class="co"># display the first few residuals</span></code></pre></div>
+<pre><code>## [1] -0.79 -0.39  0.51  0.61 -0.29  0.51</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">res &lt;-<span class="st"> </span><span class="kw">resid</span>(mod, Kids) <span class="co"># function resid does the calculation automatically</span>
+<span class="kw">head</span>(res)</code></pre></div>
+<pre><code>## [1] -0.79 -0.39  0.51  0.61 -0.29  0.51</code></pre>
+<p>Take care to use the same quantitative variable (<code>width</code> in this case) from the data as was used in constructing the model.</p>
+<p>The <code>var()</code> function will calculate the variance:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">var</span>( Kids$width )  <span class="co"># overall variation</span></code></pre></div>
+<pre><code>## [1] 0.2596761</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">var</span>( <span class="kw">fitted</span>(mod, Kids) ) <span class="co"># variation in model values</span></code></pre></div>
+<pre><code>## [1] 0.04222182</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">var</span>( <span class="kw">resid</span>(mod, Kids) ) <span class="co"># residual variation</span></code></pre></div>
+<pre><code>## [1] 0.2174543</code></pre>
+<p>Notice the “model triangle” relationship between these three numbers.</p>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="3">
+<li id="fn3"><p>These are also made available in the <strong><code>mosaic</code></strong> package as <code>TenMileRace</code>.<a href="groupwise-models.html#fnref3">↩</a></p></li>
+<li id="fn4"><p>This data set is made available by <strong><code>mosaic</code></strong> as <code>CPS85</code>.<a href="groupwise-models.html#fnref4">↩</a></p></li>
+<li id="fn5"><p>This data set is made available by <strong><code>mosaic</code></strong> as <code>Whickham</code>.<a href="groupwise-models.html#fnref5">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="describing-variation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="confidence-intervals.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/dtkaplan/04-groupwise-models.Rmd",
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+},
+"collapse": "chapter"
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
