@@ -10,29 +10,37 @@ knitr::opts_chunk$set(echo = FALSE)
 library(mosaic)
 library(ggformula)
 library(mosaicCalc)
+theme_set(theme_bw())
 ```
 
 ## Project MOSAIC
 
 **Project MOSAIC** is a community of educators working to develop a new way to introduce mathematics, statistics, computation and modeling to students in colleges and universities.
 
-From 2009 to 2016, Project MOSAIC was supported by a grant from the US National Science Foundation (NSF DUE-0920350).  The core resource developed during that time continue to be maintained and expanded.
+From 2009 to 2016, Project MOSAIC was supported by a grant from the US National Science Foundation (NSF DUE-0920350).  The core resources developed during that time continue to be maintained and expanded.
 
 Among those resources are:
 
 - The `{mosaic}` package for R which supports teaching stats using a expressive, compact, and consistent formula syntax. This minimizes start up costs for students and enables students to calculate descriptive statistics, create statistical graphics, and construct statistical graphics. `{mosaic}` is one of three main syntaxes for teaching and doing statistics using R. (For a comparison, see Prof. Amelia McNamara's [video presentation](https://www.youtube.com/watch?v=aq5SrjXZDy4).) 
 
-    Hundreds of instructors have found `{mosaic}` smooths the way to computing in introductory statistics.  Examples:
-```{r echo=TRUE}
+    Hundreds of instructors have found `{mosaic}` helpful in teaching 
+    introductory statistics.  Example:
+    
+```{r echo=TRUE, indent = "    "}
 Stats <- df_stats(births ~ wday, data = Births2015, 
-                  center=mean, conf=ci.mean(0.95))
+                  center = mean, conf = ci.mean(0.95))
 Stats
-gf_jitter(births ~ wday, data = Births2015) %>%
+```
+
+
+- The `{ggformula}` package, which enables ggplot2 graphics to be generated
+using the formula syntax. Example:
+
+```{r echo=TRUE, indent = "    "}
+gf_jitter(births ~ wday, data = Births2015, alpha = 0.5) %>%
   gf_errorbar(conf_lower + conf_upper ~ wday, data = Stats, 
               color = ~ wday, inherit=FALSE)
 ```
-
-- The `{ggformula}` package, which enables ggplot2 graphics to be generated using the formula syntax.
 
 - The **LittleApps** developed with the [MAA StatPREP](www.statprep.org) project. These are data- and graphics-centric tools for teaching introductory statistics without coding. See [the LittleApps site](http://www.statprep.org/LittleAppSite/) for more information.
 
