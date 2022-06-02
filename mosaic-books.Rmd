@@ -1,0 +1,12 @@
+---
+title: "MOSAIC books"
+description: |
+  Books written by mosaic authors or using the mosaic toolkit.
+---
+
+* [*Statistical Modeling a Fresh Appraoch*](https://dtkaplan.github.io/SM2-bookdown/) by Daniel Kaplan
+    * [end of chapter exercises](https://www.mosaic-web.org/go/SM2-Problems.pdf)
+    * [Statistical Modeling: Computational Technique](https://www.mosaic-web.org/go/SM2-technique/index.html) by Daniel Kaplan and Frank Shaw. This booklet introduces the R language commands for the methods introduced in A Fresh Approach.
+    * [A remix by R Pruim](https://statistical-modeling.netlify.app/preface-to-this-electronic-edition.html)
+* [*MOSAIC Calculus*](https://dtkaplan.github.io/MC2/) by Daniel T Kaplan
+* [*Foundations and Applications of Statistics: An Introduction using R*](https://bookstore.ams.org/amstext-28/) by Randall Pruim

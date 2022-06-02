@@ -9,6 +9,8 @@ navbar:
       href: index.html
     - text: "R packages"
       href: R-packages.html
+    - text: "Books"
+      href: mosaic-books.html
     - text: "Data"
       href: go/index.html
     - text: "About"
