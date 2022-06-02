@@ -16,7 +16,7 @@ library(mosaicCalc)
 
 **Project MOSAIC** is a community of educators working to develop a new way to introduce mathematics, statistics, computation and modeling to students in colleges and universities.
 
-From 2009 to 2016, Project MOSAIC was supported by a grant from the US National Science Foundation (NSF DUE-0920350).  The core resource developed during that time continue to be maintained and expanded.
+From 2009 to 2016, Project MOSAIC was supported by a grant from the US National Science Foundation (NSF DUE-0920350).  The core resources developed during that time continue to be maintained and expanded.
 
 Among those resources are:
 

@@ -6,15 +6,15 @@
       "description": "Some additional details about the website",
       "author": [],
       "contents": "\nWe’ll be filling this in soon.\n\n\n\n",
-      "last_modified": "2022-01-10T12:46:36-07:00"
+      "last_modified": "2022-06-02T16:34:41-05:00"
     },
     {
       "path": "index.html",
       "title": "Project MOSAIC",
       "description": "An NSF-funded project supporting Mathematics, Statistics, and Computation\n",
       "author": [],
-      "contents": "\nProject MOSAIC\nProject MOSAIC is a community of educators working to develop a new way to introduce mathematics, statistics, computation and modeling to students in colleges and universities.\nFrom 2009 to 2016, Project MOSAIC was supported by a grant from the US National Science Foundation (NSF DUE-0920350). The core resource developed during that time continue to be maintained and expanded.\nAmong those resources are:\nThe {mosaic} package for R which supports teaching stats using a expressive, compact, and consistent formula syntax. This minimizes start up costs for students and enables students to calculate descriptive statistics, create statistical graphics, and construct statistical graphics. {mosaic} is one of three main syntaxes for teaching and doing statistics using R. (For a comparison, see Prof. Amelia McNamara’s video presentation.)\nHundreds of instructors have found {mosaic} in teaching introductory statistics. Examples:\n\n\nStats <- df_stats(births ~ wday, data = Births2015, \n                center=mean, conf=ci.mean(0.95))\nStats\n\n\n\n  response wday    center conf_lower conf_upper\n1   births  Sun  7397.808   7319.233   7476.383\n2   births  Mon 11739.385  11490.746  11988.023\n3   births  Tue 12585.808  12461.750  12709.866\n4   births  Wed 12279.096  12140.249  12417.944\n5   births  Thu 12083.434  11775.866  12391.001\n6   births  Fri 11834.558  11550.568  12118.547\n7   births  Sat  8357.096   8250.949   8463.243\n\ngf_jitter(births ~ wday, data = Births2015) %>%\n  gf_errorbar(conf_lower + conf_upper ~ wday, data = Stats, \n              color = ~ wday, inherit=FALSE)\n\n\n\n\nThe {ggformula} package, which enables ggplot2 graphics to be generated using the formula syntax.\nThe LittleApps developed with the MAA StatPREP project. These are data- and graphics-centric tools for teaching introductory statistics without coding. See the LittleApps site for more information.\nA complete MOSAIC Calculus course including an online, freely accessible textbook, exercises, and symbolic software in R, all following the Project MOSAIC philosophy of building courses around modeling, using data, and integrating computing directly into the subject matter.\nOnline, freely accessible texts for teaching statistics that are coordinated with the {mosaic} R package.\nStatistical Modeling: A Fresh Approach by Daniel Kaplan\nStatistical Modeling: Computational Technique by Daniel Kaplan and Frank Shaw. This booklet introduces the R language commands for the methods introduced in A Fresh Approach.\n\n\n\n\n",
-      "last_modified": "2022-01-10T12:46:45-07:00"
+      "contents": "\nProject MOSAIC\nProject MOSAIC is a community of educators working to develop a new way to introduce mathematics, statistics, computation and modeling to students in colleges and universities.\nFrom 2009 to 2016, Project MOSAIC was supported by a grant from the US National Science Foundation (NSF DUE-0920350). The core resources developed during that time continue to be maintained and expanded.\nAmong those resources are:\nThe {mosaic} package for R which supports teaching stats using a expressive, compact, and consistent formula syntax. This minimizes start up costs for students and enables students to calculate descriptive statistics, create statistical graphics, and construct statistical graphics. {mosaic} is one of three main syntaxes for teaching and doing statistics using R. (For a comparison, see Prof. Amelia McNamara’s video presentation.)\nHundreds of instructors have found {mosaic} in teaching introductory statistics. Examples:\n\n\nStats <- df_stats(births ~ wday, data = Births2015, \n                center=mean, conf=ci.mean(0.95))\nStats\n\n\n\n  response wday    center conf_lower conf_upper\n1   births  Sun  7397.808   7319.233   7476.383\n2   births  Mon 11739.385  11490.746  11988.023\n3   births  Tue 12585.808  12461.750  12709.866\n4   births  Wed 12279.096  12140.249  12417.944\n5   births  Thu 12083.434  11775.866  12391.001\n6   births  Fri 11834.558  11550.568  12118.547\n7   births  Sat  8357.096   8250.949   8463.243\n\ngf_jitter(births ~ wday, data = Births2015) %>%\n  gf_errorbar(conf_lower + conf_upper ~ wday, data = Stats, \n              color = ~ wday, inherit=FALSE)\n\n\n\n\nThe {ggformula} package, which enables ggplot2 graphics to be generated using the formula syntax.\nThe LittleApps developed with the MAA StatPREP project. These are data- and graphics-centric tools for teaching introductory statistics without coding. See the LittleApps site for more information.\nA complete MOSAIC Calculus course including an online, freely accessible textbook, exercises, and symbolic software in R, all following the Project MOSAIC philosophy of building courses around modeling, using data, and integrating computing directly into the subject matter.\nOnline, freely accessible texts for teaching statistics that are coordinated with the {mosaic} R package.\nStatistical Modeling: A Fresh Approach by Daniel Kaplan\nStatistical Modeling: Computational Technique by Daniel Kaplan and Frank Shaw. This booklet introduces the R language commands for the methods introduced in A Fresh Approach.\n\n\n\n\n",
+      "last_modified": "2022-06-02T16:37:53-05:00"
     },
     {
       "path": "R-packages.html",
@@ -22,13 +22,13 @@
       "description": "The various R packages produced by the MOSAIC team.",
       "author": [],
       "contents": "\nThis is where we can provide links to the various packages.\n{mosaic}\n{mosaicCore}\n{mosaicData}\n\n{ggformula}\n{mosaicCalc} – Those following the progress of the USAFA modeling-based calculus course should install from GitHub: remotes::install_github(\"ProjectMOSAIC/mosaicCalc@beta\")\n{mosaicModel} – This package is in an indeterminate state while we figure out how to integrate with the many modeling packages introduced as part of the {tidyverse}.\n\n\n\n",
-      "last_modified": "2022-01-10T12:46:45-07:00"
+      "last_modified": "2022-06-02T16:34:41-05:00"
     },
     {
       "path": "README.html",
       "author": [],
       "contents": "\nmosaic-web\nWelcome to the Project MOSAIC website\n\n\n",
-      "last_modified": "2022-01-10T12:46:47-07:00"
+      "last_modified": "2022-06-02T16:37:53-05:00"
     }
   ],
   "collections": []
