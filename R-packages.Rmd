@@ -4,7 +4,8 @@ description: |
   The various R packages produced by the MOSAIC team.
 ---
 
-This is where we can provide links to the various packages.
+The following packages are part of the "mosaic suite". All are available
+on CRAN and maintained on github.
 
 * [`{mosaic}`](https://www.mosaic-web.org/mosaic/)
     - `{mosaicCore}`
