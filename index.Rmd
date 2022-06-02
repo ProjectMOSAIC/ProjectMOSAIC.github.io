@@ -22,7 +22,7 @@ Among those resources are:
 
 - The `{mosaic}` package for R which supports teaching stats using a expressive, compact, and consistent formula syntax. This minimizes start up costs for students and enables students to calculate descriptive statistics, create statistical graphics, and construct statistical graphics. `{mosaic}` is one of three main syntaxes for teaching and doing statistics using R. (For a comparison, see Prof. Amelia McNamara's [video presentation](https://www.youtube.com/watch?v=aq5SrjXZDy4).) 
 
-    Hundreds of instructors have found `{mosaic}` in teaching introductory statistics.  Examples:
+    Hundreds of instructors have found `{mosaic}` smooths the way to computing in introductory statistics.  Examples:
 ```{r echo=TRUE}
 Stats <- df_stats(births ~ wday, data = Births2015, 
                   center=mean, conf=ci.mean(0.95))
@@ -36,10 +36,11 @@ gf_jitter(births ~ wday, data = Births2015) %>%
 
 - The **LittleApps** developed with the [MAA StatPREP](www.statprep.org) project. These are data- and graphics-centric tools for teaching introductory statistics without coding. See [the LittleApps site](http://www.statprep.org/LittleAppSite/) for more information.
 
-- A complete [***MOSAIC Calculus***](http://www.mosaic-web.org/MOSAIC-Calculus/) course including an online, freely accessible textbook, exercises, and symbolic software in R, all following the Project MOSAIC philosophy of building courses around *modeling*, using *data*, and integrating *computing* directly into the subject matter. 
+- A complete [***MOSAIC Calculus***](http://dtkaplan.github.io/MC2) course including an online, freely accessible textbook, exercises, and symbolic software in R, all following the Project MOSAIC philosophy of building courses around *modeling*, using *data*, and integrating *computing* directly into the subject matter. 
 
 - Online, freely accessible texts for teaching statistics that are coordinated with the `{mosaic}` R package.
     - [*Statistical Modeling: A Fresh Approach*](https://dtkaplan.github.io/SM2-bookdown/) by Daniel Kaplan
+    - [End-of-chapter exercises for *Statistical Modeling*](go/SM2-Problems.pdf). Answers are available to instructors upon request.
     - [*Statistical Modeling: Computational Technique*](go/SM2-technique/index.html) by Daniel Kaplan and Frank Shaw. This booklet introduces the R language commands for the methods introduced in *A Fresh Approach*.
     
 
