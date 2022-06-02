@@ -10,6 +10,7 @@ knitr::opts_chunk$set(echo = FALSE)
 library(mosaic)
 library(ggformula)
 library(mosaicCalc)
+theme_set(theme_bw())
 ```
 
 ## Project MOSAIC
@@ -25,9 +26,9 @@ Among those resources are:
     Hundreds of instructors have found `{mosaic}` in teaching introductory statistics.  Examples:
 ```{r echo=TRUE}
 Stats <- df_stats(births ~ wday, data = Births2015, 
-                  center=mean, conf=ci.mean(0.95))
+                  center = mean, conf = ci.mean(0.95))
 Stats
-gf_jitter(births ~ wday, data = Births2015) %>%
+gf_jitter(births ~ wday, data = Births2015, alpha = 0.5) %>%
   gf_errorbar(conf_lower + conf_upper ~ wday, data = Stats, 
               color = ~ wday, inherit=FALSE)
 ```
