@@ -23,17 +23,24 @@ Among those resources are:
 
 - The `{mosaic}` package for R which supports teaching stats using a expressive, compact, and consistent formula syntax. This minimizes start up costs for students and enables students to calculate descriptive statistics, create statistical graphics, and construct statistical graphics. `{mosaic}` is one of three main syntaxes for teaching and doing statistics using R. (For a comparison, see Prof. Amelia McNamara's [video presentation](https://www.youtube.com/watch?v=aq5SrjXZDy4).) 
 
-    Hundreds of instructors have found `{mosaic}` in teaching introductory statistics.  Examples:
-```{r echo=TRUE}
+    Hundreds of instructors have found `{mosaic}` helpful in teaching 
+    introductory statistics.  Example:
+    
+```{r echo=TRUE, indent = "    "}
 Stats <- df_stats(births ~ wday, data = Births2015, 
                   center = mean, conf = ci.mean(0.95))
 Stats
+```
+
+
+- The `{ggformula}` package, which enables ggplot2 graphics to be generated
+using the formula syntax. Example:
+
+```{r echo=TRUE, indent = "    "}
 gf_jitter(births ~ wday, data = Births2015, alpha = 0.5) %>%
   gf_errorbar(conf_lower + conf_upper ~ wday, data = Stats, 
               color = ~ wday, inherit=FALSE)
 ```
-
-- The `{ggformula}` package, which enables ggplot2 graphics to be generated using the formula syntax.
 
 - The **LittleApps** developed with the [MAA StatPREP](www.statprep.org) project. These are data- and graphics-centric tools for teaching introductory statistics without coding. See [the LittleApps site](http://www.statprep.org/LittleAppSite/) for more information.
 
