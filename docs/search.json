@@ -21,8 +21,8 @@
       "title": "MOSAIC books",
       "description": "Books written by mosaic authors or using the mosaic toolkit.",
       "author": [],
-      "contents": "\nStatistical Modeling a Fresh Appraoch by Daniel Kaplan\nend of chapter exercises\nStatistical Modeling: Computational Technique by Daniel Kaplan and Frank Shaw. This booklet introduces the R language commands for the methods introduced in A Fresh Approach.\nA remix by R Pruim\n\nMOSAIC Calculus by Daniel T Kaplan\nFoundations and Applications of Statistics: An Introduction using R by Randall Pruim\n\n\n\n",
-      "last_modified": "2022-06-02T17:20:20-05:00"
+      "contents": "\nBooks by the mosaic team\nStatistical Modeling a Fresh Appraoch by Daniel Kaplan\nend of chapter exercises\nStatistical Modeling: Computational Technique by Daniel Kaplan and Frank Shaw. This booklet introduces the R language commands for the methods introduced in A Fresh Approach.\nA remix by R Pruim\n\nMOSAIC Calculus by Daniel T Kaplan\nFoundations and Applications of Statistics: An Introduction using R by Randall Pruim\nBooks by other authors\nMathematical Modeling and Applied Calculus\n\n\n\n",
+      "last_modified": "2022-06-02T17:27:04-05:00"
     },
     {
       "path": "R-packages.html",
@@ -36,7 +36,7 @@
       "path": "README.html",
       "author": [],
       "contents": "\nmosaic-web\nWelcome to the Project MOSAIC website\n\n\n",
-      "last_modified": "2022-06-02T17:23:11-05:00"
+      "last_modified": "2022-06-02T17:27:05-05:00"
     }
   ],
   "collections": []
