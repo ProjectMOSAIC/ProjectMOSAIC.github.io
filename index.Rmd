@@ -44,7 +44,7 @@ gf_jitter(births ~ wday, data = Births2015, alpha = 0.5) %>%
 
 - The **LittleApps** developed with the [MAA StatPREP](www.statprep.org) project. These are data- and graphics-centric tools for teaching introductory statistics without coding. See [the LittleApps site](http://www.statprep.org/LittleAppSite/) for more information.
 
-- A complete [***MOSAIC Calculus***](http://dtkaplan.github.io/MC2) course including an online, freely accessible textbook, exercises, and symbolic software in R, all following the Project MOSAIC philosophy of building courses around *modeling*, using *data*, and integrating *computing* directly into the subject matter. 
+- A complete [***MOSAIC Calculus***](http://ProjectMOSAIC.github.io/MOSAIC-Calculus) course including an online, freely accessible textbook, exercises, and symbolic software in R, all following the Project MOSAIC philosophy of building courses around *modeling*, using *data*, and integrating *computing* directly into the subject matter. 
 
 - Online, freely accessible texts for teaching statistics that are coordinated with the `{mosaic}` R package.
     - [*Statistical Modeling: A Fresh Approach*](https://dtkaplan.github.io/SM2-bookdown/) by Daniel Kaplan

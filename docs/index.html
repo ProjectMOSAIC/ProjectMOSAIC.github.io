@@ -2067,7 +2067,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2115,24 +2115,37 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h1>Project MOSAIC</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>An NSF-funded project supporting Mathematics, Statistics, and Computation</p></p>
+<p><p>An NSF-funded project supporting Mathematics, Statistics, and
+Computation</p></p>
 </div>
 
 
 <div class="d-article">
 <h2 id="project-mosaic">Project MOSAIC</h2>
-<p><strong>Project MOSAIC</strong> is a community of educators working to develop a new way to introduce mathematics, statistics, computation and modeling to students in colleges and universities.</p>
-<p>From 2009 to 2016, Project MOSAIC was supported by a grant from the US National Science Foundation (NSF DUE-0920350). The core resources developed during that time continue to be maintained and expanded.</p>
+<p><strong>Project MOSAIC</strong> is a community of educators working
+to develop a new way to introduce mathematics, statistics, computation
+and modeling to students in colleges and universities.</p>
+<p>From 2009 to 2016, Project MOSAIC was supported by a grant from the
+US National Science Foundation (NSF DUE-0920350). The core resources
+developed during that time continue to be maintained and expanded.</p>
 <p>Among those resources are:</p>
 <ul>
-<li><p>The <code>{mosaic}</code> package for R which supports teaching stats using a expressive, compact, and consistent formula syntax. This minimizes start up costs for students and enables students to calculate descriptive statistics, create statistical graphics, and construct statistical graphics. <code>{mosaic}</code> is one of three main syntaxes for teaching and doing statistics using R. (For a comparison, see Prof. Amelia McNamara’s <a href="https://www.youtube.com/watch?v=aq5SrjXZDy4">video presentation</a>.)</p>
-<p>Hundreds of instructors have found <code>{mosaic}</code> helpful in teaching introductory statistics. Example:</p>
+<li><p>The <code>{mosaic}</code> package for R which supports teaching
+stats using a expressive, compact, and consistent formula syntax. This
+minimizes start up costs for students and enables students to calculate
+descriptive statistics, create statistical graphics, and construct
+statistical graphics. <code>{mosaic}</code> is one of three main
+syntaxes for teaching and doing statistics using R. (For a comparison,
+see Prof. Amelia McNamara’s <a
+href="https://www.youtube.com/watch?v=aq5SrjXZDy4">video
+presentation</a>.)</p>
+<p>Hundreds of instructors have found <code>{mosaic}</code> helpful in
+teaching introductory statistics. Example:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>Stats</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/mosaicCore/man/df_stats.html'>df_stats</a></span><span class='op'>(</span><span class='va'>births</span> <span class='op'>~</span> <span class='va'>wday</span>, data <span class='op'>=</span> <span class='va'>Births2015</span>, 
-                    center <span class='op'>=</span> <span class='va'>mean</span>, conf <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/mosaicCore/man/interval_statistics.html'>ci.mean</a></span><span class='op'>(</span><span class='fl'>0.95</span><span class='op'>)</span><span class='op'>)</span>
-  <span class='va'>Stats</span>
-  </code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>Stats</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/mosaicCore/man/df_stats.html'>df_stats</a></span><span class='op'>(</span><span class='va'>births</span> <span class='op'>~</span> <span class='va'>wday</span>, data <span class='op'>=</span> <span class='va'>Births2015</span>, </span>
+  <span>                  center <span class='op'>=</span> <span class='va'>mean</span>, conf <span class='op'>=</span> <span class='fu'>ci.mean</span><span class='op'>(</span><span class='fl'>0.95</span><span class='op'>)</span><span class='op'>)</span></span>
+  <span><span class='va'>Stats</span></span></code></pre>
 </div>
 <pre><code>  response wday    center conf_lower conf_upper
 1   births  Sun  7397.808   7319.233   7476.383
@@ -2143,26 +2156,44 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 6   births  Fri 11834.558  11550.568  12118.547
 7   births  Sat  8357.096   8250.949   8463.243</code></pre>
 </div></li>
-<li><p>The <code>{ggformula}</code> package, which enables ggplot2 graphics to be generated using the formula syntax. Example:</p>
+<li><p>The <code>{ggformula}</code> package, which enables ggplot2
+graphics to be generated using the formula syntax. Example:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/pkg/ggformula/man/gf_jitter.html'>gf_jitter</a></span><span class='op'>(</span><span class='va'>births</span> <span class='op'>~</span> <span class='va'>wday</span>, data <span class='op'>=</span> <span class='va'>Births2015</span>, alpha <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span>
-    <span class='fu'><a href='https://rdrr.io/pkg/ggformula/man/gf_errorbar.html'>gf_errorbar</a></span><span class='op'>(</span><span class='va'>conf_lower</span> <span class='op'>+</span> <span class='va'>conf_upper</span> <span class='op'>~</span> <span class='va'>wday</span>, data <span class='op'>=</span> <span class='va'>Stats</span>, 
-                color <span class='op'>=</span> <span class='op'>~</span> <span class='va'>wday</span>, inherit<span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>)</span>
-  </code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/pkg/ggformula/man/gf_jitter.html'>gf_jitter</a></span><span class='op'>(</span><span class='va'>births</span> <span class='op'>~</span> <span class='va'>wday</span>, data <span class='op'>=</span> <span class='va'>Births2015</span>, alpha <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
+  <span>  <span class='fu'><a href='https://rdrr.io/pkg/ggformula/man/gf_errorbar.html'>gf_errorbar</a></span><span class='op'>(</span><span class='va'>conf_lower</span> <span class='op'>+</span> <span class='va'>conf_upper</span> <span class='op'>~</span> <span class='va'>wday</span>, data <span class='op'>=</span> <span class='va'>Stats</span>, </span>
+  <span>              color <span class='op'>=</span> <span class='op'>~</span> <span class='va'>wday</span>, inherit<span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>)</span></span></code></pre>
 </div>
 <p><img src="index_files/figure-html5/unnamed-chunk-2-1.png" width="624" /></p>
 </div></li>
-<li><p>The <strong>LittleApps</strong> developed with the <a href="www.statprep.org">MAA StatPREP</a> project. These are data- and graphics-centric tools for teaching introductory statistics without coding. See <a href="http://www.statprep.org/LittleAppSite/">the LittleApps site</a> for more information.</p></li>
-<li><p>A complete <a href="http://dtkaplan.github.io/MC2"><strong><em>MOSAIC Calculus</em></strong></a> course including an online, freely accessible textbook, exercises, and symbolic software in R, all following the Project MOSAIC philosophy of building courses around <em>modeling</em>, using <em>data</em>, and integrating <em>computing</em> directly into the subject matter.</p></li>
-<li><p>Online, freely accessible texts for teaching statistics that are coordinated with the <code>{mosaic}</code> R package.</p>
+<li><p>The <strong>LittleApps</strong> developed with the <a
+href="www.statprep.org">MAA StatPREP</a> project. These are data- and
+graphics-centric tools for teaching introductory statistics without
+coding. See <a href="http://www.statprep.org/LittleAppSite/">the
+LittleApps site</a> for more information.</p></li>
+<li><p>A complete <a
+href="http://ProjectMOSAIC.github.io/MOSAIC-Calculus"><strong><em>MOSAIC
+Calculus</em></strong></a> course including an online, freely accessible
+textbook, exercises, and symbolic software in R, all following the
+Project MOSAIC philosophy of building courses around <em>modeling</em>,
+using <em>data</em>, and integrating <em>computing</em> directly into
+the subject matter.</p></li>
+<li><p>Online, freely accessible texts for teaching statistics that are
+coordinated with the <code>{mosaic}</code> R package.</p>
 <ul>
-<li><a href="https://dtkaplan.github.io/SM2-bookdown/"><em>Statistical Modeling: A Fresh Approach</em></a> by Daniel Kaplan</li>
-<li><a href="go/SM2-Problems.pdf">End-of-chapter exercises for <em>Statistical Modeling</em></a>. Answers are available to instructors upon request.</li>
-<li><a href="go/SM2-technique/index.html"><em>Statistical Modeling: Computational Technique</em></a> by Daniel Kaplan and Frank Shaw. This booklet introduces the R language commands for the methods introduced in <em>A Fresh Approach</em>.</li>
+<li><a href="https://dtkaplan.github.io/SM2-bookdown/"><em>Statistical
+Modeling: A Fresh Approach</em></a> by Daniel Kaplan</li>
+<li><a href="go/SM2-Problems.pdf">End-of-chapter exercises for
+<em>Statistical Modeling</em></a>. Answers are available to instructors
+upon request.</li>
+<li><a href="go/SM2-technique/index.html"><em>Statistical Modeling:
+Computational Technique</em></a> by Daniel Kaplan and Frank Shaw. This
+booklet introduces the R language commands for the methods introduced in
+<em>A Fresh Approach</em>.</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
