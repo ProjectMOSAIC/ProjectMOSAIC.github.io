@@ -2067,7 +2067,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.17/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2099,7 +2099,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 <div class="nav-right">
 <a href="index.html">Home</a>
-<a href="R-packages.html">R packages</a>
+<a href="R-packages.html">R resources</a>
 <a href="mosaic-books.html">Books</a>
 <a href="go/index.html">Data</a>
 <a href="about.html">About</a>
@@ -2127,8 +2127,19 @@ to develop a new way to introduce mathematics, statistics, computation
 and modeling to students in colleges and universities.</p>
 <p>From 2009 to 2016, Project MOSAIC was supported by a grant from the
 US National Science Foundation (NSF DUE-0920350). The core resources
-developed during that time continue to be maintained and expanded.</p>
-<p>Among those resources are:</p>
+developed during that time continue to be maintained and expanded. New
+MOSAIC resources such as a calculus textbook and the Little Apps are
+being added and improved in the 2020s.</p>
+<hr />
+<p>NEWS: A <a
+href="https://dtkaplan.github.io/USCOTS-2023-workshop/">workshop</a>
+introducing the new project, <a
+href="https://dtkaplan.github.io/Lessons-in-statistical-thinking/"><em>Lessons
+in Statistical Thinking</em></a>, will be offered at <a
+href="causeweb.org/cause/uscots/uscots23">USCOTS 2023</a> May 30-31,
+2023</p>
+<hr />
+<h2 id="mosaic-resources">MOSAIC resources</h2>
 <ul>
 <li><p>The <code>{mosaic}</code> package for R which supports teaching
 stats using a expressive, compact, and consistent formula syntax. This
@@ -2144,7 +2155,7 @@ teaching introductory statistics. Example:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>Stats</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/mosaicCore/man/df_stats.html'>df_stats</a></span><span class='op'>(</span><span class='va'>births</span> <span class='op'>~</span> <span class='va'>wday</span>, data <span class='op'>=</span> <span class='va'>Births2015</span>, </span>
-  <span>                  center <span class='op'>=</span> <span class='va'>mean</span>, conf <span class='op'>=</span> <span class='fu'>ci.mean</span><span class='op'>(</span><span class='fl'>0.95</span><span class='op'>)</span><span class='op'>)</span></span>
+  <span>                  center <span class='op'>=</span> <span class='va'>mean</span>, conf <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/mosaicCore/man/interval_statistics.html'>ci.mean</a></span><span class='op'>(</span><span class='fl'>0.95</span><span class='op'>)</span><span class='op'>)</span></span>
   <span><span class='va'>Stats</span></span></code></pre>
 </div>
 <pre><code>  response wday    center conf_lower conf_upper
@@ -2172,8 +2183,8 @@ graphics-centric tools for teaching introductory statistics without
 coding. See <a href="http://www.statprep.org/LittleAppSite/">the
 LittleApps site</a> for more information.</p></li>
 <li><p>A complete <a
-href="http://ProjectMOSAIC.github.io/MOSAIC-Calculus"><strong><em>MOSAIC
-Calculus</em></strong></a> course including an online, freely accessible
+href="http://ProjectMOSAIC.github.io/MOSAIC-Calculus"><strong>MOSAIC
+Calculus</strong></a> course including an online, freely accessible
 textbook, exercises, and symbolic software in R, all following the
 Project MOSAIC philosophy of building courses around <em>modeling</em>,
 using <em>data</em>, and integrating <em>computing</em> directly into
@@ -2190,6 +2201,9 @@ upon request.</li>
 Computational Technique</em></a> by Daniel Kaplan and Frank Shaw. This
 booklet introduces the R language commands for the methods introduced in
 <em>A Fresh Approach</em>.</li>
+<li><a
+href="https://github.com/ProjectMOSAIC/LittleBooks/raw/master/StudentGuide/MOSAIC-StudentGuide.pdf"><em>A
+Student’s Guide to R</em></a></li>
 </ul></li>
 </ul>
 <div class="sourceCode" id="cb2"><pre

@@ -7,7 +7,7 @@ navbar:
   right:
     - text: "Home"
       href: index.html
-    - text: "R packages"
+    - text: "R resources"
       href: R-packages.html
     - text: "Books"
       href: mosaic-books.html

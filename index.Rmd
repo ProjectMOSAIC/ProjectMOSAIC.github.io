@@ -17,9 +17,15 @@ theme_set(theme_bw())
 
 **Project MOSAIC** is a community of educators working to develop a new way to introduce mathematics, statistics, computation and modeling to students in colleges and universities.
 
-From 2009 to 2016, Project MOSAIC was supported by a grant from the US National Science Foundation (NSF DUE-0920350).  The core resources developed during that time continue to be maintained and expanded.
+From 2009 to 2016, Project MOSAIC was supported by a grant from the US National Science Foundation (NSF DUE-0920350).  The core resources developed during that time continue to be maintained and expanded. New MOSAIC resources such as a calculus textbook and the Little Apps are being added and improved in the 2020s.
 
-Among those resources are:
+-----
+
+NEWS: A [workshop](https://dtkaplan.github.io/USCOTS-2023-workshop/) introducing the new project, [*Lessons in Statistical Thinking*](https://dtkaplan.github.io/Lessons-in-statistical-thinking/), will be offered at [USCOTS 2023](causeweb.org/cause/uscots/uscots23) May 30-31, 2023
+
+-----
+
+## MOSAIC resources
 
 - The `{mosaic}` package for R which supports teaching stats using a expressive, compact, and consistent formula syntax. This minimizes start up costs for students and enables students to calculate descriptive statistics, create statistical graphics, and construct statistical graphics. `{mosaic}` is one of three main syntaxes for teaching and doing statistics using R. (For a comparison, see Prof. Amelia McNamara's [video presentation](https://www.youtube.com/watch?v=aq5SrjXZDy4).) 
 
@@ -44,11 +50,12 @@ gf_jitter(births ~ wday, data = Births2015, alpha = 0.5) %>%
 
 - The **LittleApps** developed with the [MAA StatPREP](www.statprep.org) project. These are data- and graphics-centric tools for teaching introductory statistics without coding. See [the LittleApps site](http://www.statprep.org/LittleAppSite/) for more information.
 
-- A complete [***MOSAIC Calculus***](http://ProjectMOSAIC.github.io/MOSAIC-Calculus) course including an online, freely accessible textbook, exercises, and symbolic software in R, all following the Project MOSAIC philosophy of building courses around *modeling*, using *data*, and integrating *computing* directly into the subject matter. 
+- A complete [**MOSAIC Calculus**](http://ProjectMOSAIC.github.io/MOSAIC-Calculus) course including an online, freely accessible textbook, exercises, and symbolic software in R, all following the Project MOSAIC philosophy of building courses around *modeling*, using *data*, and integrating *computing* directly into the subject matter. 
 
 - Online, freely accessible texts for teaching statistics that are coordinated with the `{mosaic}` R package.
     - [*Statistical Modeling: A Fresh Approach*](https://dtkaplan.github.io/SM2-bookdown/) by Daniel Kaplan
     - [End-of-chapter exercises for *Statistical Modeling*](go/SM2-Problems.pdf). Answers are available to instructors upon request.
     - [*Statistical Modeling: Computational Technique*](go/SM2-technique/index.html) by Daniel Kaplan and Frank Shaw. This booklet introduces the R language commands for the methods introduced in *A Fresh Approach*.
+    - [*A Student's Guide to R*](https://github.com/ProjectMOSAIC/LittleBooks/raw/master/StudentGuide/MOSAIC-StudentGuide.pdf)
     
 

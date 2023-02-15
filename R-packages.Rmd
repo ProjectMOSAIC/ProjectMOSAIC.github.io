@@ -5,12 +5,18 @@ description: |
 ---
 
 The following packages are part of the "mosaic suite". All are available
-on CRAN and maintained on github.
+on CRAN and maintained on GitHub.
 
 * [`{mosaic}`](https://www.mosaic-web.org/mosaic/)
     - `{mosaicCore}`
     - `{mosaicData}`
-* [`{ggformula}`](https://www.mosaic-web.org/ggformula/)
-* [`{mosaicCalc}`](https://github.com/ProjectMOSAIC/mosaicCalc) -- 
+* [`{ggformula}`](https://www.mosaic-web.org/ggformula/) provides a formula-based interface to the popular `ggplot2` graphics system. Some advantages:
+    - uses the standard pipe operator (either `%>%` or the newer `|>`) instead of the ideosyncratic `+` of `ggplot2`.
+    - one-liner commands with fewer parentheses: `Galton |> gf_point(height ~ mother)` compared to `Galton |> ggplot2(aes(x=mother, y=height)) + geom_point()`
+    - Inter-operates with `ggplot2()` and all related packages.
+    - Provides an easy path to learning `lm()`
+* [`{mosaicCalc}`](https://github.com/ProjectMOSAIC/mosaicCalc) -- Completely updated in 2022 to provide better symbolic capabilities while retaining the ease of use of the formula interface. The vignettes give a good introduction to the package. See the [**Mosaic Calculus**](https://www.mosaic-web.org/MOSAIC-Calculus/) textbook for many more examples.
 
-* [`{mosaicModel}`](https://www.mosaic-web.org/ggformula/) -- This package is in an indeterminate state while we figure out how to integrate with the many modeling packages introduced as part of the `{tidyverse}`.
+* Modeling packages
+    - In beta: [`{math300}`](https://github.com/dtkaplan/math300) is the prototype replacement for `{mosaicModel}` providing highly unified commands for `lm()` and `glm()` regression modeling. Install with `remotes::install_github("dtkaplan/math300")`. See [*Lessons in Statistical Thinking*](https://dtkaplan.github.io/Lessons-in-statistical-thinking/) for an introduction.
+    - Deprecated: [`{mosaicModel}`](https://www.mosaic-web.org/mosaicModel/) -- This package is retained for compatibility with the [DataCamp courses on statistical modeling](https://www.datacamp.com/courses/introduction-to-statistical-modeling-in-r). Many of the features have been transferred to the core mosaic packages listed above.
