@@ -7,13 +7,15 @@ description: |
 
 ### Books by the mosaic team
 
-* [*Statistical Modeling a Fresh Approach*](https://dtkaplan.github.io/SM2-bookdown/) by Daniel Kaplan
-    * [end of chapter exercises](https://www.mosaic-web.org/go/SM2-Problems.pdf)
-    * [Statistical Modeling: Computational Technique](https://www.mosaic-web.org/go/SM2-technique/index.html) by Daniel Kaplan and Frank Shaw. This booklet introduces the R language commands for the methods introduced in A Fresh Approach.
-    * [A remix by R Pruim](https://statistical-modeling.netlify.app/preface-to-this-electronic-edition.html)
+* *Statistical Modeling: A Fresh Approach* by Daniel Kaplan
+    - [A recent remix by R Pruim](https://statistical-modeling.netlify.app/)
+    - The 2011 edition in a [free, online format](https://dtkaplan.github.io/SM2-bookdown/). Additional resources:
+        - [end of chapter exercises](https://www.mosaic-web.org/go/SM2-Problems.pdf)
+        - Updated introduction to the R-language commands used in the book: *[Statistical Modeling: Computational Technique]*(https://www.mosaic-web.org/go/SM2-technique/index.html) by Daniel Kaplan and Frank Shaw. 
+    
 * [*MOSAIC Calculus*](https://dtkaplan.github.io/MOSAIC-Calculus/) by Daniel T Kaplan
 * [*Foundations and Applications of Statistics: An Introduction using R*](https://bookstore.ams.org/amstext-28/) by Randall Pruim
-* [*Lessons in Statistical Thinking*](https://dtkaplan.github.io/Lessons-in-statistical-thinking/) by Daniel Kaplan. This is a replacement for the traditional introduction to statistical inference using `lm()` to streamline and unify the many "tests" that crowd introductory courses. It has a strong orientation to decision-making, briefly introduces Bayesian concepts, and treats p-values in a way that is honest but respects their ubiquitous use in statistical practice. *Lessons in Statistical Thinking* can be used together with the data-science oriented [*ModernDive*](moderndive.org) text. Use the first half of *ModernDive* for the first half of an intro course and *Lessons* for the second half. Both texts are free, online, and open source.
+* NEW! [*Lessons in Statistical Thinking*](https://dtkaplan.github.io/Lessons-in-statistical-thinking/) by Daniel Kaplan. A [complete rethinking](https://dtkaplan.github.io/Math300blog/posts/StatChat-10-2023/) of a university-level introductory statistics course. This is a replacement for the traditional introduction to statistical inference. It emphasizes modeling, covariates, confounding, and causal inference. It has a strong orientation to decision-making, treats p-values repectfully by honestly as a curtailed form of Bayesian inference. *Lessons in Statistical Thinking* was originally envisioned as an extension for [*ModernDive: Statistical Inference via Data Science *](moderndive.org), but has grown into a text for a complete introductory or second statistics course.
 * [*A Student's Guide to R*](https://github.com/ProjectMOSAIC/LittleBooks/raw/master/StudentGuide/MOSAIC-StudentGuide.pdf) is organized by analysis method. It demonstrates how to perform all of the statistical analyses typically covered in an Intro Stats.
 
 

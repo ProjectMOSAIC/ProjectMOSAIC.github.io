@@ -21,7 +21,8 @@ From 2009 to 2016, Project MOSAIC was supported by a grant from the US National 
 
 -----
 
-NEWS: A [workshop](https://dtkaplan.github.io/USCOTS-2023-workshop/) introducing the new project, [*Lessons in Statistical Thinking*](https://dtkaplan.github.io/Lessons-in-statistical-thinking/), will be offered at [USCOTS 2023](causeweb.org/cause/uscots/uscots23) May 30-31, 2023
+NOV. 2023 UPDATE: An advanced draft is now available of the new  [*Lessons in Statistical Thinking*](https://dtkaplan.github.io/Lessons-in-statistical-thinking/) introductory text and the associated `{LST}` R package. This is a complete rethinking of introductory statistics that places it in the context of data science, modeling, and causal inference.
+
 
 -----
 

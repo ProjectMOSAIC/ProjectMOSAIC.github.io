@@ -13,6 +13,6 @@ navbar:
       href: mosaic-books.html
     - text: "Data"
       href: go/index.html
-    - text: "About"
-      href: about.html
+    # - text: "About"
+    #   href: about.html
 output: distill::distill_article

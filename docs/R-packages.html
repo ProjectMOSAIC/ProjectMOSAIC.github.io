@@ -458,8 +458,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
 
   <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet"/>
   <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
   <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
   <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
@@ -2067,7 +2067,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.17/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.22/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2102,7 +2102,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <a href="R-packages.html">R resources</a>
 <a href="mosaic-books.html">Books</a>
 <a href="go/index.html">Data</a>
-<a href="about.html">About</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
 </nav>
@@ -2126,9 +2125,18 @@ available on CRAN and maintained on GitHub.</p>
 <li><p><a
 href="https://www.mosaic-web.org/mosaic/"><code>{mosaic}</code></a></p>
 <ul>
-<li><code>{mosaicCore}</code></li>
-<li><code>{mosaicData}</code></li>
+<li><code>{mosaicCore}</code> Contains helper functions. Automatically
+installed when <code>{mosaic}</code> is installed from CRAN.</li>
 </ul></li>
+<li><p><a
+href="http://www.mosaic-web.org/mosaicData/"><code>{mosaicData}</code></a></p></li>
+<li><p><a
+href="https://github.com/ProjectMOSAIC/mosaicCalc"><code>{mosaicCalc}</code></a>
+– Completely updated in 2022 to provide better symbolic capabilities
+while retaining the ease of use of the formula interface. The vignettes
+give a good introduction to the package. See the <a
+href="https://www.mosaic-web.org/MOSAIC-Calculus/"><strong>Mosaic
+Calculus</strong></a> textbook for many more examples.</p></li>
 <li><p><a
 href="https://www.mosaic-web.org/ggformula/"><code>{ggformula}</code></a>
 provides a formula-based interface to the popular <code>ggplot2</code>
@@ -2144,33 +2152,22 @@ newer <code>|&gt;</code>) instead of the ideosyncratic <code>+</code> of
 packages.</li>
 <li>Provides an easy path to learning <code>lm()</code></li>
 </ul></li>
-<li><p><a
-href="https://github.com/ProjectMOSAIC/mosaicCalc"><code>{mosaicCalc}</code></a>
-– Completely updated in 2022 to provide better symbolic capabilities
-while retaining the ease of use of the formula interface. The vignettes
-give a good introduction to the package. See the <a
-href="https://www.mosaic-web.org/MOSAIC-Calculus/"><strong>Mosaic
-Calculus</strong></a> textbook for many more examples.</p></li>
-<li><p>Modeling packages</p>
-<ul>
-<li>In beta: <a
-href="https://github.com/dtkaplan/math300"><code>{math300}</code></a> is
-the prototype replacement for <code>{mosaicModel}</code> providing
-highly unified commands for <code>lm()</code> and <code>glm()</code>
-regression modeling. Install with
-<code>remotes::install_github("dtkaplan/math300")</code>. See <a
+<li><p><a href="https://github.com/dtkaplan/LST"><code>{LST}</code></a>
+provides support for the textbook <a
 href="https://dtkaplan.github.io/Lessons-in-statistical-thinking/"><em>Lessons
-in Statistical Thinking</em></a> for an introduction.</li>
-<li>Deprecated: <a
+in Statistical Thinking</em></a>. <code>{LST}</code> provides highly
+integrated, introductory-level graphics and modeling in the modern
+<em>Tidyverse</em> style. Install with
+<code>remotes::install_github("dtkaplan/LST")</code>.</p></li>
+<li><p>Deprecated: <a
 href="https://www.mosaic-web.org/mosaicModel/"><code>{mosaicModel}</code></a>
 – This package is retained for compatibility with the <a
 href="https://www.datacamp.com/courses/introduction-to-statistical-modeling-in-r">DataCamp
 courses on statistical modeling</a>. Many of the features have been
-transferred to the core mosaic packages listed above.</li>
+transferred to the core mosaic packages listed above.</p></li>
 </ul>
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div></li>
-</ul>
+class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
