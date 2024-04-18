@@ -21,12 +21,11 @@ From 2009 to 2016, Project MOSAIC was supported by a grant from the US National 
 
 -----
 
-NOV. 2023 UPDATE: An advanced draft is now available of the new  [*Lessons in Statistical Thinking*](https://dtkaplan.github.io/Lessons-in-statistical-thinking/) introductory text and the associated `{LST}` R package. This is a complete rethinking of introductory statistics that places it in the context of data science, modeling, and causal inference.
-
-
 -----
 
 ## MOSAIC resources
+
+- NEW! An advanced draft is now available of the new  [*Lessons in Statistical Thinking*](https://dtkaplan.github.io/Lessons-in-statistical-thinking/) introductory text and the associated `{LSTbook}` R package. This is a complete rethinking of introductory statistics that places it in the context of data science, modeling, and causal inference.
 
 - The `{mosaic}` package for R which supports teaching stats using a expressive, compact, and consistent formula syntax. This minimizes start up costs for students and enables students to calculate descriptive statistics, create statistical graphics, and construct statistical graphics. `{mosaic}` is one of three main syntaxes for teaching and doing statistics using R. (For a comparison, see Prof. Amelia McNamara's [video presentation](https://www.youtube.com/watch?v=aq5SrjXZDy4).) 
 
