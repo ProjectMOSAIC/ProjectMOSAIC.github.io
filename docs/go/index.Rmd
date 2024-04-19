@@ -14,6 +14,10 @@ These have documentation in the `{LSTbook}` package, but the data themselves nee
 
 `load("https://www.mosaic-web.org/go/datasets/Natality_2014.rda")`
 
+- [Weights and lengths of trout](datasets/trout-perch.csv) This is from Douglas Whitaker's 2021 activity on [Stew](https://www.amstat.org/education/stew/statistics-education-web-(stew)): "Nonlinear Modeling: Something Fishy"
+
+`Trout <- read.csv("https://www.mosaic-web.org/go/datasets/trout-perch.csv")
+
 
 ## Legacy links
 
