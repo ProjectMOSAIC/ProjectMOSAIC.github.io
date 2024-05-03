@@ -20,8 +20,11 @@ These have documentation in the `{LSTbook}` package, but the data themselves nee
 
 - [Minneapolis2013](datasets/Minneapolis2013.rda) contains 80,000 ranked-choice votes in the Minneapolis mayoral election in 2013.
 
-`load("https://www.mosaic-web.org/go/datasets/Minneapolis2013.rda")`
+`load(url("https://www.mosaic-web.org/go/datasets/Minneapolis2013.rda"))`
 
+- [DenverAQI](datasets/DenverAQI.rda) 
+
+`load(url("https://www.mosaic-web.org/go/datasets/DenverAQI.rda"))`
 
 
 ## Legacy links
